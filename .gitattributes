@@ -1,0 +1,12 @@
+# Normalise line endings in the repository; check out with the platform default.
+* text=auto
+
+# Binary assets
+*.png binary
+*.gz binary
+
+# Windows scripts keep CRLF
+*.ps1 text eol=crlf
+
+# POSIX shell scripts must stay LF
+*.sh text eol=lf

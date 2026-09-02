@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osrs-f2p-pure-solver"
+version = "0.1.0"
+description = "Fail-closed, provenance-aware OSRS F2P pure combat solver"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/Davidmycodeguy/pure"
+Documentation = "https://github.com/Davidmycodeguy/pure/tree/main/docs"
+Issues = "https://github.com/Davidmycodeguy/pure/issues"
+
+[project.scripts]
+pure-solver = "pure_solver.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = [
+    "B008",  # frozen dataclass instances as argument defaults are intentional immutable sentinels
+    "B905",  # zip(strict=...) would be pure noise in the reference code
+    "UP042", # (str, Enum) -> StrEnum changes str()/format() of members, which reach JSON output
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B017"]  # two tests deliberately assert on a blind Exception
+
+[tool.ruff.format]
+line-ending = "lf"

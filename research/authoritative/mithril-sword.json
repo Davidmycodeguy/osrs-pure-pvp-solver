@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs|rsc=Mithril Short Sword|dw=Mithril Sword}}\n{{Infobox Item\n|name = Mithril sword\n|image = [[File:Mithril sword.png]]\n|release = [[4 January]] [[2001]]\n|update = Runescape beta is now online!\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A razor sharp sword.\n|value = 845\n|weight = 1.587\n|exchange = Yes\n|id = 1285\n}}\n[[File:Mithril sword detail.png|left|100px]]\nThe '''Mithril sword''' is a [[sword]] stronger than the [[black sword]]. It requires 20 [[Attack]] to wield.\n\nPlayers can make this sword at level 54 [[Smithing]] by using one [[mithril bar]] and a [[hammer]] on an [[anvil]], granting 50 experience. It can also be purchased from the [[Varrock Swordshop]].\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = +16\n|aslash = +11\n|acrush = -2\n|amagic = 0\n|arange = 0\n|dstab = 0\n|dslash = +2\n|dcrush = +1\n|dmagic = 0\n|drange = 0\n|str = +17\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = weapon\n|speed = 4\n|attackrange = 1\n|combatstyle = Stab Sword\n|image = [[File:Mithril sword equipped male.png|155px]]\n|altimage = [[File:Mithril sword equipped female.png|150px]]\n}}\n\n{{CombatStyles|Stab Sword|speed=4|attackrange=1}}\n\n==Creation==\n{{Recipe\n|skill1 = Smithing\n|skill1lvl = 54\n|skill1boostable = Yes\n|skill1exp = 50\n|members = No\n|ticks = 5\n|tools = Hammer\n|facilities = Anvil\n|mat1 = Mithril bar\n|output1 = Mithril sword\n}}\n\n==Item sources==\n{{Drop sources|Mithril sword}}\n===Shop locations===\n{{Store locations list|Mithril sword}}\n\n{{Stab weapons}}\n{{Mithril equipment}}",
+  "content_sha256": "65fe4af17de89b84bd3713ae8657397cde97cad6b6a64493a0bb72b82c0b40f2",
+  "retrieved_at": "2026-09-01T13:42:49.688831Z",
+  "revision": "15182839",
+  "source_id": "osrs-wiki:10362:15182839",
+  "source_timestamp": "2026-04-22T02:48:46Z",
+  "title": "Mithril sword",
+  "url": "https://oldschool.runescape.wiki/w/Mithril_sword?oldid=15182839"
+}

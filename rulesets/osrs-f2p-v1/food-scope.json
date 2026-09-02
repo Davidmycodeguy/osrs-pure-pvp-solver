@@ -1,0 +1,61 @@
+{
+  "scope": "f2p_standard_world_pvp",
+  "catalog_complete": false,
+  "optimized_candidates": [
+    {
+      "consumable_id": "anchovy_pizza",
+      "reason": "verified two-bite fast food; strategically distinct action timing"
+    },
+    {
+      "consumable_id": "swordfish",
+      "reason": "verified highest-healing single-serving F2P food"
+    }
+  ],
+  "verified_but_dominance_pruned": [
+    {
+      "consumable_id": "easter_egg",
+      "dominated_by": "swordfish",
+      "reason": "14 healing versus 14 with the same verified one-action eat and attack delays; canonical ordinary food keeps the lower source-observed item ID"
+    },
+    {
+      "consumable_id": "lobster",
+      "dominated_by": "swordfish",
+      "reason": "12 healing versus 14 with the same verified one-action eat and attack delays"
+    },
+    {
+      "consumable_id": "meat_pizza",
+      "dominated_by": "anchovy_pizza",
+      "reason": "16 total healing versus 18 with the same verified two-bite action timings"
+    },
+    {
+      "consumable_id": "pumpkin",
+      "dominated_by": "swordfish",
+      "reason": "14 healing versus 14 with the same verified one-action eat and attack delays; canonical ordinary food keeps the lower source-observed item ID"
+    },
+    {
+      "consumable_id": "tuna",
+      "dominated_by": "swordfish",
+      "reason": "10 healing versus 14 with the same verified one-action eat and attack delays"
+    }
+  ],
+  "observed_pending_promotion_or_dominance_proof": [],
+  "observed_but_blocked": [
+    {
+      "consumable_id": "jug_of_wine",
+      "source_ids": ["osrs-wiki:15666:15323004", "osrs-wiki:299010:15305797"],
+      "reason": "Attack -2 side effect and empty-jug byproduct must be represented in fight state before promotion"
+    },
+    {
+      "consumable_id": "kebab",
+      "source_ids": ["osrs-wiki:14416:15247717", "osrs-wiki:299010:15305797"],
+      "reason": "six-outcome healing and skill boost/drain distribution depends on current Hitpoints and fight state"
+    }
+  ],
+  "excluded": [
+    {
+      "consumable_id": "shark",
+      "source_ids": ["osrs-wiki:12159:15183388"],
+      "reason": "source infobox marks members=Yes; illegal in F2P"
+    }
+  ]
+}

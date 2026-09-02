@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #0d1010;
+  --foreground: #f3efe3;
+  --card: #151919;
+  --card-foreground: #f3efe3;
+  --popover: #181d1c;
+  --popover-foreground: #f3efe3;
+  --primary: #d6ad54;
+  --primary-foreground: #17130a;
+  --secondary: #232928;
+  --secondary-foreground: #f3efe3;
+  --muted: #202625;
+  --muted-foreground: #979d97;
+  --accent: #28312d;
+  --accent-foreground: #f3efe3;
+  --destructive: #dc6a61;
+  --border: #2a302f;
+  --input: #343a38;
+  --ring: #d6ad54;
+  --radius: 0.65rem;
+  --detail-glow: rgb(214 173 84 / 12%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply bg-background font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 1.25%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 1.25%) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  button,
+  input {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-border bg-card shadow-[0_18px_55px_rgb(0_0_0/20%)];
+  }
+  .metric-card {
+    @apply flex items-center gap-3 rounded-xl border border-border bg-card/90 px-4 py-3;
+  }
+  .level-pill {
+    @apply inline-flex items-center gap-1 rounded-md border border-border bg-muted/45 px-1.5 py-1 font-mono text-[10px] text-muted-foreground;
+  }
+  .level-pill b {
+    @apply text-primary;
+  }
+  .section-label {
+    @apply text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground;
+  }
+  .gear-slot {
+    @apply flex min-w-0 items-center gap-2 rounded-lg border border-border bg-muted/30 p-2;
+  }
+  .stat-grid {
+    @apply grid grid-cols-2 overflow-hidden rounded-lg border border-border;
+  }
+  .stat-grid > div {
+    @apply flex items-center justify-between border-b border-r border-border px-3 py-2 text-xs;
+  }
+  .stat-grid > div:nth-child(even) {
+    @apply border-r-0;
+  }
+  .stat-grid > div:nth-last-child(-n + 2) {
+    @apply border-b-0;
+  }
+  .stat-grid span {
+    @apply capitalize text-muted-foreground;
+  }
+  .stat-grid b {
+    @apply font-mono font-semibold text-foreground;
+  }
+}
+
+::selection {
+  background: rgb(214 173 84 / 28%);
+  color: #fff8df;
+}
+
+* {
+  scrollbar-color: #3b433f #151919;
+  scrollbar-width: thin;
+}

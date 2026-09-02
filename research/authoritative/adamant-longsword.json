@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rsc=Adamantite Long Sword|rs}}\n{{Infobox Item\n|name = Adamant longsword\n|image = [[File:Adamant longsword.png]]\n|release = [[4 January]] [[2001]]\n|update = Runescape beta is now online!\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A razor sharp longsword.\n|value = 3200\n|weight = 2.041\n|exchange = Yes\n|id = 1301\n}}\n[[File:Adamant longsword detail.png|left|120px]]\nThe '''adamant longsword''' is a [[longsword]] that is stronger than the [[Mithril longsword]], but weaker than the [[Rune longsword]]. Like all other [[adamant weapons]], it requires 30 [[Attack]] to wield. Players can make an adamant longsword with 76 [[Smithing]] using 2 [[adamantite bar]]s, granting 125 experience. It can be bought from the [[Varrock Swordshop]] for 3,200 coins.\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = +20\n|aslash = +29\n|acrush = -2\n|amagic = 0\n|arange = 0\n|dstab = 0\n|dslash = +3\n|dcrush = +2\n|dmagic = 0\n|drange = 0\n|str = +31\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = weapon\n|speed = 5\n|attackrange = 1\n|combatstyle = Slash Sword\n|image = [[File:Adamant longsword equipped male.png|150px]]\n|altimage = [[File:Adamant longsword equipped female.png|160px]]\n}}\n\n{{CombatStyles|Slash Sword|speed=5|attackrange=1}}\n\n==Creation==\n{{Recipe\n|skill1 = Smithing\n|skill1lvl = 76\n|skill1boostable = Yes\n|skill1exp = 125\n|members = No\n|ticks = 5\n|tools = Hammer\n|facilities = Anvil\n|mat1 = Adamantite bar\n|mat1quantity = 2\n|output1 = Adamant longsword\n}}\n\n==Item sources==\n{{Drop sources|Adamant longsword}}\n\n===Shop locations===\n{{Store locations list|Adamant longsword}}\n\n{{Slash weapons}}\n{{Adamant equipment}}",
+  "content_sha256": "3703e180036ed3e2a0ba8210d4b1fd02cd09b7d8a1e3819c5e6b530ca75ddb02",
+  "retrieved_at": "2026-09-01T13:35:44.628006Z",
+  "revision": "15182732",
+  "source_id": "osrs-wiki:10242:15182732",
+  "source_timestamp": "2026-04-22T02:47:45Z",
+  "title": "Adamant longsword",
+  "url": "https://oldschool.runescape.wiki/w/Adamant_longsword?oldid=15182732"
+}

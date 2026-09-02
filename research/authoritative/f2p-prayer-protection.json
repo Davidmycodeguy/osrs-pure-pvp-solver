@@ -1,0 +1,35 @@
+{
+  "retrieved_at": "2026-09-01T11:57:40.8449706Z",
+  "scope": "OSRS F2P protection prayer behavior for PvP simulation",
+  "source_archive_record": "research/authoritative/prayer.json",
+  "facts": {
+    "protect_from_magic": {
+      "level": 37,
+      "drain_effect": 12,
+      "player_damage_multiplier": { "numerator": 3, "denominator": 5 },
+      "npc_damage_multiplier": 0,
+      "affects_accuracy": false
+    },
+    "protect_from_missiles": {
+      "level": 40,
+      "drain_effect": 12,
+      "player_damage_multiplier": { "numerator": 3, "denominator": 5 },
+      "npc_damage_multiplier": 0,
+      "affects_accuracy": false
+    },
+    "protect_from_melee": {
+      "level": 43,
+      "drain_effect": 12,
+      "player_damage_multiplier": { "numerator": 3, "denominator": 5 },
+      "npc_damage_multiplier": 0,
+      "affects_accuracy": false
+    },
+    "drain_resistance": {
+      "base": 60,
+      "per_prayer_bonus": 2
+    },
+    "flicking": {
+      "single_tick_no_drain": true
+    }
+  }
+}

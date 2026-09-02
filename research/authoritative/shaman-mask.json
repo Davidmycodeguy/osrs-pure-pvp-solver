@@ -1,0 +1,10 @@
+{
+  "content": "{{Infobox Item\n|name = Shaman mask\n|image = [[File:Shaman mask.png]]\n|release = [[7 December]] [[2017]]\n|update = The Corsair Curse and Wilderness Chaos Altar\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wear, Drop\n|examine = The mask worn by ogre shamans.\n|value = 8000\n|weight = 2.721\n|exchange = Yes\n|id = 21838\n|leagueRegion = Kandarin\n}}\n[[File:Shaman mask detail.png|left|140px]]\n[[File:Shaman mask chathead.png|left]]\nThe '''shaman mask''' is a rare drop from [[Ogress Warrior]]s and [[Ogress Shaman|Shamans]] in the [[Corsair Cove Dungeon]]. It has similar defensive stats to an [[iron full helm]] and is tied with the [[wizard hat]] as well as [[blue wizard hat]] for the highest magic attack bonus in [[free-to-play]].\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = 0\n|aslash = 0\n|acrush = 0\n|amagic = +2\n|arange = -2\n|dstab = +6\n|dslash = +7\n|dcrush = +5\n|dmagic = -1\n|drange = +6\n|str = 0\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = head\n|image = [[File:Shaman mask equipped.png|130px]]\n|altimage = [[File:Shaman mask equipped female.png|130px]]\n}}\n\n==Item sources==\n{{Drop sources|Shaman mask}}\n\n==Changes==\n{{Subject changes header}}\n{{Subject changes\n|date = 22 July 2026\n|update = Summer Sweep-Up Gear & PvM Changes\n|change = The shaman mask's magic attack bonus has been increased from -6 to +2.\n}}\n{{Subject changes footer}}\n\n{{Magic armour}}\n{{Mask}}\n[[Category:Collection log items]][[Category:Masks]]",
+  "content_sha256": "d1946b23a89bf190e5e16c815de8f71a4aee82d71e5c963fbd4c823a5edccf07",
+  "retrieved_at": "2026-09-01T13:27:00.118836Z",
+  "revision": "15292802",
+  "source_id": "osrs-wiki:107374:15292802",
+  "source_timestamp": "2026-08-11T12:12:09Z",
+  "title": "Shaman mask",
+  "url": "https://oldschool.runescape.wiki/w/Shaman_mask?oldid=15292802"
+}

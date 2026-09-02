@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs|rsc=Steel battle Axe}}\n{{Infobox Item\n|name = Steel battleaxe\n|image = [[File:Steel battleaxe.png]]\n|release = [[4 January]] [[2001]]\n|update = Runescape beta is now online!\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A vicious looking axe.\n|value = 650\n|weight = 2.721\n|exchange = Yes\n|id = 1365\n}}\n[[File:Steel battleaxe detail.png|left|130px]]\nThe '''steel battleaxe''' is a [[battleaxe]] stronger than the [[iron battleaxe]]. The steel battleaxe requires 5 [[Attack]] to wield.\nPlayers can make a steel battleaxe with the [[Smithing]] skill at level 40 using 3 [[steel bar]]s, giving the player 112.5 [[experience]]. \nPlayers can purchase this battleaxe from [[Brian's Battleaxe Bazaar]] in [[Port Sarim]] or [[Bob's Brilliant Axes]] in [[Lumbridge]].\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = -2\n|aslash = +16\n|acrush = +11\n|amagic = 0\n|arange = 0\n|dstab = 0\n|dslash = 0\n|dcrush = 0\n|dmagic = 0\n|drange = -1\n|str = +20\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = weapon\n|speed = 6\n|attackrange = 1\n|combatstyle = Axe\n|image = [[File:Steel battleaxe equipped male.png|130px]]\n|altimage = [[File:Steel battleaxe equipped female.png|140px]]\n}}\n\n{{CombatStyles|Axe|speed=6|attackrange=1}}\n\n==Creation==\n{{Recipe\n|skill1 = Smithing\n|skill1lvl = 40\n|skill1boostable = Yes\n|skill1exp = 112.5\n|members = No\n|ticks = 5\n|tools = Hammer\n|facilities = Anvil\n|mat1 = Steel bar\n|mat1quantity = 3\n|output1 = Steel battleaxe\n}}\n\n==Item sources==\n{{Drop sources|Steel battleaxe}}\n===Shop locations===\n{{Store locations list|Steel battleaxe}}\n\n{{Slash weapons}}\n{{Steel equipment}}",
+  "content_sha256": "ba74653e6bc0dccdc685d736021c2a76f0bf264e77f888b7b253a190f3f8027f",
+  "retrieved_at": "2026-09-01T13:42:47.412078Z",
+  "revision": "15182575",
+  "source_id": "osrs-wiki:9928:15182575",
+  "source_timestamp": "2026-04-22T02:44:32Z",
+  "title": "Steel battleaxe",
+  "url": "https://oldschool.runescape.wiki/w/Steel_battleaxe?oldid=15182575"
+}

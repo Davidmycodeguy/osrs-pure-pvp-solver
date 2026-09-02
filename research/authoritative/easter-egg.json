@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs|rsc}}\n{{Infobox Item\n|name = Easter egg\n|image = [[File:Easter egg.png]]\n|release = [[31 March]] [[2002]]\n|update = No\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = No\n|stackable = No\n|noteable = Yes\n|edible = Yes\n|options = Eat, Drop\n|examine = Happy Easter.\n|value = 10\n|weight = 0.085\n|exchange = Yes\n|id = 1961\n}}\n[[File:Easter egg detail.png|left|100px]]\n'''Easter eggs''' are edible [[holiday items]]. Two easter eggs can be obtained by completing one of the [[Easter event|Easter]] [[holiday events]] that occur once per year. This also rewards the player with all other holiday items associated with Easter.\n\nConsuming an easter egg will restore 14 [[hitpoints]], which is the same amount of hitpoints as [[swordfish]] and [[pumpkin]]s. Due to their limited availability and resulting price, easter eggs are not recommended as food.\n\nPreviously, they were obtainable during the [[2013 Rare Drops]] event (from [[21 July]] to [[28 July]]) as part of a [[Easter egg (2013 Rare Drops)|rare item drop]].\n\n== Trivia ==\n* On release, the Easter egg was reported to heal only 8 hitpoints.<ref>[https://web.archive.org/web/20020806142330/http://runescape.webpunch.net:80/cgi-bin/newspro/viewnews.cgi?newsall webpunch.net \"Happy Easter Everyone !!\"]</ref> If true however, it was changed very shortly after to match the 14 heal of [[Pumpkin]]s.<ref>[https://web.archive.org/web/20020411181916/http://www.maddogcarter.com:80/runescape/buy.html ''maddogcarter.com \"Phil's RuneScape cooking guide\"'' April 2002]</ref><ref>[https://web.archive.org/web/20020609145608/http://www.rune-scape.narod.ru/food.html ''rune-scape.narod.ru \"\u0415\u0434\u0430\"'' June 2002]</ref>\n\n== References ==\n{{Reflist}}\n\n{{Easter event rewards}}",
+  "content_sha256": "4ad8e6bcc2c80b062a954022a692090effe0e8b71fed85b58554dfbd9c3dc89c",
+  "retrieved_at": "2026-09-01T13:14:42.194716Z",
+  "revision": "15184215",
+  "source_id": "osrs-wiki:20761:15184215",
+  "source_timestamp": "2026-04-22T03:01:10Z",
+  "title": "Easter egg",
+  "url": "https://oldschool.runescape.wiki/w/Easter_egg?oldid=15184215"
+}

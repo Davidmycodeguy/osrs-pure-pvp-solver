@@ -1,0 +1,232 @@
+[
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "anchovy_pizza",
+    "item_ids": [
+      2297,
+      2299
+    ],
+    "kind": "food",
+    "name": "Anchovy pizza",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:10183:15182680"
+    ],
+    "status": "verified",
+    "transitions": {
+      "full": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 1,
+        "healing": 9,
+        "next_state": "half"
+      },
+      "half": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 2,
+        "healing": 9,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "easter_egg",
+    "item_ids": [
+      1961
+    ],
+    "kind": "food",
+    "name": "Easter egg",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:20761:15184215"
+    ],
+    "status": "verified",
+    "transitions": {
+      "whole": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 3,
+        "healing": 14,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "lobster",
+    "item_ids": [
+      379
+    ],
+    "kind": "food",
+    "name": "Lobster",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:11677:15183358",
+      "osrs-wiki:299010:15305797"
+    ],
+    "status": "verified",
+    "transitions": {
+      "whole": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 3,
+        "healing": 12,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "meat_pizza",
+    "item_ids": [
+      2293,
+      2295
+    ],
+    "kind": "food",
+    "name": "Meat pizza",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:18978:15184071"
+    ],
+    "status": "verified",
+    "transitions": {
+      "full": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 1,
+        "healing": 8,
+        "next_state": "half"
+      },
+      "half": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 2,
+        "healing": 8,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "pumpkin",
+    "item_ids": [
+      1959
+    ],
+    "kind": "food",
+    "name": "Pumpkin",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:19539:15184112"
+    ],
+    "status": "verified",
+    "transitions": {
+      "whole": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 3,
+        "healing": 14,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "strength_potion",
+    "initial_state": "4_dose",
+    "item_id_by_doses": {
+      "1": 119,
+      "2": 117,
+      "3": 115,
+      "4": 113
+    },
+    "kind": "potion",
+    "name": "Strength potion",
+    "source_ids": [
+      "osrs-wiki:18169:15183998",
+      "osrs-wiki:28248:15315536",
+      "osrs-wiki:35852:15214505"
+    ],
+    "status": "verified",
+    "transitions": {
+      "1_dose": {
+        "attack_delay_ticks": 0,
+        "drink_delay_ticks": 3,
+        "effect": {
+          "formula_mechanic": "strength_potion.boost",
+          "kind": "strength_boost"
+        },
+        "next_item_id": "empty_vial",
+        "next_state": "empty"
+      },
+      "2_dose": {
+        "attack_delay_ticks": 0,
+        "drink_delay_ticks": 3,
+        "effect": {
+          "formula_mechanic": "strength_potion.boost",
+          "kind": "strength_boost"
+        },
+        "next_item_id": "strength_potion",
+        "next_state": "1_dose"
+      },
+      "3_dose": {
+        "attack_delay_ticks": 0,
+        "drink_delay_ticks": 3,
+        "effect": {
+          "formula_mechanic": "strength_potion.boost",
+          "kind": "strength_boost"
+        },
+        "next_item_id": "strength_potion",
+        "next_state": "2_dose"
+      },
+      "4_dose": {
+        "attack_delay_ticks": 0,
+        "drink_delay_ticks": 3,
+        "effect": {
+          "formula_mechanic": "strength_potion.boost",
+          "kind": "strength_boost"
+        },
+        "next_item_id": "strength_potion",
+        "next_state": "3_dose"
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "swordfish",
+    "item_ids": [
+      373
+    ],
+    "kind": "food",
+    "name": "Swordfish",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:13403:15183520"
+    ],
+    "status": "verified",
+    "transitions": {
+      "whole": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 3,
+        "healing": 14,
+        "next_state": null
+      }
+    }
+  },
+  {
+    "availability_scope": "f2p_standard_world",
+    "consumable_id": "tuna",
+    "item_ids": [
+      361
+    ],
+    "kind": "food",
+    "name": "Tuna",
+    "source_ids": [
+      "osrs-wiki-fast-foods",
+      "osrs-wiki:13023:15237950"
+    ],
+    "status": "verified",
+    "transitions": {
+      "whole": {
+        "attack_delay_ticks": 3,
+        "eat_delay_ticks": 3,
+        "healing": 10,
+        "next_state": null
+      }
+    }
+  }
+]

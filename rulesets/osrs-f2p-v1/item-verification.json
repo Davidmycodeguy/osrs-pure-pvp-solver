@@ -1,0 +1,5374 @@
+{
+  "items": [
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14831:15183638"
+        ],
+        "obtainability": [
+          "osrs-wiki:14831:15183638"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14831:15183638"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14831:15183638"
+        ]
+      },
+      "item_id": 542,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "monks-robe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14830:15183637"
+        ],
+        "obtainability": [
+          "osrs-wiki:14830:15183637"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14830:15183637"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14830:15183637"
+        ]
+      },
+      "item_id": 544,
+      "mechanic_flags": [],
+      "notes": "Requirements corrected 2026-09-02: the pinned page's 'Prayer level of 31' is the Edgeville Monastery entry requirement, not an equip requirement; the page states 'no requirements to wear'.",
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "monks-robe-top.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:11207:15322365"
+        ],
+        "obtainability": [
+          "osrs-wiki:11207:15322365"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11207:15322365"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11207:15322365"
+        ]
+      },
+      "item_id": 577,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "blue-wizard-robe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14724:15322399"
+        ],
+        "obtainability": [
+          "osrs-wiki:14724:15322399"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14724:15322399"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14724:15322399"
+        ]
+      },
+      "item_id": 579,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "blue-wizard-hat.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:17972:15183959"
+        ],
+        "obtainability": [
+          "osrs-wiki:17972:15183959"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:17972:15183959"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:17972:15183959"
+        ]
+      },
+      "item_id": 581,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "black-robe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [
+        877
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "obtainability": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10975:15301710"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10975:15301710",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 767,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "phoenix-crossbow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "crossbow"
+    },
+    {
+      "ammo_ids": [
+        877
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "obtainability": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9524:15265609"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9524:15265609",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 837,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 1
+      },
+      "source_file": "crossbow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "crossbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "availability_scope": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "obtainability": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:13813:15322388"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:13813:15322388",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 839,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "longbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "longbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "obtainability": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11066:15183214"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11066:15183214",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 841,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "shortbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "shortbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884,
+        886
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "availability_scope": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "obtainability": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:13814:15322390"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:13814:15322390",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 843,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 5
+      },
+      "source_file": "oak-shortbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "shortbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884,
+        886
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "obtainability": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10943:15322339"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10943:15322339",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 845,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 5
+      },
+      "source_file": "oak-longbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "longbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884,
+        886,
+        888
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "availability_scope": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "obtainability": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:14336:15272114"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:14336:15272114",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 847,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 20
+      },
+      "source_file": "willow-longbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "longbow"
+    },
+    {
+      "ammo_ids": [
+        882,
+        884,
+        886,
+        888
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "obtainability": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11202:15183273"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11202:15183273",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 849,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 20
+      },
+      "source_file": "willow-shortbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "shortbow"
+    },
+    {
+      "ammo_ids": [
+        890
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "obtainability": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10878:15322335"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10878:15322335",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 851,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 30
+      },
+      "source_file": "maple-longbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "longbow"
+    },
+    {
+      "ammo_ids": [
+        890
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "obtainability": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10889:15322337"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10889:15322337",
+          "osrs-wiki-f2p-pvp-techniques"
+        ]
+      },
+      "item_id": 853,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 30
+      },
+      "source_file": "maple-shortbow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "shortbow"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9988:15301699"
+        ],
+        "obtainability": [
+          "osrs-wiki:9988:15301699"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9988:15301699"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9988:15301699"
+        ]
+      },
+      "item_id": 877,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-bolts.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10299:15182782"
+        ],
+        "obtainability": [
+          "osrs-wiki:10299:15182782"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10299:15182782"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10299:15182782"
+        ]
+      },
+      "item_id": 882,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-arrow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10312:15318131"
+        ],
+        "obtainability": [
+          "osrs-wiki:10312:15318131"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10312:15318131"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10312:15318131"
+        ]
+      },
+      "item_id": 884,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-arrow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10404:15182875"
+        ],
+        "obtainability": [
+          "osrs-wiki:10404:15182875"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10404:15182875"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10404:15182875"
+        ]
+      },
+      "item_id": 886,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "steel-arrow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10336:15182814"
+        ],
+        "obtainability": [
+          "osrs-wiki:10336:15182814"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10336:15182814"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10336:15182814"
+        ]
+      },
+      "item_id": 888,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "mithril-arrow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10217:15242606"
+        ],
+        "obtainability": [
+          "osrs-wiki:10217:15242606"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10217:15242606"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10217:15242606"
+        ]
+      },
+      "item_id": 890,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "adamant-arrow.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:23736:15184481"
+        ],
+        "obtainability": [
+          "osrs-wiki:23736:15184481"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:23736:15184481"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:23736:15184481"
+        ]
+      },
+      "item_id": 1033,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "zamorak-monk-bottom.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:23737:15184482"
+        ],
+        "obtainability": [
+          "osrs-wiki:23737:15184482"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:23737:15184482"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:23737:15184482"
+        ]
+      },
+      "item_id": 1035,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "zamorak-monk-top.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:17668:15241554"
+        ],
+        "obtainability": [
+          "osrs-wiki:17668:15241554"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:17668:15241554"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:17668:15241554"
+        ]
+      },
+      "item_id": 1063,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "leather-vambraces.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14882:15241547"
+        ],
+        "obtainability": [
+          "osrs-wiki:14882:15241547"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14882:15241547"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14882:15241547"
+        ]
+      },
+      "item_id": 1065,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 40
+      },
+      "source_file": "green-dhide-vambraces.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:17664:15322421"
+        ],
+        "obtainability": [
+          "osrs-wiki:17664:15322421"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:17664:15322421"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:17664:15322421"
+        ]
+      },
+      "item_id": 1095,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "leather-chaps.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10688:15322329"
+        ],
+        "obtainability": [
+          "osrs-wiki:10688:15322329"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10688:15322329"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10688:15322329"
+        ]
+      },
+      "item_id": 1099,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 40
+      },
+      "source_file": "green-dhide-chaps.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10834:15241549"
+        ],
+        "obtainability": [
+          "osrs-wiki:10834:15241549"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10834:15241549"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10834:15241549"
+        ]
+      },
+      "item_id": 1129,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 1
+      },
+      "source_file": "leather-body.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10523:15320280"
+        ],
+        "obtainability": [
+          "osrs-wiki:10523:15320280"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10523:15320280"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10523:15320280"
+        ]
+      },
+      "item_id": 1169,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 20
+      },
+      "source_file": "coif.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "obtainability": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10368:15182845"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10368:15182845",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1277,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "obtainability": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9901:15182554"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9901:15182554",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1279,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "obtainability": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9925:15182573"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9925:15182573",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1281,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 5
+      },
+      "source_file": "steel-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "obtainability": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10037:15182621"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10037:15182621",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1283,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 10
+      },
+      "source_file": "black-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "obtainability": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10362:15182839"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10362:15182839",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1285,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 20
+      },
+      "source_file": "mithril-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "obtainability": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10257:15320175"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10257:15320175",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1287,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 30
+      },
+      "source_file": "adamant-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "obtainability": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10402:15182873"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10402:15182873",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1289,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "rune-sword.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "obtainability": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10298:15320181"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10298:15320181",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1307,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "bronze-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "obtainability": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9902:15320140"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9902:15320140",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1309,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "iron-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "obtainability": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10403:15182874"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10403:15182874",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1311,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 5
+      },
+      "source_file": "steel-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "obtainability": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10038:15182622"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10038:15182622",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1313,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 10
+      },
+      "source_file": "black-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "obtainability": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10335:15182813"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10335:15182813",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1315,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 20
+      },
+      "source_file": "mithril-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "obtainability": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10216:15320166"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10216:15320166",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1317,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 30
+      },
+      "source_file": "adamant-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "obtainability": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10365:15182842"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10365:15182842"
+        ]
+      },
+      "item_id": 1319,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "rune-2h-sword.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "two_handed_sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "obtainability": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10350:15320200"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10350:15320200",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1321,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "bronze-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "obtainability": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9900:15320139"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9900:15320139",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1323,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "obtainability": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10413:15182882"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10413:15182882",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1325,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 5
+      },
+      "source_file": "steel-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "obtainability": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10044:15182628"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10044:15182628",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1327,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 10
+      },
+      "source_file": "black-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "obtainability": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11821:15322372"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11821:15322372",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1329,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 20
+      },
+      "source_file": "mithril-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "obtainability": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10254:15242604"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10254:15242604",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1331,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 30
+      },
+      "source_file": "adamant-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "obtainability": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11447:15297497"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11447:15297497"
+        ]
+      },
+      "item_id": 1333,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "rune-scimitar.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "scimitar"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "obtainability": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9903:15320141"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9903:15320141",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1335,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 1
+      },
+      "source_file": "iron-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "obtainability": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10369:15182846"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10369:15182846",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1337,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "obtainability": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10414:15274466"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10414:15274466",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1339,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 5
+      },
+      "source_file": "steel-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "obtainability": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10036:15182620"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10036:15182620",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1341,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 10
+      },
+      "source_file": "black-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "obtainability": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10364:15182841"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10364:15182841",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1343,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 20
+      },
+      "source_file": "mithril-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "obtainability": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10259:15320176"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10259:15320176",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1345,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 30
+      },
+      "source_file": "adamant-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "availability_scope": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "obtainability": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:13987:15322393"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:13987:15322393",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1347,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "strength": 40
+      },
+      "source_file": "rune-warhammer.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "warhammer"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "obtainability": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9898:15322721"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9898:15322721",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1363,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "iron-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "obtainability": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9928:15182575"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9928:15182575",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1365,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 5
+      },
+      "source_file": "steel-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "obtainability": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10039:15182623"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10039:15182623",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1367,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 10
+      },
+      "source_file": "black-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "obtainability": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10338:15182816"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10338:15182816",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1369,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 20
+      },
+      "source_file": "mithril-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "obtainability": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10218:15182711"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10218:15182711",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1371,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 30
+      },
+      "source_file": "adamant-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "obtainability": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10367:15182844"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10367:15182844",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1373,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "rune-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_slash",
+        "aggressive_slash",
+        "aggressive_crush",
+        "defensive_slash"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "obtainability": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10302:15182785"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10302:15182785",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1375,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "bronze-battleaxe.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "battleaxe"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "obtainability": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10327:15260423"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10327:15260423",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1420,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "iron-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "obtainability": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10332:15182810"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10332:15182810",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1422,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 1
+      },
+      "source_file": "bronze-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "availability_scope": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "obtainability": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:9924:15320154"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:9924:15320154",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1424,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 5
+      },
+      "source_file": "steel-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "obtainability": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10043:15182627"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10043:15182627",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1426,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 10
+      },
+      "source_file": "black-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "obtainability": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10354:15182831"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10354:15182831",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1428,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 20
+      },
+      "source_file": "mithril-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "obtainability": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10243:15242605"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10243:15242605",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1430,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 30
+      },
+      "source_file": "adamant-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_crush",
+        "controlled_stab",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "availability_scope": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "obtainability": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:10387:15182863"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:10387:15182863",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 1432,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "rune-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10268:15240538"
+        ],
+        "obtainability": [
+          "osrs-wiki:10268:15240538"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10268:15240538"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10268:15240538"
+        ]
+      },
+      "item_id": 1478,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "amulet-of-accuracy.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10287:15288317"
+        ],
+        "obtainability": [
+          "osrs-wiki:10287:15288317"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10287:15288317"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10287:15288317"
+        ]
+      },
+      "item_id": 1540,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [
+        "Dragon Slayer I"
+      ],
+      "requirements": {},
+      "source_file": "anti-dragon-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10280:15320180"
+        ],
+        "obtainability": [
+          "osrs-wiki:10280:15320180"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10280:15320180"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10280:15320180"
+        ]
+      },
+      "item_id": 1725,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "amulet-of-strength.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10275:15182763"
+        ],
+        "obtainability": [
+          "osrs-wiki:10275:15182763"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10275:15182763"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10275:15182763"
+        ]
+      },
+      "item_id": 1727,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "amulet-of-magic.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10279:15320179"
+        ],
+        "obtainability": [
+          "osrs-wiki:10279:15320179"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10279:15320179"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10279:15320179"
+        ]
+      },
+      "item_id": 1731,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "amulet-of-power.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [
+        882,
+        884,
+        886,
+        888
+      ],
+      "attack_styles": [
+        "accurate_ranged",
+        "rapid_ranged",
+        "longrange_ranged"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "availability_scope": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "obtainability": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:13383:15323925"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:13383:15323925",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 10280,
+      "mechanic_flags": [
+        "projectile"
+      ],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 20
+      },
+      "source_file": "willow-comp-bow.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "composite_bow"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "availability_scope": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "obtainability": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:41459:15186381"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:41459:15186381",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 12727,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "goblin-paint-cannon.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "toy"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:80434:15188023"
+        ],
+        "availability_scope": [
+          "osrs-wiki:80434:15188023"
+        ],
+        "obtainability": [
+          "osrs-wiki:80434:15188023"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:80434:15188023"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:80434:15188023"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:80434:15188023",
+          "osrs-wiki:299010:15305797"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:80434:15188023",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 20756,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "hill-giant-club.json",
+      "spell_ids": [],
+      "two_handed": true,
+      "weapon_type": "club"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:107374:15292802"
+        ],
+        "obtainability": [
+          "osrs-wiki:107374:15292802"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:107374:15292802"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:107374:15292802"
+        ]
+      },
+      "item_id": 21838,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "shaman-mask.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "availability_scope": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "obtainability": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:214270:15323943"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:214270:15323943",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 23360,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "ham-joint.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "club"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_stab",
+        "aggressive_slash",
+        "controlled_stab",
+        "defensive_stab"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "availability_scope": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "obtainability": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:232190:15189526"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:232190:15189526",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 24219,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "swift-blade.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "sword"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "availability_scope": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "obtainability": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:308838:15292904"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:308838:15292904",
+          "osrs-wiki-combat-options"
+        ]
+      },
+      "item_id": 25641,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "attack": 40
+      },
+      "source_file": "barronite-mace.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "mace"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:641623:15279216"
+        ],
+        "obtainability": [
+          "osrs-wiki:641623:15279216"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:641623:15279216"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:641623:15279216"
+        ]
+      },
+      "item_id": 33101,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "mooleta.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9878:15320135"
+        ],
+        "obtainability": [
+          "osrs-wiki:9878:15320135"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9878:15320135"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9878:15320135"
+        ]
+      },
+      "item_id": 1155,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9893:15182548"
+        ],
+        "obtainability": [
+          "osrs-wiki:9893:15182548"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9893:15182548"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9893:15182548"
+        ]
+      },
+      "item_id": 1139,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9885:15182541"
+        ],
+        "obtainability": [
+          "osrs-wiki:9885:15182541"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9885:15182541"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9885:15182541"
+        ]
+      },
+      "item_id": 1117,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10304:15320183"
+        ],
+        "obtainability": [
+          "osrs-wiki:10304:15320183"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10304:15320183"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10304:15320183"
+        ]
+      },
+      "item_id": 1103,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 1
+      },
+      "source_file": "bronze-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10337:15320189"
+        ],
+        "obtainability": [
+          "osrs-wiki:10337:15320189"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10337:15320189"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10337:15320189"
+        ]
+      },
+      "item_id": 1075,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 1
+      },
+      "source_file": "bronze-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9886:15182542"
+        ],
+        "obtainability": [
+          "osrs-wiki:9886:15182542"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9886:15182542"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9886:15182542"
+        ]
+      },
+      "item_id": 1087,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9887:15182543"
+        ],
+        "obtainability": [
+          "osrs-wiki:9887:15182543"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9887:15182543"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9887:15182543"
+        ]
+      },
+      "item_id": 1189,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 1
+      },
+      "source_file": "bronze-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9877:15320133"
+        ],
+        "obtainability": [
+          "osrs-wiki:9877:15320133"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9877:15320133"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9877:15320133"
+        ]
+      },
+      "item_id": 1173,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "bronze-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10319:15320185"
+        ],
+        "obtainability": [
+          "osrs-wiki:10319:15320185"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10319:15320185"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10319:15320185"
+        ]
+      },
+      "item_id": 1153,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:18436:15322424"
+        ],
+        "obtainability": [
+          "osrs-wiki:18436:15322424"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:18436:15322424"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:18436:15322424"
+        ]
+      },
+      "item_id": 1137,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9911:15320146"
+        ],
+        "obtainability": [
+          "osrs-wiki:9911:15320146"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9911:15320146"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9911:15320146"
+        ]
+      },
+      "item_id": 1115,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9906:15320142"
+        ],
+        "obtainability": [
+          "osrs-wiki:9906:15320142"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9906:15320142"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9906:15320142"
+        ]
+      },
+      "item_id": 1101,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 1
+      },
+      "source_file": "iron-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10328:15320186"
+        ],
+        "obtainability": [
+          "osrs-wiki:10328:15320186"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10328:15320186"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10328:15320186"
+        ]
+      },
+      "item_id": 1067,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10329:15320188"
+        ],
+        "obtainability": [
+          "osrs-wiki:10329:15320188"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10329:15320188"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10329:15320188"
+        ]
+      },
+      "item_id": 1081,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9907:15320145"
+        ],
+        "obtainability": [
+          "osrs-wiki:9907:15320145"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9907:15320145"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9907:15320145"
+        ]
+      },
+      "item_id": 1191,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 1
+      },
+      "source_file": "iron-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9914:15182565"
+        ],
+        "obtainability": [
+          "osrs-wiki:9914:15182565"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9914:15182565"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9914:15182565"
+        ]
+      },
+      "item_id": 1175,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "iron-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9937:15320156"
+        ],
+        "obtainability": [
+          "osrs-wiki:9937:15320156"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9937:15320156"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9937:15320156"
+        ]
+      },
+      "item_id": 1157,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:18437:15322425"
+        ],
+        "obtainability": [
+          "osrs-wiki:18437:15322425"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:18437:15322425"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:18437:15322425"
+        ]
+      },
+      "item_id": 1141,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10411:15320258"
+        ],
+        "obtainability": [
+          "osrs-wiki:10411:15320258"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10411:15320258"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10411:15320258"
+        ]
+      },
+      "item_id": 1119,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9938:15182585"
+        ],
+        "obtainability": [
+          "osrs-wiki:9938:15182585"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9938:15182585"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9938:15182585"
+        ]
+      },
+      "item_id": 1105,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9953:15320159"
+        ],
+        "obtainability": [
+          "osrs-wiki:9953:15320159"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9953:15320159"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9953:15320159"
+        ]
+      },
+      "item_id": 1069,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10412:15320261"
+        ],
+        "obtainability": [
+          "osrs-wiki:10412:15320261"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10412:15320261"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10412:15320261"
+        ]
+      },
+      "item_id": 1083,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10410:15320256"
+        ],
+        "obtainability": [
+          "osrs-wiki:10410:15320256"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10410:15320256"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10410:15320256"
+        ]
+      },
+      "item_id": 1193,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9941:15320157"
+        ],
+        "obtainability": [
+          "osrs-wiki:9941:15320157"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9941:15320157"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9941:15320157"
+        ]
+      },
+      "item_id": 1177,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 5
+      },
+      "source_file": "steel-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14883:15183647"
+        ],
+        "obtainability": [
+          "osrs-wiki:14883:15183647"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14883:15183647"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14883:15183647"
+        ]
+      },
+      "item_id": 1165,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:13892:15326251"
+        ],
+        "obtainability": [
+          "osrs-wiki:13892:15326251"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:13892:15326251"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:13892:15326251"
+        ]
+      },
+      "item_id": 1151,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14690:15322398"
+        ],
+        "obtainability": [
+          "osrs-wiki:14690:15322398"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14690:15322398"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14690:15322398"
+        ]
+      },
+      "item_id": 1125,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9998:15182608"
+        ],
+        "obtainability": [
+          "osrs-wiki:9998:15182608"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9998:15182608"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9998:15182608"
+        ]
+      },
+      "item_id": 1107,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:11897:15211048"
+        ],
+        "obtainability": [
+          "osrs-wiki:11897:15211048"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11897:15211048"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11897:15211048"
+        ]
+      },
+      "item_id": 1077,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10004:15182610"
+        ],
+        "obtainability": [
+          "osrs-wiki:10004:15182610"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10004:15182610"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10004:15182610"
+        ]
+      },
+      "item_id": 1089,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:9995:15182605"
+        ],
+        "obtainability": [
+          "osrs-wiki:9995:15182605"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:9995:15182605"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:9995:15182605"
+        ]
+      },
+      "item_id": 1195,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:20970:15184221"
+        ],
+        "obtainability": [
+          "osrs-wiki:20970:15184221"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:20970:15184221"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:20970:15184221"
+        ]
+      },
+      "item_id": 1179,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10
+      },
+      "source_file": "black-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10344:15320197"
+        ],
+        "obtainability": [
+          "osrs-wiki:10344:15320197"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10344:15320197"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10344:15320197"
+        ]
+      },
+      "item_id": 1159,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10348:15320198"
+        ],
+        "obtainability": [
+          "osrs-wiki:10348:15320198"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10348:15320198"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10348:15320198"
+        ]
+      },
+      "item_id": 1143,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10357:15320204"
+        ],
+        "obtainability": [
+          "osrs-wiki:10357:15320204"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10357:15320204"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10357:15320204"
+        ]
+      },
+      "item_id": 1121,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10341:15320194"
+        ],
+        "obtainability": [
+          "osrs-wiki:10341:15320194"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10341:15320194"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10341:15320194"
+        ]
+      },
+      "item_id": 1109,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10358:15320205"
+        ],
+        "obtainability": [
+          "osrs-wiki:10358:15320205"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10358:15320205"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10358:15320205"
+        ]
+      },
+      "item_id": 1071,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10359:15320206"
+        ],
+        "obtainability": [
+          "osrs-wiki:10359:15320206"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10359:15320206"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10359:15320206"
+        ]
+      },
+      "item_id": 1085,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10351:15182828"
+        ],
+        "obtainability": [
+          "osrs-wiki:10351:15182828"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10351:15182828"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10351:15182828"
+        ]
+      },
+      "item_id": 1197,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10361:15182838"
+        ],
+        "obtainability": [
+          "osrs-wiki:10361:15182838"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10361:15182838"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10361:15182838"
+        ]
+      },
+      "item_id": 1181,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20
+      },
+      "source_file": "mithril-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10230:15320169"
+        ],
+        "obtainability": [
+          "osrs-wiki:10230:15320169"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10230:15320169"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10230:15320169"
+        ]
+      },
+      "item_id": 1161,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:15752:15322410"
+        ],
+        "obtainability": [
+          "osrs-wiki:15752:15322410"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:15752:15322410"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:15752:15322410"
+        ]
+      },
+      "item_id": 1145,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10245:15320171"
+        ],
+        "obtainability": [
+          "osrs-wiki:10245:15320171"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10245:15320171"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10245:15320171"
+        ]
+      },
+      "item_id": 1123,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10221:15182714"
+        ],
+        "obtainability": [
+          "osrs-wiki:10221:15182714"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10221:15182714"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10221:15182714"
+        ]
+      },
+      "item_id": 1111,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10248:15320172"
+        ],
+        "obtainability": [
+          "osrs-wiki:10248:15320172"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10248:15320172"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10248:15320172"
+        ]
+      },
+      "item_id": 1073,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10250:15320173"
+        ],
+        "obtainability": [
+          "osrs-wiki:10250:15320173"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10250:15320173"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10250:15320173"
+        ]
+      },
+      "item_id": 1091,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10237:15182727"
+        ],
+        "obtainability": [
+          "osrs-wiki:10237:15182727"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10237:15182727"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10237:15182727"
+        ]
+      },
+      "item_id": 1199,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10256:15320174"
+        ],
+        "obtainability": [
+          "osrs-wiki:10256:15320174"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10256:15320174"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10256:15320174"
+        ]
+      },
+      "item_id": 1183,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 30
+      },
+      "source_file": "adamant-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10375:15320214"
+        ],
+        "obtainability": [
+          "osrs-wiki:10375:15320214"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10375:15320214"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10375:15320214"
+        ]
+      },
+      "item_id": 1163,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-full-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10380:15182856"
+        ],
+        "obtainability": [
+          "osrs-wiki:10380:15182856"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10380:15182856"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10380:15182856"
+        ]
+      },
+      "item_id": 1147,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-med-helm.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10389:15320225"
+        ],
+        "obtainability": [
+          "osrs-wiki:10389:15320225"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10389:15320225"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10389:15320225"
+        ]
+      },
+      "item_id": 1127,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [
+        "Dragon Slayer I"
+      ],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-platebody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10371:15182848"
+        ],
+        "obtainability": [
+          "osrs-wiki:10371:15182848"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10371:15182848"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10371:15182848"
+        ]
+      },
+      "item_id": 1113,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-chainbody.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10392:15320226"
+        ],
+        "obtainability": [
+          "osrs-wiki:10392:15320226"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10392:15320226"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10392:15320226"
+        ]
+      },
+      "item_id": 1079,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-platelegs.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10398:15320228"
+        ],
+        "obtainability": [
+          "osrs-wiki:10398:15320228"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10398:15320228"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10398:15320228"
+        ]
+      },
+      "item_id": 1093,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-plateskirt.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10382:15320217"
+        ],
+        "obtainability": [
+          "osrs-wiki:10382:15320217"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10382:15320217"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10382:15320217"
+        ]
+      },
+      "item_id": 1201,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-kiteshield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:12905:15183473"
+        ],
+        "obtainability": [
+          "osrs-wiki:12905:15183473"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:12905:15183473"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:12905:15183473"
+        ]
+      },
+      "item_id": 1185,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 40
+      },
+      "source_file": "rune-sq-shield.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:17104:15322419"
+        ],
+        "obtainability": [
+          "osrs-wiki:17104:15322419"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:17104:15322419"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:17104:15322419"
+        ]
+      },
+      "item_id": 1131,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 10,
+        "ranged": 1
+      },
+      "source_file": "hardleather-body.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14770:15322400"
+        ],
+        "obtainability": [
+          "osrs-wiki:14770:15322400"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14770:15322400"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14770:15322400"
+        ]
+      },
+      "item_id": 1133,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "defence": 20,
+        "ranged": 20
+      },
+      "source_file": "studded-body.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:11524:15322369"
+        ],
+        "obtainability": [
+          "osrs-wiki:11524:15322369"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11524:15322369"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11524:15322369"
+        ]
+      },
+      "item_id": 1097,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {
+        "ranged": 20
+      },
+      "source_file": "studded-chaps.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:10687:15322330"
+        ],
+        "obtainability": [
+          "osrs-wiki:10687:15322330"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:10687:15322330"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:10687:15322330"
+        ]
+      },
+      "item_id": 1135,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [
+        "Dragon Slayer I"
+      ],
+      "requirements": {
+        "defence": 40,
+        "ranged": 40
+      },
+      "source_file": "green-dhide-body.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:11394:15322368"
+        ],
+        "obtainability": [
+          "osrs-wiki:11394:15322368"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11394:15322368"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11394:15322368"
+        ]
+      },
+      "item_id": 1167,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "leather-cowl.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "availability_scope": [
+          "osrs-wiki:14000:15322396"
+        ],
+        "obtainability": [
+          "osrs-wiki:14000:15322396"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:14000:15322396"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:14000:15322396"
+        ]
+      },
+      "item_id": 1059,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "leather-gloves.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": null
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "obtainability": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11107:15322361"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11107:15322361"
+        ]
+      },
+      "item_id": 1381,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "staff-of-air.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "staff"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "obtainability": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11108:15322362"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11108:15322362"
+        ]
+      },
+      "item_id": 1383,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "staff-of-water.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "staff"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "obtainability": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11103:15183241"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11103:15183241"
+        ]
+      },
+      "item_id": 1385,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "staff-of-earth.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "staff"
+    },
+    {
+      "ammo_ids": [],
+      "attack_styles": [
+        "accurate_crush",
+        "aggressive_crush",
+        "defensive_crush"
+      ],
+      "availability_scope": "f2p_standard_world",
+      "evidence_by_gap": {
+        "ammo_compatibility": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "availability_scope": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "obtainability": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "quest_requirements": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "skill_requirements": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "special_mechanics": [
+          "osrs-wiki:11105:15274561"
+        ],
+        "verified_attack_styles": [
+          "osrs-wiki:11105:15274561"
+        ]
+      },
+      "item_id": 1387,
+      "mechanic_flags": [],
+      "obtainable": true,
+      "quest_requirements": [],
+      "requirements": {},
+      "source_file": "staff-of-fire.json",
+      "spell_ids": [],
+      "two_handed": false,
+      "weapon_type": "staff"
+    }
+  ]
+}

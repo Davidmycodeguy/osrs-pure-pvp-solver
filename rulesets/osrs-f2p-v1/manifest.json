@@ -1,0 +1,38 @@
+{
+  "ruleset_id": "osrs-f2p-1def-pvp-2026-09-01",
+  "solver_version": "0.1.0",
+  "data_snapshot_id": "bootstrap-2026-09-01-v6",
+  "retrieval_timestamp": "2026-09-01T13:11:37.039664Z",
+  "source_archive": "../../research/authoritative",
+  "environment": {
+    "game": "Old School RuneScape",
+    "mode": "Free-to-Play PvP",
+    "defence_level": 1,
+    "combat_level_minimum": 30,
+    "combat_level_maximum": 40,
+    "inventory_slots": 28
+  },
+  "required_mechanics": [
+    "combat_level",
+    "melee.effective_strength",
+    "melee.max_hit",
+    "melee.accuracy",
+    "tick.pipeline",
+    "death.simultaneous_ko",
+    "melee.damage_timing",
+    "ranged.projectile_timing",
+    "magic.projectile_timing",
+    "movement.resolution",
+    "weapon.switch",
+    "food.swordfish",
+    "food.anchovy_pizza",
+    "food.lobster",
+    "food.tuna",
+    "food.meat_pizza",
+    "food.pumpkin",
+    "food.easter_egg",
+    "potion.strength",
+    "potion.strength_reboost_application",
+    "prayer.pvp_protection"
+  ]
+}

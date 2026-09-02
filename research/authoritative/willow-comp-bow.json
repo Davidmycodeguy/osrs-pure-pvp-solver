@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs=Willow composite bow}}\n{{Infobox Item\n|name = Willow comp bow\n|image = [[File:Willow comp bow.png]]\n|release = [[5 December]] [[2006]]\n|update = Treasure Trails, spiders and sheep\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A powerful bow made from willow wood.\n|value = 300\n|weight = 1.800\n|exchange = Yes\n|id = 10280\n|leagueRegion = General\n}}\n[[File:Willow comp bow detail.png|left|100px]]\n'''Willow composite bows''' are a reward from Easy [[Treasure Trails]]. It requires a [[Ranged]] level of 20 to use and can fire up to [[mithril arrow]]s. The attack range of the willow composite bow is ten squares.\n\nThe willow composite bow cannot be made using the [[Fletching]] skill. It can, however, be obtained through trading with another player.\n\n{{Costume storage|treasure chest|tier=easy}}\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = 0\n|aslash = 0\n|acrush = 0\n|amagic = 0\n|arange = +22\n|dstab = 0\n|dslash = 0\n|dcrush = 0\n|dmagic = 0\n|drange = 0\n|str = 0\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = 2h\n|speed = 5\n|attackrange = 10\n|combatstyle = Bow\n|image = [[File:Willow comp bow equipped.png|110px]]\n|altimage = [[File:Willow comp bow equipped female.png|110px]]\n}}\n\n{{CombatStyles|Bow|speed=5|attackrange=10}}\n\n==Item sources==\n{{Drop sources|Willow comp bow}}\n\n{{Ranged weapons}}\n{{Easy clue rewards}}\n[[Category:Items storable in the costume room]]\n[[Category:Collection log items]]",
+  "content_sha256": "9636a3741bcccbb741bdefcc85889de2f0f9dd3e4d21a3776a82c9b49a3c6fe5",
+  "retrieved_at": "2026-09-01T13:28:15.267614Z",
+  "revision": "15323925",
+  "source_id": "osrs-wiki:13383:15323925",
+  "source_timestamp": "2026-08-28T21:31:28Z",
+  "title": "Willow comp bow",
+  "url": "https://oldschool.runescape.wiki/w/Willow_comp_bow?oldid=15323925"
+}

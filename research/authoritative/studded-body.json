@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs|dw=Studded Leather Body}}\n{{Infobox Item\n|name = Studded body\n|image = [[File:Studded body.png]]\n|release = [[29 March]] [[2004]]\n|update = RS2 Launched!\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wear, Drop\n|examine = Those studs should provide a bit more protection.\n|value = 850\n|weight = 5.443\n|exchange = Yes\n|id = 1133\n}}\n\n[[File:Studded body detail.png|left|120px]]\nA '''studded body''' is a part of [[studded leather armour]] set and it requires 20 [[Ranged]] and [[Defence]] to equip.\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = 0\n|aslash = 0\n|acrush = 0\n|amagic = -4\n|arange = +8\n|dstab = +18\n|dslash = +25\n|dcrush = +22\n|dmagic = +8\n|drange = +25\n|str = 0\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = body\n|image = [[File:Studded body equipped male.png]]\n|altimage = [[File:Studded body equipped female.png|170px]]\n}}\n\n==Creation==\n{{Recipe\n|skill1 = Crafting\n|skill1lvl = 41\n|skill1boostable = Yes\n|skill1exp = 40\n|members = Yes\n|ticks = 3\n|mat1 = Leather body\n|mat2 = Steel studs\n|output1 = Studded body\n}}\n\n==Treasure Trails==\n{{EmoteClue}}\n\n==Item sources==\n{{Drop sources|Studded body}}\n\n===Shop locations===\n{{Store locations list|Studded body}}\n\n==Changes==\n{{Subject changes header}}\n{{Subject changes\n|date = 29 March 2004\n|update = RS2 Launched!\n|change = The item became permanently available with the launch of ''RuneScape 2''.\n}}\n{{Subject changes\n|date = 1 December 2003\n|update = RuneScape 2 Beta is Here!\n|change = The item was added to the ''RuneScape 2'' Beta.\n}}\n{{Subject changes footer}}\n\n{{Ranged armour}}",
+  "content_sha256": "5123f8973b956f65a665210cecde548ff36b0580c0c7a6a22c406978fcff5946",
+  "retrieved_at": "2026-09-02T08:22:58.428164Z",
+  "revision": "15322400",
+  "source_id": "osrs-wiki:14770:15322400",
+  "source_timestamp": "2026-08-27T21:39:57Z",
+  "title": "Studded body",
+  "url": "https://oldschool.runescape.wiki/w/Studded_body?oldid=15322400"
+}

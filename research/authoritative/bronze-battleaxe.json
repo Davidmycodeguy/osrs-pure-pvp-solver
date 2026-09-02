@@ -1,0 +1,10 @@
+{
+  "content": "{{External|rs|rsc=Bronze battle Axe}}\n{{Infobox Item\n|name = Bronze battleaxe\n|image = [[File:Bronze battleaxe.png]]\n|release = [[4 January]] [[2001]]\n|update = Runescape beta is now online!\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A vicious looking axe.\n|value = 52\n|weight = 2.721\n|exchange = Yes\n|id = 1375\n}}\n[[File:Bronze battleaxe detail.png|left|130px]]\nThe '''bronze battleaxe''' is a [[battleaxe]] made of [[bronze]]. The weakest battleaxe in the game, it requires 1 [[Attack]] to wield. Players can make a bronze battleaxe with the [[Smithing]] skill at level 10 using 3 [[bronze bar]]s, giving 37.5 experience. It is a [[slashing]] weapon, which makes it good for monsters with a slash weakness. Players can purchase this battleaxe from [[Brian's Battleaxe Bazaar]] in [[Port Sarim]].\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = -2\n|aslash = +6\n|acrush = +3\n|amagic = 0\n|arange = 0\n|dstab = 0\n|dslash = 0\n|dcrush = 0\n|dmagic = 0\n|drange = -1\n|str = +9\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = weapon\n|speed = 6\n|attackrange = 1\n|combatstyle = Axe\n|image = [[File:Bronze battleaxe equipped male.png|130px]]\n|altimage = [[File:Bronze battleaxe equipped female.png|140px]]\n}}\n\n{{CombatStyles|Axe|speed=6|attackrange=1}}\n\n==Creation==\n{{Recipe\n|skill1 = Smithing\n|skill1lvl = 10\n|skill1boostable = Yes\n|skill1exp = 37.5\n|members = No\n|ticks = 5\n|tools = Hammer\n|facilities = Anvil\n|mat1 = Bronze bar\n|mat1quantity = 3\n|output1 = Bronze battleaxe\n}}\n\n==Item sources==\n{{Drop sources|Bronze battleaxe}}\n\n===Shop locations===\n{{Store locations list|Bronze battleaxe}}\n\n{{Slash weapons}}\n{{Bronze equipment}}",
+  "content_sha256": "9a40bbb0e0d70776d6eed7869e8667f4653df0165609c15470cbba73ebdebd27",
+  "retrieved_at": "2026-09-01T13:42:47.036149Z",
+  "revision": "15182785",
+  "source_id": "osrs-wiki:10302:15182785",
+  "source_timestamp": "2026-04-22T02:48:17Z",
+  "title": "Bronze battleaxe",
+  "url": "https://oldschool.runescape.wiki/w/Bronze_battleaxe?oldid=15182785"
+}

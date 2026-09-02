@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+*.egg-info/
+.venv/
+venv/
+
+# Rust
+pure_math/target/
+
+# Viewer (Node / vinext)
+viewer/node_modules/
+viewer/dist/
+viewer/.vinext/
+viewer/.next/
+viewer/next-env.d.ts
+viewer/tsconfig.tsbuildinfo
+viewer/.env*
+
+# Viewer datasets (published as GitHub release assets): fetch with
+# `python viewer/scripts/fetch_data.py`, or regenerate with the pipeline scripts
+# under pure_math/scripts/ followed by `viewer/scripts/export_build_data.py`
+viewer/public/data/
+
+# Generated pipeline outputs (multi-GB; regenerate with pure_math/scripts/run_pipeline.{sh,ps1})
+outputs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

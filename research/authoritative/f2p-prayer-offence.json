@@ -1,0 +1,84 @@
+{
+  "retrieved_at": "2026-09-01T11:57:40.8449706Z",
+  "scope": "OSRS F2P offensive combat prayers used by the pure solver",
+  "source_archive_record": "research/authoritative/prayer.json",
+  "facts": [
+    {
+      "prayer_id": "burst_of_strength",
+      "level": 4,
+      "drain_effect": 1,
+      "strength_multiplier": { "numerator": 21, "denominator": 20 }
+    },
+    {
+      "prayer_id": "clarity_of_thought",
+      "level": 7,
+      "drain_effect": 1,
+      "attack_multiplier": { "numerator": 21, "denominator": 20 }
+    },
+    {
+      "prayer_id": "sharp_eye",
+      "level": 8,
+      "drain_effect": 1,
+      "ranged_multiplier": { "numerator": 21, "denominator": 20 }
+    },
+    {
+      "prayer_id": "mystic_will",
+      "level": 9,
+      "drain_effect": 1,
+      "magic_attack_multiplier": { "numerator": 21, "denominator": 20 },
+      "magic_defence_multiplier": { "numerator": 21, "denominator": 20 }
+    },
+    {
+      "prayer_id": "superhuman_strength",
+      "level": 13,
+      "drain_effect": 6,
+      "strength_multiplier": { "numerator": 11, "denominator": 10 }
+    },
+    {
+      "prayer_id": "improved_reflexes",
+      "level": 16,
+      "drain_effect": 6,
+      "attack_multiplier": { "numerator": 11, "denominator": 10 }
+    },
+    {
+      "prayer_id": "hawk_eye",
+      "level": 26,
+      "drain_effect": 6,
+      "ranged_multiplier": { "numerator": 11, "denominator": 10 }
+    },
+    {
+      "prayer_id": "mystic_lore",
+      "level": 27,
+      "drain_effect": 6,
+      "magic_attack_multiplier": { "numerator": 11, "denominator": 10 },
+      "magic_defence_multiplier": { "numerator": 11, "denominator": 10 },
+      "magic_damage_multiplier": { "numerator": 101, "denominator": 100 }
+    },
+    {
+      "prayer_id": "ultimate_strength",
+      "level": 31,
+      "drain_effect": 12,
+      "strength_multiplier": { "numerator": 23, "denominator": 20 }
+    },
+    {
+      "prayer_id": "incredible_reflexes",
+      "level": 34,
+      "drain_effect": 12,
+      "attack_multiplier": { "numerator": 23, "denominator": 20 }
+    },
+    {
+      "prayer_id": "eagle_eye",
+      "level": 44,
+      "drain_effect": 12,
+      "ranged_multiplier": { "numerator": 23, "denominator": 20 }
+    },
+    {
+      "prayer_id": "mystic_might",
+      "level": 45,
+      "drain_effect": 12,
+      "magic_attack_multiplier": { "numerator": 23, "denominator": 20 },
+      "magic_defence_multiplier": { "numerator": 23, "denominator": 20 },
+      "magic_damage_multiplier": { "numerator": 51, "denominator": 50 }
+    }
+  ]
+}

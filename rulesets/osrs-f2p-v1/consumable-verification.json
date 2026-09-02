@@ -1,0 +1,188 @@
+{
+  "consumables": [
+    {
+      "consumable_id": "swordfish",
+      "expected_name": "Swordfish",
+      "expected_item_ids": [373],
+      "source_file": "swordfish.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "whole": {
+          "next_state": null,
+          "healing": 14,
+          "eat_delay_ticks": 3,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:13403:15183520"],
+        "obtainability": ["osrs-wiki:13403:15183520"]
+        ,"availability_scope": ["osrs-wiki:13403:15183520"]
+      }
+    },
+    {
+      "consumable_id": "anchovy_pizza",
+      "expected_name": "Anchovy pizza",
+      "expected_item_ids": [2297, 2299],
+      "source_file": "anchovy-pizza.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "full": {
+          "next_state": "half",
+          "healing": 9,
+          "eat_delay_ticks": 1,
+          "attack_delay_ticks": 3
+        },
+        "half": {
+          "next_state": null,
+          "healing": 9,
+          "eat_delay_ticks": 2,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:10183:15182680", "osrs-wiki-fast-foods"],
+        "obtainability": ["osrs-wiki:10183:15182680"]
+        ,"availability_scope": ["osrs-wiki:10183:15182680"]
+      }
+    },
+    {
+      "consumable_id": "lobster",
+      "expected_name": "Lobster",
+      "expected_item_ids": [379],
+      "source_file": "lobster.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "whole": {
+          "next_state": null,
+          "healing": 12,
+          "eat_delay_ticks": 3,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:11677:15183358"],
+        "obtainability": ["osrs-wiki:11677:15183358", "osrs-wiki:299010:15305797"],
+        "availability_scope": ["osrs-wiki:11677:15183358"]
+      }
+    },
+    {
+      "consumable_id": "tuna",
+      "expected_name": "Tuna",
+      "expected_item_ids": [361],
+      "source_file": "tuna.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "whole": {
+          "next_state": null,
+          "healing": 10,
+          "eat_delay_ticks": 3,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:13023:15237950"],
+        "obtainability": ["osrs-wiki:13023:15237950"],
+        "availability_scope": ["osrs-wiki:13023:15237950"]
+      }
+    },
+    {
+      "consumable_id": "meat_pizza",
+      "expected_name": "Meat pizza",
+      "expected_item_ids": [2293, 2295],
+      "source_file": "meat-pizza.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "full": {
+          "next_state": "half",
+          "healing": 8,
+          "eat_delay_ticks": 1,
+          "attack_delay_ticks": 3
+        },
+        "half": {
+          "next_state": null,
+          "healing": 8,
+          "eat_delay_ticks": 2,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:18978:15184071", "osrs-wiki-fast-foods"],
+        "obtainability": ["osrs-wiki:18978:15184071"],
+        "availability_scope": ["osrs-wiki:18978:15184071"]
+      }
+    },
+    {
+      "consumable_id": "pumpkin",
+      "expected_name": "Pumpkin",
+      "expected_item_ids": [1959],
+      "source_file": "pumpkin.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "whole": {
+          "next_state": null,
+          "healing": 14,
+          "eat_delay_ticks": 3,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:19539:15184112"],
+        "obtainability": ["osrs-wiki:19539:15184112"],
+        "availability_scope": ["osrs-wiki:19539:15184112"]
+      }
+    },
+    {
+      "consumable_id": "easter_egg",
+      "expected_name": "Easter egg",
+      "expected_item_ids": [1961],
+      "source_file": "easter-egg.json",
+      "availability_scope": "f2p_standard_world",
+      "transitions": {
+        "whole": {
+          "next_state": null,
+          "healing": 14,
+          "eat_delay_ticks": 3,
+          "attack_delay_ticks": 3
+        }
+      },
+      "evidence_by_gap": {
+        "eat_delay_ticks": ["osrs-wiki-fast-foods"],
+        "attack_delay_ticks": ["osrs-wiki-fast-foods"],
+        "state_transition_order": ["osrs-wiki:20761:15184215"],
+        "obtainability": ["osrs-wiki:20761:15184215"],
+        "availability_scope": ["osrs-wiki:20761:15184215"]
+      }
+    }
+  ],
+  "potions": [
+    {
+      "consumable_id": "strength_potion",
+      "source_file": "strength-potion.json",
+      "availability_scope": "f2p_standard_world",
+      "expected_item_id_by_doses": {
+        "1": 119,
+        "2": 117,
+        "3": 115,
+        "4": 113
+      },
+      "source_ids": [
+        "osrs-wiki:18169:15183998",
+        "osrs-wiki:35852:15214505",
+        "osrs-wiki:28248:15315536"
+      ]
+    }
+  ]
+}

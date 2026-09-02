@@ -1,0 +1,22 @@
+{
+  "representative_defence_rolls": {
+    "high": {
+      "crush": 1296,
+      "ranged": 1188,
+      "slash": 1224,
+      "stab": 1140
+    },
+    "low": {
+      "crush": 1068,
+      "ranged": 912,
+      "slash": 1068,
+      "stab": 1008
+    },
+    "medium": {
+      "crush": 1104,
+      "ranged": 984,
+      "slash": 1092,
+      "stab": 1032
+    }
+  }
+}

@@ -1,0 +1,3339 @@
+{
+  "mechanics": [
+    {
+      "formula_version": "osrs-wiki-combat-level-15305725",
+      "mechanic_id": "combat_level",
+      "source_ids": [
+        "osrs-wiki-combat-level"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_combat_level_uses_outer_floor"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "defence",
+                        "op": "ref"
+                      },
+                      {
+                        "name": "hitpoints",
+                        "op": "ref"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "prayer",
+                                "op": "ref"
+                              },
+                              {
+                                "op": "const",
+                                "value": 2
+                              }
+                            ],
+                            "op": "div"
+                          }
+                        ],
+                        "op": "floor"
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "op": "const",
+                    "value": 4
+                  }
+                ],
+                "op": "div"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 13
+                      },
+                      {
+                        "op": "const",
+                        "value": 40
+                      }
+                    ],
+                    "op": "div"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "attack",
+                            "op": "ref"
+                          },
+                          {
+                            "name": "strength",
+                            "op": "ref"
+                          }
+                        ],
+                        "op": "add"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "ranged",
+                                    "op": "ref"
+                                  },
+                                  {
+                                    "op": "const",
+                                    "value": 3
+                                  }
+                                ],
+                                "op": "mul"
+                              },
+                              {
+                                "op": "const",
+                                "value": 2
+                              }
+                            ],
+                            "op": "div"
+                          }
+                        ],
+                        "op": "floor"
+                      },
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "name": "magic",
+                                    "op": "ref"
+                                  },
+                                  {
+                                    "op": "const",
+                                    "value": 3
+                                  }
+                                ],
+                                "op": "mul"
+                              },
+                              {
+                                "op": "const",
+                                "value": 2
+                              }
+                            ],
+                            "op": "div"
+                          }
+                        ],
+                        "op": "floor"
+                      }
+                    ],
+                    "op": "max"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "add"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "melee.effective_strength",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_effective_strength_preserves_prayer_floor_order"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "strength_level",
+                        "op": "ref"
+                      },
+                      {
+                        "name": "strength_boost",
+                        "op": "ref"
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "name": "prayer_multiplier",
+                    "op": "ref"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "floor"
+          },
+          {
+            "name": "style_bonus",
+            "op": "ref"
+          },
+          {
+            "op": "const",
+            "value": 8
+          }
+        ],
+        "op": "add"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-max-hit-15292108",
+      "mechanic_id": "melee.max_hit",
+      "source_ids": [
+        "osrs-wiki-melee-max-hit"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_max_hit_uses_exact_integer_form"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "effective_strength",
+                        "op": "ref"
+                      },
+                      {
+                        "args": [
+                          {
+                            "name": "melee_strength_bonus",
+                            "op": "ref"
+                          },
+                          {
+                            "op": "const",
+                            "value": 64
+                          }
+                        ],
+                        "op": "add"
+                      }
+                    ],
+                    "op": "mul"
+                  },
+                  {
+                    "op": "const",
+                    "value": 320
+                  }
+                ],
+                "op": "add"
+              },
+              {
+                "op": "const",
+                "value": 640
+              }
+            ],
+            "op": "div"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "melee.accuracy",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_accuracy_uses_strict_greater_than_branch"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "attack_roll",
+                "op": "ref"
+              },
+              {
+                "name": "defence_roll",
+                "op": "ref"
+              }
+            ],
+            "op": "gt"
+          },
+          {
+            "args": [
+              {
+                "op": "const",
+                "value": 1
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "defence_roll",
+                        "op": "ref"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "args": [
+                          {
+                            "name": "attack_roll",
+                            "op": "ref"
+                          },
+                          {
+                            "op": "const",
+                            "value": 1
+                          }
+                        ],
+                        "op": "add"
+                      }
+                    ],
+                    "op": "mul"
+                  }
+                ],
+                "op": "div"
+              }
+            ],
+            "op": "sub"
+          },
+          {
+            "args": [
+              {
+                "name": "attack_roll",
+                "op": "ref"
+              },
+              {
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 2
+                  },
+                  {
+                    "args": [
+                      {
+                        "name": "defence_roll",
+                        "op": "ref"
+                      },
+                      {
+                        "op": "const",
+                        "value": 1
+                      }
+                    ],
+                    "op": "add"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "div"
+          }
+        ],
+        "op": "if"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-game-tick-14880661",
+      "mechanic_id": "game_tick.nominal_milliseconds",
+      "source_ids": [
+        "osrs-wiki-game-tick"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_tick_is_logical_not_wall_clock"
+      ],
+      "value": 600
+    },
+    {
+      "formula_version": "osrs-wiki-f2p-pvp-techniques-15270837",
+      "mechanic_id": "tick.pipeline",
+      "source_ids": [
+        "osrs-wiki-f2p-pvp-techniques"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ruleset_timing_pipeline_resolves_player_priority"
+      ],
+      "value": {
+        "phases": [
+          "resolve_pending_damage",
+          "record_actions",
+          "check_terminal"
+        ],
+        "pipeline_id": "actions-before-new-impacts-v1",
+        "priority_order": [
+          "player",
+          "opponent"
+        ]
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-f2p-pvp-techniques-15270837",
+      "mechanic_id": "death.simultaneous_ko",
+      "source_ids": [
+        "osrs-wiki-f2p-pvp-techniques"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_same_tick_lethal_damage_uses_verified_pid_priority"
+      ],
+      "value": "player_win"
+    },
+    {
+      "formula_version": "osrs-wiki-f2p-pvp-techniques-15270837",
+      "mechanic_id": "melee.damage_timing",
+      "source_ids": [
+        "osrs-wiki-f2p-pvp-techniques",
+        "osrs-wiki-attack-speed"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_supported_melee_timing_is_ruleset_defined"
+      ],
+      "value": {
+        "impact_delay_by_distance": {
+          "1": 0,
+          "2": 0
+        },
+        "maximum_distance": 2,
+        "minimum_distance": 1
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-f2p-pvp-techniques-15270837+attack-speed-15313313",
+      "mechanic_id": "ranged.projectile_timing",
+      "source_ids": [
+        "osrs-wiki-f2p-pvp-techniques",
+        "osrs-wiki-attack-speed",
+        "osrs-wiki-combat-options"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_supported_ranged_timing_is_ruleset_defined"
+      ],
+      "value": {
+        "impact_delay_by_distance": {
+          "2": 3
+        },
+        "maximum_distance": 2,
+        "minimum_distance": 2
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-f2p-pvp-techniques-15270837+standard-spellbook-15318342",
+      "mechanic_id": "magic.projectile_timing",
+      "source_ids": [
+        "osrs-wiki-f2p-pvp-techniques",
+        "osrs-wiki:17119:15318342"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_magic_profile_carries_verified_projectile_timing"
+      ],
+      "value": {
+        "impact_delay_by_distance": {
+          "7": 5,
+          "8": 5
+        },
+        "maximum_distance": 8,
+        "minimum_distance": 7
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "melee.effective_attack",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_melee_attack_profile_is_formula_derived"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "attack_level",
+                        "op": "ref"
+                      },
+                      {
+                        "name": "attack_boost",
+                        "op": "ref"
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "name": "prayer_multiplier",
+                    "op": "ref"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "floor"
+          },
+          {
+            "name": "style_bonus",
+            "op": "ref"
+          },
+          {
+            "op": "const",
+            "value": 8
+          }
+        ],
+        "op": "add"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "melee.attack_roll",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_melee_attack_profile_is_formula_derived"
+      ],
+      "value": {
+        "args": [
+          {
+            "name": "effective_attack",
+            "op": "ref"
+          },
+          {
+            "args": [
+              {
+                "name": "attack_bonus",
+                "op": "ref"
+              },
+              {
+                "op": "const",
+                "value": 64
+              }
+            ],
+            "op": "add"
+          }
+        ],
+        "op": "mul"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "player.effective_defence",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_player_defence_roll_uses_player_plus_eight_rule"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "defence_level",
+                        "op": "ref"
+                      },
+                      {
+                        "name": "defence_boost",
+                        "op": "ref"
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "name": "prayer_multiplier",
+                    "op": "ref"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "floor"
+          },
+          {
+            "name": "style_bonus",
+            "op": "ref"
+          },
+          {
+            "op": "const",
+            "value": 8
+          }
+        ],
+        "op": "add"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-melee-dps-15119280",
+      "mechanic_id": "player.defence_roll",
+      "source_ids": [
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_player_defence_roll_uses_player_plus_eight_rule"
+      ],
+      "value": {
+        "args": [
+          {
+            "name": "effective_defence",
+            "op": "ref"
+          },
+          {
+            "args": [
+              {
+                "name": "defence_bonus",
+                "op": "ref"
+              },
+              {
+                "op": "const",
+                "value": 64
+              }
+            ],
+            "op": "add"
+          }
+        ],
+        "op": "mul"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-ranged-max-hit-15199053",
+      "mechanic_id": "ranged.effective_strength",
+      "source_ids": [
+        "osrs-wiki-ranged-max-hit"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ranged_profile_preserves_double_floor"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "ranged_level",
+                                "op": "ref"
+                              },
+                              {
+                                "name": "ranged_boost",
+                                "op": "ref"
+                              }
+                            ],
+                            "op": "add"
+                          },
+                          {
+                            "name": "prayer_multiplier",
+                            "op": "ref"
+                          }
+                        ],
+                        "op": "mul"
+                      }
+                    ],
+                    "op": "floor"
+                  },
+                  {
+                    "name": "style_bonus",
+                    "op": "ref"
+                  },
+                  {
+                    "op": "const",
+                    "value": 8
+                  }
+                ],
+                "op": "add"
+              },
+              {
+                "name": "void_multiplier",
+                "op": "ref"
+              }
+            ],
+            "op": "mul"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-ranged-dps-14906132",
+      "mechanic_id": "ranged.effective_attack",
+      "source_ids": [
+        "osrs-wiki-ranged-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ranged_profile_preserves_double_floor"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "ranged_level",
+                                "op": "ref"
+                              },
+                              {
+                                "name": "ranged_boost",
+                                "op": "ref"
+                              }
+                            ],
+                            "op": "add"
+                          },
+                          {
+                            "name": "prayer_multiplier",
+                            "op": "ref"
+                          }
+                        ],
+                        "op": "mul"
+                      }
+                    ],
+                    "op": "floor"
+                  },
+                  {
+                    "name": "style_bonus",
+                    "op": "ref"
+                  },
+                  {
+                    "op": "const",
+                    "value": 8
+                  }
+                ],
+                "op": "add"
+              },
+              {
+                "name": "void_multiplier",
+                "op": "ref"
+              }
+            ],
+            "op": "mul"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-ranged-max-hit-15199053",
+      "mechanic_id": "ranged.max_hit",
+      "source_ids": [
+        "osrs-wiki-ranged-max-hit"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ranged_profile_preserves_double_floor"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "name": "effective_ranged_strength",
+                                "op": "ref"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "name": "ranged_strength_bonus",
+                                    "op": "ref"
+                                  },
+                                  {
+                                    "op": "const",
+                                    "value": 64
+                                  }
+                                ],
+                                "op": "add"
+                              }
+                            ],
+                            "op": "mul"
+                          },
+                          {
+                            "op": "const",
+                            "value": 320
+                          }
+                        ],
+                        "op": "add"
+                      },
+                      {
+                        "op": "const",
+                        "value": 640
+                      }
+                    ],
+                    "op": "div"
+                  }
+                ],
+                "op": "floor"
+              },
+              {
+                "name": "gear_multiplier",
+                "op": "ref"
+              }
+            ],
+            "op": "mul"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-ranged-dps-14906132",
+      "mechanic_id": "ranged.attack_roll",
+      "source_ids": [
+        "osrs-wiki-ranged-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ranged_profile_preserves_double_floor"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "name": "effective_ranged_attack",
+                "op": "ref"
+              },
+              {
+                "args": [
+                  {
+                    "name": "ranged_attack_bonus",
+                    "op": "ref"
+                  },
+                  {
+                    "op": "const",
+                    "value": 64
+                  }
+                ],
+                "op": "add"
+              },
+              {
+                "name": "gear_multiplier",
+                "op": "ref"
+              }
+            ],
+            "op": "mul"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-successful-hit-15278658",
+      "mechanic_id": "damage.player_successful_zero_to_one",
+      "source_ids": [
+        "osrs-wiki-successful-hit"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_player_successful_zero_roll_becomes_one_when_configured"
+      ],
+      "value": true
+    },
+    {
+      "formula_version": "osrs-wiki-attack-speed-15313313",
+      "mechanic_id": "ranged.rapid_attack_cooldown",
+      "source_ids": [
+        "osrs-wiki-attack-speed",
+        "osrs-wiki-combat-options"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_shortbow_rapid_is_three_ticks"
+      ],
+      "value": {
+        "args": [
+          {
+            "name": "base_attack_speed",
+            "op": "ref"
+          },
+          {
+            "op": "const",
+            "value": 1
+          }
+        ],
+        "op": "sub"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-combat-options-15274532",
+      "mechanic_id": "combat_style.f2p_bonuses",
+      "source_ids": [
+        "osrs-wiki-combat-options"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_style_bonus_snapshot_matches_pinned_source"
+      ],
+      "value": {
+        "accurate": {
+          "attack": 3,
+          "defence": 0,
+          "range": 0,
+          "strength": 0
+        },
+        "aggressive": {
+          "attack": 0,
+          "defence": 0,
+          "range": 0,
+          "strength": 3
+        },
+        "controlled": {
+          "attack": 1,
+          "defence": 1,
+          "range": 0,
+          "strength": 1
+        },
+        "defensive": {
+          "attack": 0,
+          "defence": 3,
+          "range": 0,
+          "strength": 0
+        },
+        "longrange": {
+          "attack": 0,
+          "defence": 3,
+          "range": 2,
+          "strength": 0
+        },
+        "rapid": {
+          "attack": 0,
+          "defence": 0,
+          "range": 0,
+          "strength": 0
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013+melee-dps-15119280",
+      "mechanic_id": "prayer.f2p.attack_boosts",
+      "source_ids": [
+        "osrs-wiki-prayer",
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_prayer_unlocks_and_multipliers_match_pinned_source"
+      ],
+      "value": {
+        "clarity_of_thought": {
+          "level": 7,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 21
+          }
+        },
+        "improved_reflexes": {
+          "level": 16,
+          "multiplier": {
+            "denominator": 10,
+            "numerator": 11
+          }
+        },
+        "incredible_reflexes": {
+          "level": 34,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 23
+          }
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013+melee-dps-15119280",
+      "mechanic_id": "prayer.f2p.strength_boosts",
+      "source_ids": [
+        "osrs-wiki-prayer",
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_prayer_unlocks_and_multipliers_match_pinned_source"
+      ],
+      "value": {
+        "burst_of_strength": {
+          "level": 4,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 21
+          }
+        },
+        "superhuman_strength": {
+          "level": 13,
+          "multiplier": {
+            "denominator": 10,
+            "numerator": 11
+          }
+        },
+        "ultimate_strength": {
+          "level": 31,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 23
+          }
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013+ranged-dps-14906132",
+      "mechanic_id": "prayer.f2p.ranged_boosts",
+      "source_ids": [
+        "osrs-wiki-prayer",
+        "osrs-wiki-ranged-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_prayer_unlocks_and_multipliers_match_pinned_source"
+      ],
+      "value": {
+        "hawk_eye": {
+          "level": 26,
+          "multiplier": {
+            "denominator": 10,
+            "numerator": 11
+          }
+        },
+        "sharp_eye": {
+          "level": 8,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 21
+          }
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013+melee-dps-15119280",
+      "mechanic_id": "prayer.pvp_protection",
+      "source_ids": [
+        "osrs-wiki-prayer",
+        "osrs-wiki-melee-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_pvp_protection_snapshot_matches_pinned_source"
+      ],
+      "value": {
+        "magic": {
+          "damage_multiplier": {
+            "denominator": 5,
+            "numerator": 3
+          },
+          "level": 37,
+          "prayer_id": "protect_from_magic"
+        },
+        "melee": {
+          "damage_multiplier": {
+            "denominator": 5,
+            "numerator": 3
+          },
+          "level": 43,
+          "prayer_id": "protect_from_melee"
+        },
+        "ranged": {
+          "damage_multiplier": {
+            "denominator": 5,
+            "numerator": 3
+          },
+          "level": 40,
+          "prayer_id": "protect_from_missiles"
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-strength-potion-15183998",
+      "mechanic_id": "strength_potion.boost",
+      "source_ids": [
+        "osrs-wiki:18169:15183998",
+        "osrs-wiki:35852:15214505"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_potion_boost_uses_static_level"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "base_strength",
+                    "op": "ref"
+                  },
+                  {
+                    "op": "const",
+                    "value": 10
+                  }
+                ],
+                "op": "div"
+              }
+            ],
+            "op": "floor"
+          },
+          {
+            "op": "const",
+            "value": 3
+          }
+        ],
+        "op": "add"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-temporary-skill-boost-15214505",
+      "mechanic_id": "boost.combat_decay_interval_ticks",
+      "source_ids": [
+        "osrs-wiki:35852:15214505",
+        "osrs-wiki-game-tick"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_boost_decay_uses_continuous_100_tick_cycle"
+      ],
+      "value": 100
+    },
+    {
+      "formula_version": "osrs-wiki-potions-15315536",
+      "mechanic_id": "potion.drink_delay_ticks",
+      "source_ids": [
+        "osrs-wiki:28248:15315536"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_potion_has_separate_three_tick_drink_timer"
+      ],
+      "value": 3
+    },
+    {
+      "formula_version": "osrs-wiki-potions-15315536",
+      "mechanic_id": "potion.food_timer_independent",
+      "source_ids": [
+        "osrs-wiki:28248:15315536",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_potion_has_separate_three_tick_drink_timer"
+      ],
+      "value": true
+    },
+    {
+      "formula_version": "osrs-wiki-strength-potion-15183998",
+      "mechanic_id": "potion.strength",
+      "source_ids": [
+        "osrs-wiki:18169:15183998",
+        "osrs-wiki:28248:15315536",
+        "osrs-wiki:35852:15214505"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_potion_dose_states_regenerate_from_source"
+      ],
+      "value": {
+        "boost_formula": "strength_potion.boost",
+        "decay_interval_mechanic": "boost.combat_decay_interval_ticks",
+        "drink_delay_mechanic": "potion.drink_delay_ticks",
+        "maximum_doses": 4
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-temporary-skill-boost-15214505",
+      "mechanic_id": "potion.strength_reboost_application",
+      "source_ids": [
+        "osrs-wiki:35852:15214505",
+        "osrs-wiki:18169:15183998"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_strength_repot_restores_static_cap_without_resetting_cycle"
+      ],
+      "value": "replace_visible_boost_with_static_cap"
+    },
+    {
+      "formula_version": "osrs-wiki-swordfish-15183520+fast-foods-15264530",
+      "mechanic_id": "food.swordfish",
+      "source_ids": [
+        "osrs-wiki:13403:15183520",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "swordfish",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-anchovy-pizza-15182680+fast-foods-15264530",
+      "mechanic_id": "food.anchovy_pizza",
+      "source_ids": [
+        "osrs-wiki:10183:15182680",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "anchovy_pizza",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-lobster-15183358+fast-foods-15264530",
+      "mechanic_id": "food.lobster",
+      "source_ids": [
+        "osrs-wiki:11677:15183358",
+        "osrs-wiki-fast-foods",
+        "osrs-wiki:299010:15305797"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "lobster",
+        "optimization_status": "strictly_dominated_by_swordfish",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-tuna-15237950+fast-foods-15264530",
+      "mechanic_id": "food.tuna",
+      "source_ids": [
+        "osrs-wiki:13023:15237950",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "tuna",
+        "optimization_status": "strictly_dominated_by_swordfish",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-meat-pizza-15184071+fast-foods-15264530",
+      "mechanic_id": "food.meat_pizza",
+      "source_ids": [
+        "osrs-wiki:18978:15184071",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "meat_pizza",
+        "optimization_status": "strictly_dominated_by_anchovy_pizza",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-pumpkin-15184112+fast-foods-15264530",
+      "mechanic_id": "food.pumpkin",
+      "source_ids": [
+        "osrs-wiki:19539:15184112",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "pumpkin",
+        "optimization_status": "strategically_equivalent_to_swordfish",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-easter-egg-15184215+fast-foods-15264530",
+      "mechanic_id": "food.easter_egg",
+      "source_ids": [
+        "osrs-wiki:20761:15184215",
+        "osrs-wiki-fast-foods"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_committed_snapshot_regenerates_and_applies_real_transitions"
+      ],
+      "value": {
+        "consumable_id": "easter_egg",
+        "optimization_status": "strategically_equivalent_to_swordfish",
+        "transition_snapshot": "consumables.json"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-experience-15167522",
+      "mechanic_id": "experience.level_threshold",
+      "source_ids": [
+        "osrs-wiki:2086:15167522"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_xp_level_golden_thresholds"
+      ],
+      "value": "floor(sum(level + floor(300 * 2^(level/7)), level=1..L-1) / 4)"
+    },
+    {
+      "formula_version": "osrs-wiki-attack-speed-15313313",
+      "mechanic_id": "weapon.switch",
+      "source_ids": [
+        "osrs-wiki-attack-speed",
+        "osrs-wiki-f2p-pvp-techniques"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_weapon_switch_does_not_reset_existing_attack_cooldown"
+      ],
+      "value": {
+        "new_weapon_speed_applies_after_next_attack": true,
+        "preserve_existing_attack_ready_tick": true
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013+ranged-dps-14906132",
+      "mechanic_id": "prayer.f2p.extra_ranged_boosts",
+      "source_ids": [
+        "osrs-wiki-prayer",
+        "osrs-wiki-ranged-dps"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_catalog_loads_verified_f2p_pvp_prayers"
+      ],
+      "value": {
+        "eagle_eye": {
+          "level": 44,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 23
+          }
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.f2p.magic_boosts",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_catalog_loads_verified_f2p_pvp_prayers"
+      ],
+      "value": {
+        "mystic_lore": {
+          "level": 27,
+          "magic_damage_multiplier": {
+            "denominator": 100,
+            "numerator": 101
+          },
+          "multiplier": {
+            "denominator": 10,
+            "numerator": 11
+          }
+        },
+        "mystic_might": {
+          "level": 45,
+          "magic_damage_multiplier": {
+            "denominator": 50,
+            "numerator": 51
+          },
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 23
+          }
+        },
+        "mystic_will": {
+          "level": 9,
+          "magic_damage_multiplier": 1,
+          "multiplier": {
+            "denominator": 20,
+            "numerator": 21
+          }
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.f2p.drain_effects",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_drain_counter_matches_published_three_second_rate"
+      ],
+      "value": {
+        "burst_of_strength": 1,
+        "clarity_of_thought": 1,
+        "eagle_eye": 12,
+        "hawk_eye": 6,
+        "improved_reflexes": 6,
+        "incredible_reflexes": 12,
+        "mystic_lore": 6,
+        "mystic_might": 12,
+        "mystic_will": 1,
+        "protect_from_magic": 12,
+        "protect_from_melee": 12,
+        "protect_from_missiles": 12,
+        "sharp_eye": 1,
+        "superhuman_strength": 6,
+        "ultimate_strength": 12
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.f2p.conflicts",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_melee_attack_and_strength_stack_but_ranged_replaces_them",
+        "test_protection_reduces_player_damage_without_touching_accuracy"
+      ],
+      "value": {
+        "burst_of_strength": {
+          "conflicts_with_groups": [
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "strength"
+        },
+        "clarity_of_thought": {
+          "conflicts_with_groups": [
+            "attack",
+            "ranged",
+            "magic"
+          ],
+          "group": "attack"
+        },
+        "eagle_eye": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "ranged"
+        },
+        "hawk_eye": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "ranged"
+        },
+        "improved_reflexes": {
+          "conflicts_with_groups": [
+            "attack",
+            "ranged",
+            "magic"
+          ],
+          "group": "attack"
+        },
+        "incredible_reflexes": {
+          "conflicts_with_groups": [
+            "attack",
+            "ranged",
+            "magic"
+          ],
+          "group": "attack"
+        },
+        "mystic_lore": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "magic"
+        },
+        "mystic_might": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "magic"
+        },
+        "mystic_will": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "magic"
+        },
+        "protect_from_magic": {
+          "conflicts_with_groups": [
+            "protection"
+          ],
+          "group": "protection"
+        },
+        "protect_from_melee": {
+          "conflicts_with_groups": [
+            "protection"
+          ],
+          "group": "protection"
+        },
+        "protect_from_missiles": {
+          "conflicts_with_groups": [
+            "protection"
+          ],
+          "group": "protection"
+        },
+        "sharp_eye": {
+          "conflicts_with_groups": [
+            "attack",
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "ranged"
+        },
+        "superhuman_strength": {
+          "conflicts_with_groups": [
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "strength"
+        },
+        "ultimate_strength": {
+          "conflicts_with_groups": [
+            "strength",
+            "ranged",
+            "magic"
+          ],
+          "group": "strength"
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.drain.base_resistance",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_drain_counter_matches_published_three_second_rate"
+      ],
+      "value": 60
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.drain.per_bonus_resistance",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_drain_counter_matches_published_three_second_rate"
+      ],
+      "value": 2
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.pvp_protection_affects_accuracy",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_protection_reduces_player_damage_without_touching_accuracy"
+      ],
+      "value": false
+    },
+    {
+      "formula_version": "osrs-wiki-prayer-15327013",
+      "mechanic_id": "prayer.flick.single_tick_no_drain",
+      "source_ids": [
+        "osrs-wiki-prayer"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_flicking_resets_counter_when_all_prayers_turn_off"
+      ],
+      "value": true
+    },
+    {
+      "formula_version": "osrs-wiki-magic-dps-15321382",
+      "mechanic_id": "magic.effective_attack",
+      "source_ids": [
+        "osrs-wiki:269242:15321382",
+        "osrs-wiki:11374:15315801"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_magic_profile_uses_spell_max_hit_and_accuracy"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "name": "magic_level",
+                        "op": "ref"
+                      },
+                      {
+                        "name": "magic_boost",
+                        "op": "ref"
+                      }
+                    ],
+                    "op": "add"
+                  },
+                  {
+                    "name": "prayer_multiplier",
+                    "op": "ref"
+                  }
+                ],
+                "op": "mul"
+              }
+            ],
+            "op": "floor"
+          },
+          {
+            "name": "style_bonus",
+            "op": "ref"
+          },
+          {
+            "op": "const",
+            "value": 8
+          }
+        ],
+        "op": "add"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-magic-dps-15321382",
+      "mechanic_id": "magic.attack_roll",
+      "source_ids": [
+        "osrs-wiki:269242:15321382"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_magic_profile_uses_spell_max_hit_and_accuracy"
+      ],
+      "value": {
+        "args": [
+          {
+            "name": "effective_magic_attack",
+            "op": "ref"
+          },
+          {
+            "args": [
+              {
+                "name": "magic_attack_bonus",
+                "op": "ref"
+              },
+              {
+                "op": "const",
+                "value": 64
+              }
+            ],
+            "op": "add"
+          }
+        ],
+        "op": "mul"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-magic-dps-15321382",
+      "mechanic_id": "magic.max_hit",
+      "source_ids": [
+        "osrs-wiki:269242:15321382",
+        "osrs-wiki:17119:15318342"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_magic_profile_uses_spell_max_hit_and_accuracy"
+      ],
+      "value": {
+        "args": [
+          {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "spell_base_max_hit",
+                    "op": "ref"
+                  },
+                  {
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 100
+                      },
+                      {
+                        "name": "magic_damage_percent",
+                        "op": "ref"
+                      }
+                    ],
+                    "op": "add"
+                  }
+                ],
+                "op": "mul"
+              },
+              {
+                "op": "const",
+                "value": 100
+              }
+            ],
+            "op": "div"
+          }
+        ],
+        "op": "floor"
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-standard-spellbook-15318342",
+      "mechanic_id": "magic.f2p.spells",
+      "source_ids": [
+        "osrs-wiki:17119:15318342",
+        "osrs-wiki:19965:15165009",
+        "osrs-wiki:19968:15175486"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_f2p_spell_gates_runes_and_bind_durations"
+      ],
+      "value": {
+        "bind": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 0,
+          "bind_duration_ticks": 8,
+          "free_to_play": true,
+          "magic_level": 20,
+          "name": "Bind",
+          "rune_cost": {
+            "earth": 3,
+            "nature": 2,
+            "water": 3
+          },
+          "source_ids": [
+            "osrs-wiki:19965:15165009"
+          ],
+          "status": "verified"
+        },
+        "earth_blast": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 15,
+          "free_to_play": true,
+          "magic_level": 53,
+          "name": "Earth Blast",
+          "rune_cost": {
+            "air": 3,
+            "death": 1,
+            "earth": 4
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "earth_bolt": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 11,
+          "free_to_play": true,
+          "magic_level": 29,
+          "name": "Earth Bolt",
+          "rune_cost": {
+            "air": 2,
+            "chaos": 1,
+            "earth": 3
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "earth_strike": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 6,
+          "free_to_play": true,
+          "magic_level": 9,
+          "name": "Earth Strike",
+          "rune_cost": {
+            "air": 1,
+            "earth": 2,
+            "mind": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "fire_blast": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 16,
+          "free_to_play": true,
+          "magic_level": 59,
+          "name": "Fire Blast",
+          "rune_cost": {
+            "air": 4,
+            "death": 1,
+            "fire": 5
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "fire_bolt": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 12,
+          "free_to_play": true,
+          "magic_level": 35,
+          "name": "Fire Bolt",
+          "rune_cost": {
+            "air": 3,
+            "chaos": 1,
+            "fire": 4
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "fire_strike": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 8,
+          "free_to_play": true,
+          "magic_level": 13,
+          "name": "Fire Strike",
+          "rune_cost": {
+            "air": 2,
+            "fire": 3,
+            "mind": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "snare": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 2,
+          "bind_duration_ticks": 16,
+          "free_to_play": true,
+          "magic_level": 50,
+          "name": "Snare",
+          "rune_cost": {
+            "earth": 4,
+            "nature": 3,
+            "water": 4
+          },
+          "source_ids": [
+            "osrs-wiki:19968:15175486"
+          ],
+          "status": "verified"
+        },
+        "water_blast": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 14,
+          "free_to_play": true,
+          "magic_level": 47,
+          "name": "Water Blast",
+          "rune_cost": {
+            "air": 3,
+            "death": 1,
+            "water": 3
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "water_bolt": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 10,
+          "free_to_play": true,
+          "magic_level": 23,
+          "name": "Water Bolt",
+          "rune_cost": {
+            "air": 2,
+            "chaos": 1,
+            "water": 2
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "water_strike": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 4,
+          "free_to_play": true,
+          "magic_level": 5,
+          "name": "Water Strike",
+          "rune_cost": {
+            "air": 1,
+            "mind": 1,
+            "water": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "wind_blast": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 13,
+          "free_to_play": true,
+          "magic_level": 41,
+          "name": "Wind Blast",
+          "rune_cost": {
+            "air": 3,
+            "death": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "wind_bolt": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 9,
+          "free_to_play": true,
+          "magic_level": 17,
+          "name": "Wind Bolt",
+          "rune_cost": {
+            "air": 2,
+            "chaos": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        },
+        "wind_strike": {
+          "attack_speed_ticks": 5,
+          "base_max_hit": 2,
+          "free_to_play": true,
+          "magic_level": 1,
+          "name": "Wind Strike",
+          "rune_cost": {
+            "air": 1,
+            "mind": 1
+          },
+          "source_ids": [
+            "osrs-wiki:17119:15318342"
+          ],
+          "status": "verified"
+        }
+      }
+    },
+    {
+      "formula_version": "osrs-wiki-game-tick-14880661+tithe-15298303",
+      "mechanic_id": "movement.resolution",
+      "source_ids": [
+        "osrs-wiki-game-tick",
+        "osrs-wiki:346655:15298303"
+      ],
+      "status": "verified",
+      "test_ids": [
+        "test_ruleset_movement_profile_resolves_walk_run_and_diagonal"
+      ],
+      "value": {
+        "diagonal_allowed": true,
+        "distance_metric": "chebyshev",
+        "run_tiles_per_tick": 2,
+        "walk_tiles_per_tick": 1
+      }
+    }
+  ],
+  "sources": [
+    {
+      "content_sha256": "51df85a7b754845e8d3cdb88cb99a215f97e36380c1b5c7036293652a1f1386c",
+      "retrieved_at": "2026-09-01T10:21:27.950387Z",
+      "revision": "15305725",
+      "source_id": "osrs-wiki-combat-level",
+      "url": "https://oldschool.runescape.wiki/w/Combat_level?oldid=15305725"
+    },
+    {
+      "content_sha256": "43805d0ea758499b1b471a756940ebcad1086d2f1abd3ff49164ef05f03e599c",
+      "retrieved_at": "2026-09-01T10:21:28.176755Z",
+      "revision": "15292108",
+      "source_id": "osrs-wiki-melee-max-hit",
+      "url": "https://oldschool.runescape.wiki/w/Maximum_melee_hit?oldid=15292108"
+    },
+    {
+      "content_sha256": "1f532664c5eb5b3625c1cc6bb7944d159accdfecb75e453a7381cf50d772cbd3",
+      "retrieved_at": "2026-09-01T10:21:28.358834Z",
+      "revision": "15119280",
+      "source_id": "osrs-wiki-melee-dps",
+      "url": "https://oldschool.runescape.wiki/w/Damage_per_second/Melee?oldid=15119280"
+    },
+    {
+      "content_sha256": "a2c0cbb9afa0a621dd4b1f58c030f723d85dbd4882b772c43e32190635259c55",
+      "retrieved_at": "2026-09-01T10:21:28.538765Z",
+      "revision": "14880661",
+      "source_id": "osrs-wiki-game-tick",
+      "url": "https://oldschool.runescape.wiki/w/RuneScape_clock?oldid=14880661"
+    },
+    {
+      "content_sha256": "11f49bcf8858abade585344f85eb73c0d95ea1bb3f4497958ecb61615b6fae1e",
+      "retrieved_at": "2026-09-01T10:21:28.964754Z",
+      "revision": "15270837",
+      "source_id": "osrs-wiki-f2p-pvp-techniques",
+      "url": "https://oldschool.runescape.wiki/w/Free-to-play_PvP_techniques?oldid=15270837"
+    },
+    {
+      "content_sha256": "b14a3e7a7b362e86ee1c68f1f38d6872835a91cb5809cd38a0c802fc96ff7ef3",
+      "retrieved_at": "2026-09-01T10:21:28.756341Z",
+      "revision": "15264530",
+      "source_id": "osrs-wiki-fast-foods",
+      "url": "https://oldschool.runescape.wiki/w/Food/Fast_foods?oldid=15264530"
+    },
+    {
+      "content_sha256": "a1e6d2dd52f9728e8331b57344bb921e03482f683e06ce26df12fc2cad0ea925",
+      "retrieved_at": "2026-09-01T10:34:48.619902Z",
+      "revision": "14906132",
+      "source_id": "osrs-wiki-ranged-dps",
+      "url": "https://oldschool.runescape.wiki/w/Damage_per_second/Ranged?oldid=14906132"
+    },
+    {
+      "content_sha256": "942836ce2d43d1bc50087feef4ca0b2d46496d7c25a063f5cbf6fd427be357d4",
+      "retrieved_at": "2026-09-01T10:34:48.804245Z",
+      "revision": "15199053",
+      "source_id": "osrs-wiki-ranged-max-hit",
+      "url": "https://oldschool.runescape.wiki/w/Maximum_ranged_hit?oldid=15199053"
+    },
+    {
+      "content_sha256": "41d6555071cf3f2b06d3eadd011a396ace065fe89c89e58ddf87d327aabb50ca",
+      "retrieved_at": "2026-09-01T10:34:48.985982Z",
+      "revision": "15278658",
+      "source_id": "osrs-wiki-successful-hit",
+      "url": "https://oldschool.runescape.wiki/w/Successful_hit?oldid=15278658"
+    },
+    {
+      "content_sha256": "24f5d48b689541cba6486f461ac362e9f70ca52fe1f2ae1e5ea4b8b7f1f9a993",
+      "retrieved_at": "2026-09-01T10:32:08.286723Z",
+      "revision": "15297497",
+      "source_id": "osrs-wiki:11447:15297497",
+      "url": "https://oldschool.runescape.wiki/w/Rune_scimitar?oldid=15297497"
+    },
+    {
+      "content_sha256": "d319099df5b52a21d373d8b2d6690ec105447c44136547a55c9eb1f3647bb8c7",
+      "retrieved_at": "2026-09-01T10:39:10.455444Z",
+      "revision": "15322337",
+      "source_id": "osrs-wiki:10889:15322337",
+      "url": "https://oldschool.runescape.wiki/w/Maple_shortbow?oldid=15322337"
+    },
+    {
+      "content_sha256": "dea290bee1d7f50b1b7a7f7d6ef53b7d75b66e390ef0ceb37122fa629b262fe6",
+      "retrieved_at": "2026-09-01T10:39:10.657294Z",
+      "revision": "15182842",
+      "source_id": "osrs-wiki:10365:15182842",
+      "url": "https://oldschool.runescape.wiki/w/Rune_2h_sword?oldid=15182842"
+    },
+    {
+      "content_sha256": "b9f95ec8c2ebe3ea59a0c9f36fc5379429a6675b05bda438c6ba14263f8a73c3",
+      "retrieved_at": "2026-09-01T10:39:10.853683Z",
+      "revision": "15242606",
+      "source_id": "osrs-wiki:10217:15242606",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_arrow?oldid=15242606"
+    },
+    {
+      "content_sha256": "5df5c7c7477923c0a9c2cd1c60f207500c4183db408e72aca9c694d0b7c98e64",
+      "retrieved_at": "2026-09-01T10:39:11.054068Z",
+      "revision": "15183520",
+      "source_id": "osrs-wiki:13403:15183520",
+      "url": "https://oldschool.runescape.wiki/w/Swordfish?oldid=15183520"
+    },
+    {
+      "content_sha256": "f144e9e44b5652d3742d49f98d3e1dd82b7402bc705e6abd64f5c5680f584ee2",
+      "retrieved_at": "2026-09-01T10:39:11.232075Z",
+      "revision": "15182680",
+      "source_id": "osrs-wiki:10183:15182680",
+      "url": "https://oldschool.runescape.wiki/w/Anchovy_pizza?oldid=15182680"
+    },
+    {
+      "content_sha256": "f47e7d6ba5545390b92c4efec7cc46cabba850338e9e16e774af457e0eb4ac57",
+      "retrieved_at": "2026-09-01T13:06:26.555926Z",
+      "revision": "15305797",
+      "source_id": "osrs-wiki:299010:15305797",
+      "url": "https://oldschool.runescape.wiki/w/Free-to-play_PvP_equipment?oldid=15305797"
+    },
+    {
+      "content_sha256": "a29d4c6ed0cb2ce47560b16168cd19ca467cb92419ab8f083d9678fd6d7c3aa4",
+      "retrieved_at": "2026-09-01T13:06:26.744100Z",
+      "revision": "15183358",
+      "source_id": "osrs-wiki:11677:15183358",
+      "url": "https://oldschool.runescape.wiki/w/Lobster?oldid=15183358"
+    },
+    {
+      "content_sha256": "02810c95cc5a5b60a95e5df63179ce94b856cc318fc6d98a0dcbd5094b2b5fe9",
+      "retrieved_at": "2026-09-01T13:06:26.922835Z",
+      "revision": "15323004",
+      "source_id": "osrs-wiki:15666:15323004",
+      "url": "https://oldschool.runescape.wiki/w/Jug_of_wine?oldid=15323004"
+    },
+    {
+      "content_sha256": "6e3b2c65a11b0524182cf54a128b222b9e3bd175231def9ae5236f857a73e935",
+      "retrieved_at": "2026-09-01T13:11:37.039664Z",
+      "revision": "15183388",
+      "source_id": "osrs-wiki:12159:15183388",
+      "url": "https://oldschool.runescape.wiki/w/Shark?oldid=15183388"
+    },
+    {
+      "content_sha256": "09eeb5ad343bb58b06ba9dbd952d0e28d35f620647501651a66e465937ed641c",
+      "retrieved_at": "2026-09-01T13:15:03.691591Z",
+      "revision": "15182844",
+      "source_id": "osrs-wiki:10367:15182844",
+      "url": "https://oldschool.runescape.wiki/w/Rune_battleaxe?oldid=15182844"
+    },
+    {
+      "content_sha256": "1328e90e1993fdf5c57823fcf4ebe6714d3e4809ec2aae7de9e394543201b9ce",
+      "retrieved_at": "2026-09-01T13:15:03.703393Z",
+      "revision": "15322393",
+      "source_id": "osrs-wiki:13987:15322393",
+      "url": "https://oldschool.runescape.wiki/w/Rune_warhammer?oldid=15322393"
+    },
+    {
+      "content_sha256": "59c9c18a5ed7a186006046e7f9913b225ab428bef1bcd8a49736d9181e5afc8e",
+      "retrieved_at": "2026-09-01T13:15:03.635573Z",
+      "revision": "15188023",
+      "source_id": "osrs-wiki:80434:15188023",
+      "url": "https://oldschool.runescape.wiki/w/Hill_giant_club?oldid=15188023"
+    },
+    {
+      "content_sha256": "09f2a11308c4dda2ee956c18cc344046d47c5cc855e673c89c6cd3350c31e5d6",
+      "retrieved_at": "2026-09-01T13:15:03.753554Z",
+      "revision": "15292904",
+      "source_id": "osrs-wiki:308838:15292904",
+      "url": "https://oldschool.runescape.wiki/w/Barronite_mace?oldid=15292904"
+    },
+    {
+      "content_sha256": "79fc66eb473bbf14e089c2a5234ce38deccd743f4d54e94d9930ce642e5fe959",
+      "retrieved_at": "2026-09-01T13:15:03.710514Z",
+      "revision": "15182873",
+      "source_id": "osrs-wiki:10402:15182873",
+      "url": "https://oldschool.runescape.wiki/w/Rune_sword?oldid=15182873"
+    },
+    {
+      "content_sha256": "03d08c5b1b1a74373f9ca33a999ff39cca3848370d50bab78f5a5262b24b4807",
+      "retrieved_at": "2026-09-01T13:15:03.734740Z",
+      "revision": "15182863",
+      "source_id": "osrs-wiki:10387:15182863",
+      "url": "https://oldschool.runescape.wiki/w/Rune_mace?oldid=15182863"
+    },
+    {
+      "content_sha256": "bf56f16a637e93f1224a5a178ceaba677c4a0aad000371c41dcbad5612ce3a1b",
+      "retrieved_at": "2026-09-01T13:15:03.733303Z",
+      "revision": "15186381",
+      "source_id": "osrs-wiki:41459:15186381",
+      "url": "https://oldschool.runescape.wiki/w/Goblin_paint_cannon?oldid=15186381"
+    },
+    {
+      "content_sha256": "7d5a97664feed4d2975ce364cc45dcd944a1b381912cd0a7cf581361a6f4d2e5",
+      "retrieved_at": "2026-09-01T13:15:03.731106Z",
+      "revision": "15323943",
+      "source_id": "osrs-wiki:214270:15323943",
+      "url": "https://oldschool.runescape.wiki/w/Ham_joint?oldid=15323943"
+    },
+    {
+      "content_sha256": "62307030eeefced07571938b7e6d6fd7c73fcf83f57959630971018ef58c2e72",
+      "retrieved_at": "2026-09-01T13:15:03.736301Z",
+      "revision": "15189526",
+      "source_id": "osrs-wiki:232190:15189526",
+      "url": "https://oldschool.runescape.wiki/w/Swift_blade?oldid=15189526"
+    },
+    {
+      "content_sha256": "88abb98186eb74a4b6738b63a5cdf7b9b88da72f12057fc824947f892c160ade",
+      "retrieved_at": "2026-09-01T13:27:00.215345Z",
+      "revision": "15240538",
+      "source_id": "osrs-wiki:10268:15240538",
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_accuracy?oldid=15240538"
+    },
+    {
+      "content_sha256": "c11933d7e62fefce4a23b7e4df1b239e8b1e32d124d9a12fc83200d4f0cc1acf",
+      "retrieved_at": "2026-09-01T13:27:00.415776Z",
+      "revision": "15182763",
+      "source_id": "osrs-wiki:10275:15182763",
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_magic?oldid=15182763"
+    },
+    {
+      "content_sha256": "258b2e10eb9627a673447c292c68ddbfef98b9e15d3a9bff30b2b5251a3b5301",
+      "retrieved_at": "2026-09-01T13:27:00.412473Z",
+      "revision": "15320179",
+      "source_id": "osrs-wiki:10279:15320179",
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_power?oldid=15320179"
+    },
+    {
+      "content_sha256": "5795d72f89c99bd0975f7a004b3987d82f736402192f831eda80f4b7b9572b10",
+      "retrieved_at": "2026-09-01T13:27:00.413345Z",
+      "revision": "15320180",
+      "source_id": "osrs-wiki:10280:15320180",
+      "url": "https://oldschool.runescape.wiki/w/Amulet_of_strength?oldid=15320180"
+    },
+    {
+      "content_sha256": "857bd3e9727ffab68f426f506d4fe27a09ef6df8b9b867173632bd118f41b72f",
+      "retrieved_at": "2026-09-01T13:27:00.410308Z",
+      "revision": "15288317",
+      "source_id": "osrs-wiki:10287:15288317",
+      "url": "https://oldschool.runescape.wiki/w/Anti-dragon_shield?oldid=15288317"
+    },
+    {
+      "content_sha256": "329f9b74fa717000bab217bf717db3a94ac411d1e4e27a9727bedc5fd5adb18f",
+      "retrieved_at": "2026-09-01T13:27:00.334292Z",
+      "revision": "15183959",
+      "source_id": "osrs-wiki:17972:15183959",
+      "url": "https://oldschool.runescape.wiki/w/Black_robe?oldid=15183959"
+    },
+    {
+      "content_sha256": "d6db8205c1f0aa94725d1d34c55bf32fd271fb189344f399d4427b5dca27c848",
+      "retrieved_at": "2026-09-01T13:27:00.384033Z",
+      "revision": "15322399",
+      "source_id": "osrs-wiki:14724:15322399",
+      "url": "https://oldschool.runescape.wiki/w/Blue_wizard_hat?oldid=15322399"
+    },
+    {
+      "content_sha256": "6c6f20a2f5efdd4043b9186a10a6ae997448727b195b1ca3195d728ea58b4773",
+      "retrieved_at": "2026-09-01T13:27:00.410238Z",
+      "revision": "15322365",
+      "source_id": "osrs-wiki:11207:15322365",
+      "url": "https://oldschool.runescape.wiki/w/Blue_wizard_robe?oldid=15322365"
+    },
+    {
+      "content_sha256": "b3836e6ccc1363df32521309bd3a0260902aa97cf3160091912e1c5e6facdd4c",
+      "retrieved_at": "2026-09-01T13:27:00.347318Z",
+      "revision": "15320280",
+      "source_id": "osrs-wiki:10523:15320280",
+      "url": "https://oldschool.runescape.wiki/w/Coif?oldid=15320280"
+    },
+    {
+      "content_sha256": "af1f92b677a3ef644cc89496202f61b95484977b25e72d7289bb37b9c6cac431",
+      "retrieved_at": "2026-09-01T13:27:00.397284Z",
+      "revision": "15322329",
+      "source_id": "osrs-wiki:10688:15322329",
+      "url": "https://oldschool.runescape.wiki/w/Green_d%27hide_chaps?oldid=15322329"
+    },
+    {
+      "content_sha256": "359d2c22cb51bca3e975f437eb078e6dbe2e5baa0d85184f6619bf3f1748fa3e",
+      "retrieved_at": "2026-09-01T13:27:00.297207Z",
+      "revision": "15241547",
+      "source_id": "osrs-wiki:14882:15241547",
+      "url": "https://oldschool.runescape.wiki/w/Green_d%27hide_vambraces?oldid=15241547"
+    },
+    {
+      "content_sha256": "dcfd1c4452650ce35eca3baf87996ca273a2623cc2f90daa4d34c6e5d032487d",
+      "retrieved_at": "2026-09-01T13:27:00.419381Z",
+      "revision": "15241549",
+      "source_id": "osrs-wiki:10834:15241549",
+      "url": "https://oldschool.runescape.wiki/w/Leather_body?oldid=15241549"
+    },
+    {
+      "content_sha256": "0e41784385f1fb26ef817a62bd414939d91818a0ee08732cedeca4bdc58b78e9",
+      "retrieved_at": "2026-09-01T13:27:00.320512Z",
+      "revision": "15322421",
+      "source_id": "osrs-wiki:17664:15322421",
+      "url": "https://oldschool.runescape.wiki/w/Leather_chaps?oldid=15322421"
+    },
+    {
+      "content_sha256": "fb3fcba7694b58838eac06307cf49aa2c41ecf31c2b5e8572b9acb1c092ae680",
+      "retrieved_at": "2026-09-01T13:27:00.075748Z",
+      "revision": "15241554",
+      "source_id": "osrs-wiki:17668:15241554",
+      "url": "https://oldschool.runescape.wiki/w/Leather_vambraces?oldid=15241554"
+    },
+    {
+      "content_sha256": "5a77ee357aba260023b25c4a531f816d1a0fffa9af9a829aa8117295f1bf79de",
+      "retrieved_at": "2026-09-01T13:27:00.410256Z",
+      "revision": "15183637",
+      "source_id": "osrs-wiki:14830:15183637",
+      "url": "https://oldschool.runescape.wiki/w/Monk%27s_robe_top?oldid=15183637"
+    },
+    {
+      "content_sha256": "82b470f681b14dbd4afe8282027a97cfb6d1d50251d8edd3f45146d3eb6ebe6a",
+      "retrieved_at": "2026-09-01T13:27:00.359419Z",
+      "revision": "15183638",
+      "source_id": "osrs-wiki:14831:15183638",
+      "url": "https://oldschool.runescape.wiki/w/Monk%27s_robe?oldid=15183638"
+    },
+    {
+      "content_sha256": "6d8df83ece61bf9de0c377bf802ee4add0767c4f178e80f45dca68bbeac3a1d1",
+      "retrieved_at": "2026-09-01T13:27:00.410253Z",
+      "revision": "15279216",
+      "source_id": "osrs-wiki:641623:15279216",
+      "url": "https://oldschool.runescape.wiki/w/Mooleta?oldid=15279216"
+    },
+    {
+      "content_sha256": "d1946b23a89bf190e5e16c815de8f71a4aee82d71e5c963fbd4c823a5edccf07",
+      "retrieved_at": "2026-09-01T13:27:00.118836Z",
+      "revision": "15292802",
+      "source_id": "osrs-wiki:107374:15292802",
+      "url": "https://oldschool.runescape.wiki/w/Shaman_mask?oldid=15292802"
+    },
+    {
+      "content_sha256": "f6dffe40a3ee3c5d51e7196bb30f9ba28e8c744f7d2b7f98624562978494f7cd",
+      "retrieved_at": "2026-09-01T13:27:00.399031Z",
+      "revision": "15184481",
+      "source_id": "osrs-wiki:23736:15184481",
+      "url": "https://oldschool.runescape.wiki/w/Zamorak_monk_bottom?oldid=15184481"
+    },
+    {
+      "content_sha256": "b8b887ead97e051ffc18c2af9f6c76ade729a3aecf0fb79123adf6650317aac1",
+      "retrieved_at": "2026-09-01T13:27:00.410266Z",
+      "revision": "15184482",
+      "source_id": "osrs-wiki:23737:15184482",
+      "url": "https://oldschool.runescape.wiki/w/Zamorak_monk_top?oldid=15184482"
+    },
+    {
+      "content_sha256": "0443846773c2175c90c4a6f241d672040bfd166ad33f782c275b1da895be86ca",
+      "retrieved_at": "2026-09-01T13:15:03.797052Z",
+      "revision": "15322361",
+      "source_id": "osrs-wiki:11107:15322361",
+      "url": "https://oldschool.runescape.wiki/w/Staff_of_air?oldid=15322361"
+    },
+    {
+      "content_sha256": "126b349bd5202ff4790ec3b36b6ab7bab73510d3c928128f6e2d691a46fc35c7",
+      "retrieved_at": "2026-09-01T13:15:03.722543Z",
+      "revision": "15317782",
+      "source_id": "osrs-wiki:115746:15317782",
+      "url": "https://oldschool.runescape.wiki/w/Bryophyta%27s_staff?oldid=15317782"
+    },
+    {
+      "content_sha256": "dbc37f8f7733144e360ec80ccf87ae4418d406f0124cc0ff17c2b5dd81f8296e",
+      "retrieved_at": "2026-09-01T13:15:03.728601Z",
+      "revision": "15322335",
+      "source_id": "osrs-wiki:10878:15322335",
+      "url": "https://oldschool.runescape.wiki/w/Maple_longbow?oldid=15322335"
+    },
+    {
+      "content_sha256": "1049fcd0bfd116e998a7ccf4e3085f4ad232a8698ad1b9e9e97bad49b2c15637",
+      "retrieved_at": "2026-09-01T13:14:42.186910Z",
+      "revision": "15237950",
+      "source_id": "osrs-wiki:13023:15237950",
+      "url": "https://oldschool.runescape.wiki/w/Tuna?oldid=15237950"
+    },
+    {
+      "content_sha256": "fed01df8f7e8b58a790f75dd07337430ec279977813779d34aa9d3995a7a2a96",
+      "retrieved_at": "2026-09-01T13:14:42.216778Z",
+      "revision": "15184071",
+      "source_id": "osrs-wiki:18978:15184071",
+      "url": "https://oldschool.runescape.wiki/w/Meat_pizza?oldid=15184071"
+    },
+    {
+      "content_sha256": "79a409819b48362e934d40928a334c32ae2cfaba6e757a1127f7087ec43ac523",
+      "retrieved_at": "2026-09-01T13:14:42.204961Z",
+      "revision": "15184112",
+      "source_id": "osrs-wiki:19539:15184112",
+      "url": "https://oldschool.runescape.wiki/w/Pumpkin?oldid=15184112"
+    },
+    {
+      "content_sha256": "4ad8e6bcc2c80b062a954022a692090effe0e8b71fed85b58554dfbd9c3dc89c",
+      "retrieved_at": "2026-09-01T13:14:42.194716Z",
+      "revision": "15184215",
+      "source_id": "osrs-wiki:20761:15184215",
+      "url": "https://oldschool.runescape.wiki/w/Easter_egg?oldid=15184215"
+    },
+    {
+      "content_sha256": "c0b02a717d09dc0632b0b93193b46217b6c8de7442bf92ab36bda71516ea60aa",
+      "retrieved_at": "2026-09-01T13:14:42.177862Z",
+      "revision": "15247717",
+      "source_id": "osrs-wiki:14416:15247717",
+      "url": "https://oldschool.runescape.wiki/w/Kebab?oldid=15247717"
+    },
+    {
+      "content_sha256": "ce146d79465e96be119e952f3c0e58fe92a0edfb58731f1abaa1ced62d5b325e",
+      "retrieved_at": "2026-09-01T13:14:42.179174Z",
+      "revision": "15320560",
+      "source_id": "osrs-wiki:16513:15320560",
+      "url": "https://oldschool.runescape.wiki/w/Energy_potion?oldid=15320560"
+    },
+    {
+      "content_sha256": "4f0f8e00b483184fd56597746aeaad5a0e9dd8ed304dd3fade6d403cd750aaf8",
+      "retrieved_at": "2026-09-01T13:14:42.184514Z",
+      "revision": "15304451",
+      "source_id": "osrs-wiki:11970:15304451",
+      "url": "https://oldschool.runescape.wiki/w/Wizard%27s_mind_bomb?oldid=15304451"
+    },
+    {
+      "content_sha256": "cd490b1cbe13e49d87b234b5335a846f2d02a92857b7a15999d868ca7b89f194",
+      "retrieved_at": "2026-09-01T10:59:19.366834Z",
+      "revision": "15274532",
+      "source_id": "osrs-wiki-combat-options",
+      "url": "https://oldschool.runescape.wiki/w/Combat_Options?oldid=15274532"
+    },
+    {
+      "content_sha256": "9aa129df4ad82f96ff1bfb3994ab5cdc6703b940346b56ba728558b5a81e9f99",
+      "retrieved_at": "2026-09-01T10:59:19.556365Z",
+      "revision": "15313313",
+      "source_id": "osrs-wiki-attack-speed",
+      "url": "https://oldschool.runescape.wiki/w/Attack_speed?oldid=15313313"
+    },
+    {
+      "content_sha256": "3a48f0efd98065131579d0799b63cc5e90cb1496c63baafb4a394974d9f3a26f",
+      "retrieved_at": "2026-09-01T11:38:27.496625Z",
+      "revision": "15183998",
+      "source_id": "osrs-wiki:18169:15183998",
+      "url": "https://oldschool.runescape.wiki/w/Strength_potion?oldid=15183998"
+    },
+    {
+      "content_sha256": "f9ddd817993fbf417118ee3548650573033181eb371c77f12b8e1e1fcad2f1c9",
+      "retrieved_at": "2026-09-01T11:38:27.678377Z",
+      "revision": "15214505",
+      "source_id": "osrs-wiki:35852:15214505",
+      "url": "https://oldschool.runescape.wiki/w/Temporary_skill_boost?oldid=15214505"
+    },
+    {
+      "content_sha256": "e429113b13b7cb3eaee11d76177ad4b6f8e412f666bedd37520d5b695a2b59a6",
+      "retrieved_at": "2026-09-01T11:38:27.861002Z",
+      "revision": "15315536",
+      "source_id": "osrs-wiki:28248:15315536",
+      "url": "https://oldschool.runescape.wiki/w/Potions?oldid=15315536"
+    },
+    {
+      "content_sha256": "8f7bb64258d0a471bf9bd83ba643d5148535b5c5a7f1cbfd24f6e0e7670ca99e",
+      "retrieved_at": "2026-09-01T11:57:00.644761Z",
+      "revision": "15327013",
+      "source_id": "osrs-wiki-prayer",
+      "url": "https://oldschool.runescape.wiki/w/Prayer?oldid=15327013"
+    },
+    {
+      "content_sha256": "c95e94256ffb7a43e1e09ed7fc59a152c428f83965ab6c8c1a22234f7cf4ca0d",
+      "retrieved_at": "2026-09-01T11:58:45.716094Z",
+      "revision": "15167522",
+      "source_id": "osrs-wiki:2086:15167522",
+      "url": "https://oldschool.runescape.wiki/w/Experience?oldid=15167522"
+    },
+    {
+      "content_sha256": "37e67216fac833b923ba8e3bf8af6597b3113dd015ab7760613f4a25bb788ec6",
+      "retrieved_at": "2026-09-01T11:58:45.900023Z",
+      "revision": "15285995",
+      "source_id": "osrs-wiki:11639:15285995",
+      "url": "https://oldschool.runescape.wiki/w/Hitpoints?oldid=15285995"
+    },
+    {
+      "content_sha256": "a318fb05cd29ff0d97fbdb2d6d5c9cf4c35d0f359e23850d08367f3d131f422e",
+      "retrieved_at": "2026-09-01T12:14:14.175744Z",
+      "revision": "15318342",
+      "source_id": "osrs-wiki:17119:15318342",
+      "url": "https://oldschool.runescape.wiki/w/Standard_spellbook?oldid=15318342"
+    },
+    {
+      "content_sha256": "872cec81f73fbae9c3950551aa563c2a09a250171b9056ff31b3ba00384021bb",
+      "retrieved_at": "2026-09-01T12:14:14.355239Z",
+      "revision": "15315801",
+      "source_id": "osrs-wiki:11374:15315801",
+      "url": "https://oldschool.runescape.wiki/w/Magic?oldid=15315801"
+    },
+    {
+      "content_sha256": "9663907110a4daa9cf97da3618058cc3070a3950c3828ca81f4df81132ee9a60",
+      "retrieved_at": "2026-09-01T12:14:14.543959Z",
+      "revision": "15165009",
+      "source_id": "osrs-wiki:19965:15165009",
+      "url": "https://oldschool.runescape.wiki/w/Bind?oldid=15165009"
+    },
+    {
+      "content_sha256": "020e803d8578d2791130dd2f6e4622b23ed9ff862c8014581e91b38db4238109",
+      "retrieved_at": "2026-09-01T12:14:14.731772Z",
+      "revision": "15175486",
+      "source_id": "osrs-wiki:19968:15175486",
+      "url": "https://oldschool.runescape.wiki/w/Snare?oldid=15175486"
+    },
+    {
+      "content_sha256": "08de4c2acaf6cd184b26172dbb1ef8c2153856c29c519d07c273601103891e1e",
+      "retrieved_at": "2026-09-01T12:14:24.044815Z",
+      "revision": "15321382",
+      "source_id": "osrs-wiki:269242:15321382",
+      "url": "https://oldschool.runescape.wiki/w/Damage_per_second/Magic?oldid=15321382"
+    },
+    {
+      "content_sha256": "b58c63ae10d224c8b813ca9ffc538ea58ffc1a6e14fe5c9aa7190ea9697d8e5d",
+      "retrieved_at": "2026-09-01T12:21:16.917891Z",
+      "revision": "15298303",
+      "source_id": "osrs-wiki:346655:15298303",
+      "url": "https://oldschool.runescape.wiki/w/Tithe_Farm/Strategies?oldid=15298303"
+    },
+    {
+      "content_sha256": "9b93a336fb29a257b1ff680527eae147b67925abf321affdc3bc8af2afcc2ba9",
+      "retrieved_at": "2026-09-01T13:42:44.857709Z",
+      "revision": "15320200",
+      "source_id": "osrs-wiki:10350:15320200",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_scimitar?oldid=15320200"
+    },
+    {
+      "content_sha256": "2d7ce739bd5cf82362fba04afb14acbbe942ea85d8ee056d5afc6a18979ceec0",
+      "retrieved_at": "2026-09-01T13:42:45.066736Z",
+      "revision": "15320139",
+      "source_id": "osrs-wiki:9900:15320139",
+      "url": "https://oldschool.runescape.wiki/w/Iron_scimitar?oldid=15320139"
+    },
+    {
+      "content_sha256": "ca43d3c3f6f10e44ac564a2fe40196870728c379423aa2c8a77cb6eb1a221a35",
+      "retrieved_at": "2026-09-01T13:42:45.253077Z",
+      "revision": "15182882",
+      "source_id": "osrs-wiki:10413:15182882",
+      "url": "https://oldschool.runescape.wiki/w/Steel_scimitar?oldid=15182882"
+    },
+    {
+      "content_sha256": "2394e82646b6d97e8873fde691639c8baa353d83b2be5fa9accd78d67cbc5729",
+      "retrieved_at": "2026-09-01T13:42:45.434225Z",
+      "revision": "15182628",
+      "source_id": "osrs-wiki:10044:15182628",
+      "url": "https://oldschool.runescape.wiki/w/Black_scimitar?oldid=15182628"
+    },
+    {
+      "content_sha256": "38f5c4ebb15ac1b2d11c037cedeb5417a4bd4f39c3ce850c7d2fa9bcc897bc18",
+      "retrieved_at": "2026-09-01T13:42:45.617445Z",
+      "revision": "15322372",
+      "source_id": "osrs-wiki:11821:15322372",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_scimitar?oldid=15322372"
+    },
+    {
+      "content_sha256": "c2700fde767c7a6e0ddbc10c8fe61cfb837408b905fe539bc14058b918b3b304",
+      "retrieved_at": "2026-09-01T13:35:44.619857Z",
+      "revision": "15242604",
+      "source_id": "osrs-wiki:10254:15242604",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_scimitar?oldid=15242604"
+    },
+    {
+      "content_sha256": "26f49524662aaa53c241d2c94ab6f93e5619ca0635be217aabcd3979ea517f9c",
+      "retrieved_at": "2026-09-01T13:42:46.074649Z",
+      "revision": "15320181",
+      "source_id": "osrs-wiki:10298:15320181",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_2h_sword?oldid=15320181"
+    },
+    {
+      "content_sha256": "2a9caa18d79b6e3f4d7efe8a58a6e03595555da7dd612f2ccd0a1cca86725a1b",
+      "retrieved_at": "2026-09-01T13:42:46.267365Z",
+      "revision": "15320140",
+      "source_id": "osrs-wiki:9902:15320140",
+      "url": "https://oldschool.runescape.wiki/w/Iron_2h_sword?oldid=15320140"
+    },
+    {
+      "content_sha256": "52fcc07dd2ba7f1009edf09b6bb9ce82bb9484b6356806b7e9e329d966600c14",
+      "retrieved_at": "2026-09-01T13:42:46.453404Z",
+      "revision": "15182874",
+      "source_id": "osrs-wiki:10403:15182874",
+      "url": "https://oldschool.runescape.wiki/w/Steel_2h_sword?oldid=15182874"
+    },
+    {
+      "content_sha256": "e6da1359773dcc9de0d357f80d5f81d497c90cbcb497605549b76251053a80f1",
+      "retrieved_at": "2026-09-01T13:42:46.636192Z",
+      "revision": "15182622",
+      "source_id": "osrs-wiki:10038:15182622",
+      "url": "https://oldschool.runescape.wiki/w/Black_2h_sword?oldid=15182622"
+    },
+    {
+      "content_sha256": "f152b578715872be758075e2ee8ddd3c985a997f6f56db54158e0331ee03458c",
+      "retrieved_at": "2026-09-01T13:42:46.846773Z",
+      "revision": "15182813",
+      "source_id": "osrs-wiki:10335:15182813",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_2h_sword?oldid=15182813"
+    },
+    {
+      "content_sha256": "c1c81dcd91b0e0a13d974476848f0ed20dbda6191286650d6f55b6974b239c39",
+      "retrieved_at": "2026-09-01T13:35:44.634630Z",
+      "revision": "15320166",
+      "source_id": "osrs-wiki:10216:15320166",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_2h_sword?oldid=15320166"
+    },
+    {
+      "content_sha256": "9a40bbb0e0d70776d6eed7869e8667f4653df0165609c15470cbba73ebdebd27",
+      "retrieved_at": "2026-09-01T13:42:47.036149Z",
+      "revision": "15182785",
+      "source_id": "osrs-wiki:10302:15182785",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_battleaxe?oldid=15182785"
+    },
+    {
+      "content_sha256": "cd436056399f3403107f181a423046d49b9393dd926d582e8455e9885cb8488b",
+      "retrieved_at": "2026-09-01T13:42:47.222056Z",
+      "revision": "15322721",
+      "source_id": "osrs-wiki:9898:15322721",
+      "url": "https://oldschool.runescape.wiki/w/Iron_battleaxe?oldid=15322721"
+    },
+    {
+      "content_sha256": "ba74653e6bc0dccdc685d736021c2a76f0bf264e77f888b7b253a190f3f8027f",
+      "retrieved_at": "2026-09-01T13:42:47.412078Z",
+      "revision": "15182575",
+      "source_id": "osrs-wiki:9928:15182575",
+      "url": "https://oldschool.runescape.wiki/w/Steel_battleaxe?oldid=15182575"
+    },
+    {
+      "content_sha256": "c2174466df3a46032f6df1b787212c5743fb64281a9af52b96e65ddb61ac2542",
+      "retrieved_at": "2026-09-01T13:42:47.607995Z",
+      "revision": "15182623",
+      "source_id": "osrs-wiki:10039:15182623",
+      "url": "https://oldschool.runescape.wiki/w/Black_battleaxe?oldid=15182623"
+    },
+    {
+      "content_sha256": "f9f9e3f9965fcb2975ba97eef29b0458a164c049db0cb841222bdbf8849b3b9a",
+      "retrieved_at": "2026-09-01T13:42:47.815340Z",
+      "revision": "15182816",
+      "source_id": "osrs-wiki:10338:15182816",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_battleaxe?oldid=15182816"
+    },
+    {
+      "content_sha256": "0ae59e63a3ab07b1c708166935afdf27291ff9205d33d33ffdfbac7106373c4b",
+      "retrieved_at": "2026-09-01T13:35:44.604548Z",
+      "revision": "15182711",
+      "source_id": "osrs-wiki:10218:15182711",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_battleaxe?oldid=15182711"
+    },
+    {
+      "content_sha256": "c83b8eedcf5c0df7491aff3346bbb1e0f57689edffdc1fc389bac8cb39a92207",
+      "retrieved_at": "2026-09-01T13:42:48.003849Z",
+      "revision": "15182846",
+      "source_id": "osrs-wiki:10369:15182846",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_warhammer?oldid=15182846"
+    },
+    {
+      "content_sha256": "a4ee0b8109e1f55ba3fb5a09d6309f9224ff2e10333103e748ce404c8fb6c82b",
+      "retrieved_at": "2026-09-01T13:42:48.205155Z",
+      "revision": "15320141",
+      "source_id": "osrs-wiki:9903:15320141",
+      "url": "https://oldschool.runescape.wiki/w/Iron_warhammer?oldid=15320141"
+    },
+    {
+      "content_sha256": "a7d7fdcb610804821bd3ff995296f7a971e5ab528ded8f04015cc72282978788",
+      "retrieved_at": "2026-09-01T13:42:48.392369Z",
+      "revision": "15274466",
+      "source_id": "osrs-wiki:10414:15274466",
+      "url": "https://oldschool.runescape.wiki/w/Steel_warhammer?oldid=15274466"
+    },
+    {
+      "content_sha256": "f87d93e142fcd75413e78d86416308bd64fdd457a7607bfc4ca9b8b629ac0a0d",
+      "retrieved_at": "2026-09-01T13:42:48.571147Z",
+      "revision": "15182620",
+      "source_id": "osrs-wiki:10036:15182620",
+      "url": "https://oldschool.runescape.wiki/w/Black_warhammer?oldid=15182620"
+    },
+    {
+      "content_sha256": "42066b2f206fb7f1ab178b8dd4fab737c0fd7cf14190e115a2a9babdd9222694",
+      "retrieved_at": "2026-09-01T13:42:48.764220Z",
+      "revision": "15182841",
+      "source_id": "osrs-wiki:10364:15182841",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_warhammer?oldid=15182841"
+    },
+    {
+      "content_sha256": "de07bfa3a18d9ff0e533ab414599394cab95f80c425fa77c1f281a26c1df8110",
+      "retrieved_at": "2026-09-01T13:35:44.605007Z",
+      "revision": "15320176",
+      "source_id": "osrs-wiki:10259:15320176",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_warhammer?oldid=15320176"
+    },
+    {
+      "content_sha256": "658d1effb0b134b8849f5d46a445d03dd95e9c6bd38c18099812a6754a546816",
+      "retrieved_at": "2026-09-01T13:42:48.944053Z",
+      "revision": "15182845",
+      "source_id": "osrs-wiki:10368:15182845",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_sword?oldid=15182845"
+    },
+    {
+      "content_sha256": "ac0bfd31c3fffa72908e3ef55efadfe6a9b52583e9e862cad9f2d88b29c286c6",
+      "retrieved_at": "2026-09-01T13:42:49.135577Z",
+      "revision": "15182554",
+      "source_id": "osrs-wiki:9901:15182554",
+      "url": "https://oldschool.runescape.wiki/w/Iron_sword?oldid=15182554"
+    },
+    {
+      "content_sha256": "0dfc905e91565336032c55c513b82d83214573252de5e50ad2928d379cd27771",
+      "retrieved_at": "2026-09-01T13:42:49.319452Z",
+      "revision": "15182573",
+      "source_id": "osrs-wiki:9925:15182573",
+      "url": "https://oldschool.runescape.wiki/w/Steel_sword?oldid=15182573"
+    },
+    {
+      "content_sha256": "07880f2ae1107aa996a34c67fc415b5657c404c25cb204999d8ba8d4674fcd20",
+      "retrieved_at": "2026-09-01T13:42:49.502649Z",
+      "revision": "15182621",
+      "source_id": "osrs-wiki:10037:15182621",
+      "url": "https://oldschool.runescape.wiki/w/Black_sword?oldid=15182621"
+    },
+    {
+      "content_sha256": "65fe4af17de89b84bd3713ae8657397cde97cad6b6a64493a0bb72b82c0b40f2",
+      "retrieved_at": "2026-09-01T13:42:49.688831Z",
+      "revision": "15182839",
+      "source_id": "osrs-wiki:10362:15182839",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_sword?oldid=15182839"
+    },
+    {
+      "content_sha256": "80915b027d6a66fb0f9565b342030d90b26a98f8cc01634665a41161b4dbefa8",
+      "retrieved_at": "2026-09-01T13:35:44.619641Z",
+      "revision": "15320175",
+      "source_id": "osrs-wiki:10257:15320175",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_sword?oldid=15320175"
+    },
+    {
+      "content_sha256": "a5625a1ca8fd5338e6fdf75ede4b76c21f4537a65b99954a63f32d25a60c611a",
+      "retrieved_at": "2026-09-01T13:42:49.888658Z",
+      "revision": "15182810",
+      "source_id": "osrs-wiki:10332:15182810",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_mace?oldid=15182810"
+    },
+    {
+      "content_sha256": "b6bbd35fd154ea59bcd7ebe7aa1f218b6d31d0fb47bf38c7822c8aa54724a416",
+      "retrieved_at": "2026-09-01T13:42:50.091364Z",
+      "revision": "15260423",
+      "source_id": "osrs-wiki:10327:15260423",
+      "url": "https://oldschool.runescape.wiki/w/Iron_mace?oldid=15260423"
+    },
+    {
+      "content_sha256": "304cd1317dfcd1dabbe53e3058b0deb3e88c10a4bef127349abbb5b1940732e0",
+      "retrieved_at": "2026-09-01T13:42:50.277275Z",
+      "revision": "15320154",
+      "source_id": "osrs-wiki:9924:15320154",
+      "url": "https://oldschool.runescape.wiki/w/Steel_mace?oldid=15320154"
+    },
+    {
+      "content_sha256": "4ae1009a7d720933eb87918ae88c1ddd41be371808b02985de783ba945905a2f",
+      "retrieved_at": "2026-09-01T13:42:50.470926Z",
+      "revision": "15182627",
+      "source_id": "osrs-wiki:10043:15182627",
+      "url": "https://oldschool.runescape.wiki/w/Black_mace?oldid=15182627"
+    },
+    {
+      "content_sha256": "534bbdb2c9a7a0b5788f6311549109c2d04e9227dab98fab6ad45866c300f8a7",
+      "retrieved_at": "2026-09-01T13:42:50.662163Z",
+      "revision": "15182831",
+      "source_id": "osrs-wiki:10354:15182831",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_mace?oldid=15182831"
+    },
+    {
+      "content_sha256": "bf2b5996913083f6af1c1f1383103b9d000fea228bbf24d489ed4412b8ab171d",
+      "retrieved_at": "2026-09-01T13:35:44.619824Z",
+      "revision": "15242605",
+      "source_id": "osrs-wiki:10243:15242605",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_mace?oldid=15242605"
+    },
+    {
+      "content_sha256": "763d9dcb7fc5b957aeb7200c3667a040e98dabbc617d408f136e56af29a1a0d5",
+      "retrieved_at": "2026-09-01T13:42:50.850238Z",
+      "revision": "15183214",
+      "source_id": "osrs-wiki:11066:15183214",
+      "url": "https://oldschool.runescape.wiki/w/Shortbow?oldid=15183214"
+    },
+    {
+      "content_sha256": "aed61841adfcf4867db631a9141d877363f7d2c5bcb2ad1a0944361c959630fe",
+      "retrieved_at": "2026-09-01T13:42:51.034465Z",
+      "revision": "15322390",
+      "source_id": "osrs-wiki:13814:15322390",
+      "url": "https://oldschool.runescape.wiki/w/Oak_shortbow?oldid=15322390"
+    },
+    {
+      "content_sha256": "39f0e703e6bce21fbc9796e19586c61c7552592d69617051f90427ed6a560d0a",
+      "retrieved_at": "2026-09-01T13:42:51.219566Z",
+      "revision": "15183273",
+      "source_id": "osrs-wiki:11202:15183273",
+      "url": "https://oldschool.runescape.wiki/w/Willow_shortbow?oldid=15183273"
+    },
+    {
+      "content_sha256": "88edb3e7c1cd148c99f74c3fa0e9234ee727db02f00b7d1d17ac9b05703f2106",
+      "retrieved_at": "2026-09-01T13:42:51.406758Z",
+      "revision": "15322388",
+      "source_id": "osrs-wiki:13813:15322388",
+      "url": "https://oldschool.runescape.wiki/w/Longbow?oldid=15322388"
+    },
+    {
+      "content_sha256": "5e7f041d7951c2340e03249a2d1bbcc60398e8a02c2ab17c26aea3372a099ff8",
+      "retrieved_at": "2026-09-01T13:42:51.589027Z",
+      "revision": "15322339",
+      "source_id": "osrs-wiki:10943:15322339",
+      "url": "https://oldschool.runescape.wiki/w/Oak_longbow?oldid=15322339"
+    },
+    {
+      "content_sha256": "24d6c5570f7d34cd66512d024603957e0890f227f1faf89c431c88200e172e15",
+      "retrieved_at": "2026-09-01T13:42:51.784021Z",
+      "revision": "15272114",
+      "source_id": "osrs-wiki:14336:15272114",
+      "url": "https://oldschool.runescape.wiki/w/Willow_longbow?oldid=15272114"
+    },
+    {
+      "content_sha256": "6d2d4ec3560592796fa9a034874cb4f83cbd5f442fabb25b19e85f3d5e801bc0",
+      "retrieved_at": "2026-09-01T13:35:44.619849Z",
+      "revision": "15265609",
+      "source_id": "osrs-wiki:9524:15265609",
+      "url": "https://oldschool.runescape.wiki/w/Crossbow?oldid=15265609"
+    },
+    {
+      "content_sha256": "a6069041f21388537680fa78c9743bc5d0adfbce68afb2140ff64e029aa1bf54",
+      "retrieved_at": "2026-09-01T13:28:15.187206Z",
+      "revision": "15301710",
+      "source_id": "osrs-wiki:10975:15301710",
+      "url": "https://oldschool.runescape.wiki/w/Phoenix_crossbow?oldid=15301710"
+    },
+    {
+      "content_sha256": "9636a3741bcccbb741bdefcc85889de2f0f9dd3e4d21a3776a82c9b49a3c6fe5",
+      "retrieved_at": "2026-09-01T13:28:15.267614Z",
+      "revision": "15323925",
+      "source_id": "osrs-wiki:13383:15323925",
+      "url": "https://oldschool.runescape.wiki/w/Willow_comp_bow?oldid=15323925"
+    },
+    {
+      "content_sha256": "1ecc77df1336aa4feb2061fa2daef4b98a2c519b5491ddb52d9bd7c9cef65e50",
+      "retrieved_at": "2026-09-01T13:42:51.973680Z",
+      "revision": "15182782",
+      "source_id": "osrs-wiki:10299:15182782",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_arrow?oldid=15182782"
+    },
+    {
+      "content_sha256": "a4e27b5798fdf350b3f19aa012e791fae0efcdafd837e1ae825e2c056f280464",
+      "retrieved_at": "2026-09-01T13:42:52.154658Z",
+      "revision": "15318131",
+      "source_id": "osrs-wiki:10312:15318131",
+      "url": "https://oldschool.runescape.wiki/w/Iron_arrow?oldid=15318131"
+    },
+    {
+      "content_sha256": "9f24dbfea12bc965932ea365804456347e7e07f7a4851176f59bc12d004b71f6",
+      "retrieved_at": "2026-09-01T13:42:52.332793Z",
+      "revision": "15182875",
+      "source_id": "osrs-wiki:10404:15182875",
+      "url": "https://oldschool.runescape.wiki/w/Steel_arrow?oldid=15182875"
+    },
+    {
+      "content_sha256": "879fa7e81991f57e296d003517001be83eec242559953097b5711ac01b5cf15f",
+      "retrieved_at": "2026-09-01T13:28:15.250180Z",
+      "revision": "15182814",
+      "source_id": "osrs-wiki:10336:15182814",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_arrow?oldid=15182814"
+    },
+    {
+      "content_sha256": "64df0a021af9f00cb36644adc052741d022bb12460a5418c3be68a7b1a081945",
+      "retrieved_at": "2026-09-01T13:28:15.264844Z",
+      "revision": "15301699",
+      "source_id": "osrs-wiki:9988:15301699",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_bolts?oldid=15301699"
+    },
+    {
+      "content_sha256": "72c6545d0caed25066c44b15a1ac07fda34a4b72d7854f3573b1ebf5a21e9ac0",
+      "retrieved_at": "2026-09-02T08:27:33.695989Z",
+      "revision": "15320135",
+      "source_id": "osrs-wiki:9878:15320135",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_full_helm?oldid=15320135"
+    },
+    {
+      "content_sha256": "1306092aae8e797abd6d1b4a4e279675a7da2aa416af4cd05285ebce02e44555",
+      "retrieved_at": "2026-09-02T08:27:33.890399Z",
+      "revision": "15182548",
+      "source_id": "osrs-wiki:9893:15182548",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_med_helm?oldid=15182548"
+    },
+    {
+      "content_sha256": "8893825bb28a8ad2b8cc613538eecedabbc5804da4488abb1d3b45cb184c7f55",
+      "retrieved_at": "2026-09-02T08:27:34.077950Z",
+      "revision": "15182541",
+      "source_id": "osrs-wiki:9885:15182541",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_platebody?oldid=15182541"
+    },
+    {
+      "content_sha256": "fb482d28b57a039bb26a226a5a6d1c6a871eab4bcc7ca20e559713a22c9f7241",
+      "retrieved_at": "2026-09-02T08:27:34.294124Z",
+      "revision": "15320183",
+      "source_id": "osrs-wiki:10304:15320183",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_chainbody?oldid=15320183"
+    },
+    {
+      "content_sha256": "f70535e74110d3d052d53f9146abae062a28aabb91c3ccbf9b87992159a7391c",
+      "retrieved_at": "2026-09-02T08:27:34.503784Z",
+      "revision": "15320189",
+      "source_id": "osrs-wiki:10337:15320189",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_platelegs?oldid=15320189"
+    },
+    {
+      "content_sha256": "1b8a82d8533d04f9ee6d00858f57ad18803321a12c23ade49187ca53dafe866d",
+      "retrieved_at": "2026-09-02T08:27:34.704604Z",
+      "revision": "15182542",
+      "source_id": "osrs-wiki:9886:15182542",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_plateskirt?oldid=15182542"
+    },
+    {
+      "content_sha256": "42c4426b5a06eae9b34d7fe3181a5c4fcd0283e11795d6a6ebdf121ac90f707a",
+      "retrieved_at": "2026-09-02T08:27:34.889988Z",
+      "revision": "15182543",
+      "source_id": "osrs-wiki:9887:15182543",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_kiteshield?oldid=15182543"
+    },
+    {
+      "content_sha256": "a5eee66b01ef1987dbd2dabf2fce6a346736b7df97185e6bae135cdf0ca20dc6",
+      "retrieved_at": "2026-09-02T08:27:35.094717Z",
+      "revision": "15320133",
+      "source_id": "osrs-wiki:9877:15320133",
+      "url": "https://oldschool.runescape.wiki/w/Bronze_sq_shield?oldid=15320133"
+    },
+    {
+      "content_sha256": "4c3634f6c31aedfa5fad8e54ebef094611ab9716afd8e0a54c2b33a9cd3bc716",
+      "retrieved_at": "2026-09-02T08:27:35.296764Z",
+      "revision": "15320185",
+      "source_id": "osrs-wiki:10319:15320185",
+      "url": "https://oldschool.runescape.wiki/w/Iron_full_helm?oldid=15320185"
+    },
+    {
+      "content_sha256": "22e60d621b182ead3724ef661e59a475214b841f898c32d238df77db4071ba53",
+      "retrieved_at": "2026-09-02T08:27:35.494508Z",
+      "revision": "15322424",
+      "source_id": "osrs-wiki:18436:15322424",
+      "url": "https://oldschool.runescape.wiki/w/Iron_med_helm?oldid=15322424"
+    },
+    {
+      "content_sha256": "113a1dd3feddd193adc3a26367bba01bc613015d9ff3b585e78320b0afb56fa4",
+      "retrieved_at": "2026-09-02T08:27:35.708155Z",
+      "revision": "15320146",
+      "source_id": "osrs-wiki:9911:15320146",
+      "url": "https://oldschool.runescape.wiki/w/Iron_platebody?oldid=15320146"
+    },
+    {
+      "content_sha256": "5727ab80ed609fb044706d7784191af420ebb652c90a5bb4b9204c086c99c110",
+      "retrieved_at": "2026-09-02T08:23:00.612499Z",
+      "revision": "15320142",
+      "source_id": "osrs-wiki:9906:15320142",
+      "url": "https://oldschool.runescape.wiki/w/Iron_chainbody?oldid=15320142"
+    },
+    {
+      "content_sha256": "29358a0504fa2b6120c5c1ff5eb546c73dfb51910ab9e7d8d167209cd8b762f2",
+      "retrieved_at": "2026-09-02T08:27:35.918863Z",
+      "revision": "15320186",
+      "source_id": "osrs-wiki:10328:15320186",
+      "url": "https://oldschool.runescape.wiki/w/Iron_platelegs?oldid=15320186"
+    },
+    {
+      "content_sha256": "088b7eaedaa8a7d0408e923586c8aa2b674bd4fa3013cf8073271eacd9f8f7fd",
+      "retrieved_at": "2026-09-02T08:27:36.102714Z",
+      "revision": "15320188",
+      "source_id": "osrs-wiki:10329:15320188",
+      "url": "https://oldschool.runescape.wiki/w/Iron_plateskirt?oldid=15320188"
+    },
+    {
+      "content_sha256": "aa6d3b4fc8457b04c29cde37b2e0142c4bb4d588217df6b51b3f90b1fdd8c255",
+      "retrieved_at": "2026-09-02T08:27:36.293972Z",
+      "revision": "15320145",
+      "source_id": "osrs-wiki:9907:15320145",
+      "url": "https://oldschool.runescape.wiki/w/Iron_kiteshield?oldid=15320145"
+    },
+    {
+      "content_sha256": "b1853e7aa5eb3a6aed0ae528e2f5dff1cf78d1e72d114c127d6a26778cd9adac",
+      "retrieved_at": "2026-09-02T08:27:36.500671Z",
+      "revision": "15182565",
+      "source_id": "osrs-wiki:9914:15182565",
+      "url": "https://oldschool.runescape.wiki/w/Iron_sq_shield?oldid=15182565"
+    },
+    {
+      "content_sha256": "f26076bbaa210062e2099c8800d74d45745ee22f2e5f74baa5f98dc692879477",
+      "retrieved_at": "2026-09-02T08:22:57.924522Z",
+      "revision": "15320156",
+      "source_id": "osrs-wiki:9937:15320156",
+      "url": "https://oldschool.runescape.wiki/w/Steel_full_helm?oldid=15320156"
+    },
+    {
+      "content_sha256": "9bb80c07f9dc9a8fc19eeedd920f7c6ae42723cea027c90286e5e4faa5ef45ad",
+      "retrieved_at": "2026-09-02T08:27:36.690021Z",
+      "revision": "15322425",
+      "source_id": "osrs-wiki:18437:15322425",
+      "url": "https://oldschool.runescape.wiki/w/Steel_med_helm?oldid=15322425"
+    },
+    {
+      "content_sha256": "309550f907689fba08a1d8f1ccfd601ebc7c88fb4cfad197b07eb39a74a55e04",
+      "retrieved_at": "2026-09-02T08:27:36.880749Z",
+      "revision": "15320258",
+      "source_id": "osrs-wiki:10411:15320258",
+      "url": "https://oldschool.runescape.wiki/w/Steel_platebody?oldid=15320258"
+    },
+    {
+      "content_sha256": "379436a1375e7a047273ed3f17ef02fd3b8c49757e6266850510a7c53bd6994a",
+      "retrieved_at": "2026-09-02T08:27:37.072599Z",
+      "revision": "15182585",
+      "source_id": "osrs-wiki:9938:15182585",
+      "url": "https://oldschool.runescape.wiki/w/Steel_chainbody?oldid=15182585"
+    },
+    {
+      "content_sha256": "3f83c089a5a72e835ed88ddbc09b07d6433efb9a09e2e03e8c394fc0e5c6e976",
+      "retrieved_at": "2026-09-02T08:27:37.277767Z",
+      "revision": "15320159",
+      "source_id": "osrs-wiki:9953:15320159",
+      "url": "https://oldschool.runescape.wiki/w/Steel_platelegs?oldid=15320159"
+    },
+    {
+      "content_sha256": "e4ee5645442e009a05aa381024cd5debf317edd8bfb934e270cdc1acd0c6d404",
+      "retrieved_at": "2026-09-02T08:27:37.477405Z",
+      "revision": "15320261",
+      "source_id": "osrs-wiki:10412:15320261",
+      "url": "https://oldschool.runescape.wiki/w/Steel_plateskirt?oldid=15320261"
+    },
+    {
+      "content_sha256": "a9273f876511c980236e7e4462d1f1eb0a27108bb82ada097f08eed289d03f5f",
+      "retrieved_at": "2026-09-02T08:27:37.684239Z",
+      "revision": "15320256",
+      "source_id": "osrs-wiki:10410:15320256",
+      "url": "https://oldschool.runescape.wiki/w/Steel_kiteshield?oldid=15320256"
+    },
+    {
+      "content_sha256": "d450e5bbd22be41ffe3f34e13167709ef63b44f24a4fb52557dd50bc5d225163",
+      "retrieved_at": "2026-09-02T08:27:37.894348Z",
+      "revision": "15320157",
+      "source_id": "osrs-wiki:9941:15320157",
+      "url": "https://oldschool.runescape.wiki/w/Steel_sq_shield?oldid=15320157"
+    },
+    {
+      "content_sha256": "4d4d020a40928e32b1be3638cb3bb0e8d045fdf01d511d828aabce42584c498a",
+      "retrieved_at": "2026-09-02T08:27:38.083732Z",
+      "revision": "15183647",
+      "source_id": "osrs-wiki:14883:15183647",
+      "url": "https://oldschool.runescape.wiki/w/Black_full_helm?oldid=15183647"
+    },
+    {
+      "content_sha256": "3f14bdf32fe5d926c7c9403028d4ee8c6e2d08167397c9c9d10851d752ad1bb6",
+      "retrieved_at": "2026-09-02T08:27:38.296765Z",
+      "revision": "15326251",
+      "source_id": "osrs-wiki:13892:15326251",
+      "url": "https://oldschool.runescape.wiki/w/Black_med_helm?oldid=15326251"
+    },
+    {
+      "content_sha256": "69d06da4ce90855dc279d16afc6a52301c00f2ef194078d5c1021b16a980cbc9",
+      "retrieved_at": "2026-09-02T08:27:38.482369Z",
+      "revision": "15322398",
+      "source_id": "osrs-wiki:14690:15322398",
+      "url": "https://oldschool.runescape.wiki/w/Black_platebody?oldid=15322398"
+    },
+    {
+      "content_sha256": "43c3f4b7b708928a7367c0aa412487a12da6fd23e6cd5c3d8ef8817bcfcbbb28",
+      "retrieved_at": "2026-09-02T08:27:38.667140Z",
+      "revision": "15182608",
+      "source_id": "osrs-wiki:9998:15182608",
+      "url": "https://oldschool.runescape.wiki/w/Black_chainbody?oldid=15182608"
+    },
+    {
+      "content_sha256": "efa267a39c098efa6dc8b7d0f44e105b2f1d573aa4a9c0f3b8c7e14e8540dc80",
+      "retrieved_at": "2026-09-02T08:27:38.894446Z",
+      "revision": "15211048",
+      "source_id": "osrs-wiki:11897:15211048",
+      "url": "https://oldschool.runescape.wiki/w/Black_platelegs?oldid=15211048"
+    },
+    {
+      "content_sha256": "3522d1e3a68cc3cd95ff9570db1a0c312bc5dac1a801636556e1af51ed5e973d",
+      "retrieved_at": "2026-09-02T08:27:39.095912Z",
+      "revision": "15182610",
+      "source_id": "osrs-wiki:10004:15182610",
+      "url": "https://oldschool.runescape.wiki/w/Black_plateskirt?oldid=15182610"
+    },
+    {
+      "content_sha256": "ab6aea696da21d8b5607e5d78e24d6300b65be3081114b184c651ab7b5bd1844",
+      "retrieved_at": "2026-09-02T08:27:39.271917Z",
+      "revision": "15182605",
+      "source_id": "osrs-wiki:9995:15182605",
+      "url": "https://oldschool.runescape.wiki/w/Black_kiteshield?oldid=15182605"
+    },
+    {
+      "content_sha256": "333a40aefe8ce994d599fe3e565b03ae6cc517025c1dabb3f8ce7c3d2961a82f",
+      "retrieved_at": "2026-09-02T08:27:39.460224Z",
+      "revision": "15184221",
+      "source_id": "osrs-wiki:20970:15184221",
+      "url": "https://oldschool.runescape.wiki/w/Black_sq_shield?oldid=15184221"
+    },
+    {
+      "content_sha256": "68f704c0147219ca9398bd95a9a0e6c94b8be4d6b308d52e6a5954bdaabd99ab",
+      "retrieved_at": "2026-09-02T08:27:39.641718Z",
+      "revision": "15320197",
+      "source_id": "osrs-wiki:10344:15320197",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_full_helm?oldid=15320197"
+    },
+    {
+      "content_sha256": "91cab781717a08c5f1ade3578de90f2bb9e2a55496b328f2cfd13e794d7ebac2",
+      "retrieved_at": "2026-09-02T08:27:39.823376Z",
+      "revision": "15320198",
+      "source_id": "osrs-wiki:10348:15320198",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_med_helm?oldid=15320198"
+    },
+    {
+      "content_sha256": "6f8388ccd1bf5bb56c8011d0395419165063519c7cb2ac3c09b8bb93681ba8be",
+      "retrieved_at": "2026-09-02T08:27:40.006416Z",
+      "revision": "15320204",
+      "source_id": "osrs-wiki:10357:15320204",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_platebody?oldid=15320204"
+    },
+    {
+      "content_sha256": "dd93945093cd1eaa83b79b8d2e91549666b4573df52e53c974502abac2c01a92",
+      "retrieved_at": "2026-09-02T08:27:40.205850Z",
+      "revision": "15320194",
+      "source_id": "osrs-wiki:10341:15320194",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_chainbody?oldid=15320194"
+    },
+    {
+      "content_sha256": "05cc4cf3eae8a1d9044bbe16ed4c8782db6419d2501a9d6f1e33e1384e22cf54",
+      "retrieved_at": "2026-09-02T08:27:40.400330Z",
+      "revision": "15320205",
+      "source_id": "osrs-wiki:10358:15320205",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_platelegs?oldid=15320205"
+    },
+    {
+      "content_sha256": "500ab84899d90a45f4721c292ef653d434416c43ea1f7b8e2dd5a2efa80166e3",
+      "retrieved_at": "2026-09-02T08:27:40.585923Z",
+      "revision": "15320206",
+      "source_id": "osrs-wiki:10359:15320206",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_plateskirt?oldid=15320206"
+    },
+    {
+      "content_sha256": "abb147c15c472e12d8fb97ae043aaf78236c00334f9bfe44072e187656b5c67f",
+      "retrieved_at": "2026-09-02T08:27:40.777407Z",
+      "revision": "15182828",
+      "source_id": "osrs-wiki:10351:15182828",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_kiteshield?oldid=15182828"
+    },
+    {
+      "content_sha256": "4b9f6fa5a2a2e122de73e02501be69273fc7bfaef3dacc9e36b6c395966e02a1",
+      "retrieved_at": "2026-09-02T08:27:40.971702Z",
+      "revision": "15182838",
+      "source_id": "osrs-wiki:10361:15182838",
+      "url": "https://oldschool.runescape.wiki/w/Mithril_sq_shield?oldid=15182838"
+    },
+    {
+      "content_sha256": "e6c8a777829a31273bb22204546d14147bba4da8f67e45d95ac1f30b087b78ee",
+      "retrieved_at": "2026-09-02T08:27:41.195185Z",
+      "revision": "15320169",
+      "source_id": "osrs-wiki:10230:15320169",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_full_helm?oldid=15320169"
+    },
+    {
+      "content_sha256": "3dda56055c245636dccb557f7d9b143529fc1ec0bf0d4c27c36f6f11f91a2934",
+      "retrieved_at": "2026-09-02T08:27:41.385114Z",
+      "revision": "15322410",
+      "source_id": "osrs-wiki:15752:15322410",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_med_helm?oldid=15322410"
+    },
+    {
+      "content_sha256": "7e4e4fdd679fd8461de364c0e4588e9c1722e67e1b0e731540703e3618ac4ffa",
+      "retrieved_at": "2026-09-02T08:27:41.587620Z",
+      "revision": "15320171",
+      "source_id": "osrs-wiki:10245:15320171",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_platebody?oldid=15320171"
+    },
+    {
+      "content_sha256": "ea58efaf3fdc130f72cbe114b17cdff9815239fd904ed22d933990b8c2f105af",
+      "retrieved_at": "2026-09-02T08:27:41.796105Z",
+      "revision": "15182714",
+      "source_id": "osrs-wiki:10221:15182714",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_chainbody?oldid=15182714"
+    },
+    {
+      "content_sha256": "9cd7f143d6d13a084156762362ae4cab055adfed90cc3c5dbded5a9955efdc9a",
+      "retrieved_at": "2026-09-02T08:27:41.981523Z",
+      "revision": "15320172",
+      "source_id": "osrs-wiki:10248:15320172",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_platelegs?oldid=15320172"
+    },
+    {
+      "content_sha256": "012d348ce81f99a1448a0e8be2096a0901f61d3b02f00089fd980b636713d96d",
+      "retrieved_at": "2026-09-02T08:23:01.640849Z",
+      "revision": "15320173",
+      "source_id": "osrs-wiki:10250:15320173",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_plateskirt?oldid=15320173"
+    },
+    {
+      "content_sha256": "a6700744db5dd534567a536669bf9b178975f8f18eba290c5791ec70e327e5d2",
+      "retrieved_at": "2026-09-02T08:27:42.164417Z",
+      "revision": "15182727",
+      "source_id": "osrs-wiki:10237:15182727",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_kiteshield?oldid=15182727"
+    },
+    {
+      "content_sha256": "98d1b69ac030deeab2b1b162cced29c8d26f72b843ca08cf45f22635391e745e",
+      "retrieved_at": "2026-09-02T08:27:42.354109Z",
+      "revision": "15320174",
+      "source_id": "osrs-wiki:10256:15320174",
+      "url": "https://oldschool.runescape.wiki/w/Adamant_sq_shield?oldid=15320174"
+    },
+    {
+      "content_sha256": "77c04a68cda9b27ef095cb7a3f6aac4ef904cafcd6acee42b0131cf39cd3f88c",
+      "retrieved_at": "2026-09-02T08:27:42.538135Z",
+      "revision": "15320214",
+      "source_id": "osrs-wiki:10375:15320214",
+      "url": "https://oldschool.runescape.wiki/w/Rune_full_helm?oldid=15320214"
+    },
+    {
+      "content_sha256": "e322f23a4ad04b1bdd524f6d235bf61364e9e265f780078056863bb6e0a21982",
+      "retrieved_at": "2026-09-02T08:27:42.720879Z",
+      "revision": "15182856",
+      "source_id": "osrs-wiki:10380:15182856",
+      "url": "https://oldschool.runescape.wiki/w/Rune_med_helm?oldid=15182856"
+    },
+    {
+      "content_sha256": "549c3935cba15c102d8d8eef6ba31b40bc35615cd6b668c54d5f651b0735d83c",
+      "retrieved_at": "2026-09-02T08:22:57.430159Z",
+      "revision": "15320225",
+      "source_id": "osrs-wiki:10389:15320225",
+      "url": "https://oldschool.runescape.wiki/w/Rune_platebody?oldid=15320225"
+    },
+    {
+      "content_sha256": "9cbb46925a838e716467475c996273b02ade7c93b531f3a1823c0e655a752f9b",
+      "retrieved_at": "2026-09-02T08:27:42.921464Z",
+      "revision": "15182848",
+      "source_id": "osrs-wiki:10371:15182848",
+      "url": "https://oldschool.runescape.wiki/w/Rune_chainbody?oldid=15182848"
+    },
+    {
+      "content_sha256": "3c11827e83352bbd6c431365e704a14a52d69be677182388abe716db917e0bf5",
+      "retrieved_at": "2026-09-02T08:27:43.104257Z",
+      "revision": "15320226",
+      "source_id": "osrs-wiki:10392:15320226",
+      "url": "https://oldschool.runescape.wiki/w/Rune_platelegs?oldid=15320226"
+    },
+    {
+      "content_sha256": "3fb75360e1d27423b521dfbbb21cb5aabd58de464c31baab951478974bbc3bf1",
+      "retrieved_at": "2026-09-02T08:27:43.284913Z",
+      "revision": "15320228",
+      "source_id": "osrs-wiki:10398:15320228",
+      "url": "https://oldschool.runescape.wiki/w/Rune_plateskirt?oldid=15320228"
+    },
+    {
+      "content_sha256": "27b6a51d0a695fcc8b19ad514a49a42ad36632108ad20d804392011c4098fd0e",
+      "retrieved_at": "2026-09-02T08:22:59.523209Z",
+      "revision": "15320217",
+      "source_id": "osrs-wiki:10382:15320217",
+      "url": "https://oldschool.runescape.wiki/w/Rune_kiteshield?oldid=15320217"
+    },
+    {
+      "content_sha256": "81ab9f16df7cd924c84022a1d2cc3fd9941a4966dc8c1782edafbc4e8c682d2d",
+      "retrieved_at": "2026-09-02T08:27:43.481183Z",
+      "revision": "15183473",
+      "source_id": "osrs-wiki:12905:15183473",
+      "url": "https://oldschool.runescape.wiki/w/Rune_sq_shield?oldid=15183473"
+    },
+    {
+      "content_sha256": "7e24939cd196e6d1063cc788248dfd68bb4c918cb8eac115727f88849fe70875",
+      "retrieved_at": "2026-09-02T08:23:00.090806Z",
+      "revision": "15322419",
+      "source_id": "osrs-wiki:17104:15322419",
+      "url": "https://oldschool.runescape.wiki/w/Hardleather_body?oldid=15322419"
+    },
+    {
+      "content_sha256": "5123f8973b956f65a665210cecde548ff36b0580c0c7a6a22c406978fcff5946",
+      "retrieved_at": "2026-09-02T08:22:58.428164Z",
+      "revision": "15322400",
+      "source_id": "osrs-wiki:14770:15322400",
+      "url": "https://oldschool.runescape.wiki/w/Studded_body?oldid=15322400"
+    },
+    {
+      "content_sha256": "235348ed81373f7911901080201ebd3322ad5598bd19da8cd587c3e50a0c82ba",
+      "retrieved_at": "2026-09-02T08:27:43.670154Z",
+      "revision": "15322369",
+      "source_id": "osrs-wiki:11524:15322369",
+      "url": "https://oldschool.runescape.wiki/w/Studded_chaps?oldid=15322369"
+    },
+    {
+      "content_sha256": "f8ffa36a659837e26dd37ae56bf95e2b89fd09b9b54b849936b120a6ec4e49a8",
+      "retrieved_at": "2026-09-02T08:22:58.931237Z",
+      "revision": "15322330",
+      "source_id": "osrs-wiki:10687:15322330",
+      "url": "https://oldschool.runescape.wiki/w/Green_d%27hide_body?oldid=15322330"
+    },
+    {
+      "content_sha256": "203561a8226ddb8b334c9e68719ba2a878c8c485622293d5febff76b1a75adb6",
+      "retrieved_at": "2026-09-02T08:23:01.131341Z",
+      "revision": "15322368",
+      "source_id": "osrs-wiki:11394:15322368",
+      "url": "https://oldschool.runescape.wiki/w/Leather_cowl?oldid=15322368"
+    },
+    {
+      "content_sha256": "f70a16f3ff6d0faf54ceb29d97fad7b31e309db9407e172fc9fa95f92e404825",
+      "retrieved_at": "2026-09-02T08:27:43.870152Z",
+      "revision": "15322396",
+      "source_id": "osrs-wiki:14000:15322396",
+      "url": "https://oldschool.runescape.wiki/w/Leather_gloves?oldid=15322396"
+    },
+    {
+      "content_sha256": "e0fe1fe48d4aee70ce1f045a67678ca3601f54561bfcb8e841acafa5261896dd",
+      "retrieved_at": "2026-09-01T13:28:15.206179Z",
+      "revision": "15322362",
+      "source_id": "osrs-wiki:11108:15322362",
+      "url": "https://oldschool.runescape.wiki/w/Staff_of_water?oldid=15322362"
+    },
+    {
+      "content_sha256": "9163cf386c52149098b7957f5d29311558bb517837e6174ed1d497abf921abef",
+      "retrieved_at": "2026-09-01T13:28:15.200318Z",
+      "revision": "15183241",
+      "source_id": "osrs-wiki:11103:15183241",
+      "url": "https://oldschool.runescape.wiki/w/Staff_of_earth?oldid=15183241"
+    },
+    {
+      "content_sha256": "159a35cd8b7172fbeb21b760319142db27d8e399affeb65e25a18e79b8f3f990",
+      "retrieved_at": "2026-09-01T13:28:15.275914Z",
+      "revision": "15274561",
+      "source_id": "osrs-wiki:11105:15274561",
+      "url": "https://oldschool.runescape.wiki/w/Staff_of_fire?oldid=15274561"
+    }
+  ]
+}

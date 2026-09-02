@@ -1,0 +1,10 @@
+{
+  "content": "{{Infobox Item\n|name = Ham joint\n|image = [[File:Ham joint.png]]\n|release = [[11 April]] [[2019]]\n|update = Treasure Trails Expansion and Easter 2019\n|members = No\n|quest = No\n|tradeable = Yes\n|equipable = Yes\n|stackable = No\n|noteable = Yes\n|options = Wield, Drop\n|examine = A delicious joint of ham.\n|value = 1500\n|weight = 2.000\n|exchange = Yes\n|id = 23360\n|leagueRegion = General\n}}\n[[File:Ham joint detail.png|left|130px]]\nThe '''Ham joint''' is a [[Weapon_slot_table|one-handed weapon]] that is obtained as a rare reward from [[Clue scroll (easy)|easy]] [[Treasure Trails]].\n\nIt is one of only four [[melee]] weapons with an [[attack speed]] of 3, with the other ones being the [[swift blade]], [[goblin paint cannon]], and [[mystic cards]], with the latter two also being two handed weapons only. The swift blade also exclusively uses [[Stab]] and [[Slash]] attack styles whereas the others use [[Crush]], and the mystic cards have negative combat stat bonuses whereas the others have no bonuses.\n\n{{Costume storage|treasure chest|tier=easy}}\n\n==Combat stats==\n{{Infobox Bonuses\n|astab = 0\n|aslash = 0\n|acrush = 0\n|amagic = 0\n|arange = 0\n|dstab = 0\n|dslash = 0\n|dcrush = 0\n|dmagic = 0\n|drange = 0\n|str = 0\n|rstr = 0\n|mdmg = 0\n|prayer = 0\n|slot = weapon\n|speed = 3\n|attackrange = 1\n|combatstyle = Blunt\n|image = [[File:Ham joint equipped.png|150px]]\n|altimage = [[File:Ham joint equipped female.png|150px]]\n}}\n\n{{CombatStyles|Blunt|speed=3|attackrange=1}}\n\n==Item sources==\n{{Drop sources|Ham joint}}\n\n{{Easy clue rewards}}\n[[Category:Items storable in the costume room]]\n[[Category:Collection log items]]",
+  "content_sha256": "7d5a97664feed4d2975ce364cc45dcd944a1b381912cd0a7cf581361a6f4d2e5",
+  "retrieved_at": "2026-09-01T13:15:03.731106Z",
+  "revision": "15323943",
+  "source_id": "osrs-wiki:214270:15323943",
+  "source_timestamp": "2026-08-28T21:34:35Z",
+  "title": "Ham joint",
+  "url": "https://oldschool.runescape.wiki/w/Ham_joint?oldid=15323943"
+}
