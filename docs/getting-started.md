@@ -13,7 +13,7 @@ Three ways in, from easiest to most involved. Pick the one that matches what you
 The viewer (PureLab) is a browser app that loads the ranked builds and knockout kits for one combat level, lets you filter and sort them, and explains every number. The datasets are downloaded from the GitHub release, so you do not need Rust or the pipeline for this.
 
 ```bash
-git clone https://github.com/Davidmycodeguy/pure.git
+git clone https://github.com/Davidmycodeguy/osrs-pure-pvp-solver.git
 cd pure/viewer
 npm ci
 python scripts/fetch_data.py        # ~56 MB of gzipped datasets from the GitHub release

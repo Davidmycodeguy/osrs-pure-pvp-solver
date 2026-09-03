@@ -29,11 +29,11 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
-REPOSITORY = "Davidmycodeguy/pure"
+REPOSITORY = "Davidmycodeguy/osrs-pure-pvp-solver"
 DEFAULT_TAG = "data-2026-09-02"
 API_ROOT = "https://api.github.com"
 DATA_DIR = Path(__file__).resolve().parents[1] / "public" / "data"
-USER_AGENT = "purelab-fetch-data/1.0 (+https://github.com/Davidmycodeguy/pure)"
+USER_AGENT = "purelab-fetch-data/1.0 (+https://github.com/Davidmycodeguy/osrs-pure-pvp-solver)"
 CHUNK_BYTES = 1 << 20
 
 

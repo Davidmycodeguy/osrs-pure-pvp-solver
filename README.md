@@ -1,15 +1,20 @@
-# PureLab
+# OSRS F2P Pure PvP Build Solver
 
-[![CI](https://github.com/Davidmycodeguy/pure/actions/workflows/ci.yml/badge.svg)](https://github.com/Davidmycodeguy/pure/actions/workflows/ci.yml)
+[![CI](https://github.com/Davidmycodeguy/osrs-pure-pvp-solver/actions/workflows/ci.yml/badge.svg)](https://github.com/Davidmycodeguy/osrs-pure-pvp-solver/actions/workflows/ci.yml)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 ![Rust](https://img.shields.io/badge/rust-2021-orange)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 
-**Free-to-play PvP in Old School RuneScape, at combat level 30 or 40. Which pure build wins the most fights?**
+**What is the mathematically best free-to-play pure build for PvP in Old School RuneScape at combat level 30 or 40? This computes the answer with exact combat math, and is built to grow into a reinforcement-learning agent that proves it in real fights.**
 
-I wanted to win more F2P fights at combat level 30 and 40, and every guide just repeats whichever build is popular. So I did the math instead. This project takes every item, every skill-level split, every attack style and every inventory a pure at that combat level can legally use, runs each one through the same fight math the game uses against a panel of opponents, and ranks the lot. The output is a ranked list of builds, a ranked list of knockout kits, and a browser app for digging through them.
+Every guide just repeats whichever build is popular. This does the math instead: it takes every item, every skill-level split, every attack style and every inventory a pure at that combat level can legally use, runs each one through the same fight math the game uses against a panel of opponents, and ranks the lot. The output is a ranked list of builds, a ranked list of knockout kits, and a browser app (PureLab) for digging through them.
 
-The short answer, for fights against real people: a low-Attack, high-Strength shortbow pure carrying a Rune warhammer switch and a Strength potion. The rest of this page is why, and what the model still gets wrong.
+The project runs in two phases:
+
+1. **Exact math, built now.** Closed-form probability arithmetic, not dice rolls, ranks every legal build and knockout kit. Every hit is a full damage distribution, combos are convolved exactly, and every rerun is byte-identical. This is what the repository does today.
+2. **Reinforcement-learning validation, the goal.** The math assumes both players play perfectly, which real fights are not. The headline roadmap item is to play the top builds against each other on a private OSRS server and train a reinforcement-learning agent on each side, starting from [osrs-pvp-reinforcement-learning](https://github.com/Naton1/osrs-pvp-reinforcement-learning), to measure which builds actually win and where the closed-form model is wrong.
+
+The short answer today, for fights against real people: a low-Attack, high-Strength shortbow pure carrying a Rune warhammer switch and a Strength potion. The rest of this page is why, and what the model still gets wrong.
 
 ![PureLab viewer: ranked knockout kits at combat level 40](docs/screenshots/kits-view.png)
 
@@ -115,7 +120,7 @@ The attrition winner has no way to punish anything, so against a human it wins o
 The viewer is a browser app that loads the ranked builds and knockout kits for one combat level, lets you filter, sort and pick columns, and explains every number in a glossary. It downloads the datasets from the GitHub release, so it needs Node 22.13+ and Python 3.11+ but not Rust.
 
 ```bash
-git clone https://github.com/Davidmycodeguy/pure.git
+git clone https://github.com/Davidmycodeguy/osrs-pure-pvp-solver.git
 cd pure/viewer
 npm ci
 python scripts/fetch_data.py        # ~56 MB of gzipped datasets from the GitHub release

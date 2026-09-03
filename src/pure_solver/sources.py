@@ -16,7 +16,7 @@ from typing import Any
 from .errors import DataUnavailableError
 
 WIKI_API = "https://oldschool.runescape.wiki/api.php"
-USER_AGENT = "osrs-f2p-pure-solver/0.1.0 (+https://github.com/Davidmycodeguy/pure)"
+USER_AGENT = "osrs-f2p-pure-solver/0.1.0 (+https://github.com/Davidmycodeguy/osrs-pure-pvp-solver)"
 
 
 def fetch_wiki_revision(title: str, timeout_seconds: int = 30) -> dict[str, Any]:

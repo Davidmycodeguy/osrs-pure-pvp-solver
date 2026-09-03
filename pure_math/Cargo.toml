@@ -3,7 +3,7 @@ name = "pure_math"
 version = "0.1.0"
 edition = "2021"
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/Davidmycodeguy/pure"
+repository = "https://github.com/Davidmycodeguy/osrs-pure-pvp-solver"
 description = "Exact OSRS F2P combat math for the pure solver: formula evaluation, account/gear enumeration, kit ranking."
 
 [lib]
