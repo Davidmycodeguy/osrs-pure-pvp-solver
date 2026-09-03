@@ -45,6 +45,16 @@ def fetch_wiki_revision(title: str, timeout_seconds: int = 30) -> dict[str, Any]
     content = revision.get("slots", {}).get("main", {}).get("*")
     if not isinstance(content, str):
         raise DataUnavailableError(f"OSRS Wiki revision for {title!r} had no readable main content")
+    return _source_record(page, revision, content)
+
+
+def _revision_url(page: dict, revision: dict) -> str:
+    """Permanent link to one OSRS Wiki revision."""
+    title = urllib.parse.quote(page["title"].replace(" ", "_"))
+    return f"https://oldschool.runescape.wiki/w/{title}?oldid={revision['revid']}"
+
+
+def _source_record(page: dict, revision: dict, content: str) -> dict[str, Any]:
     return {
         "source_id": f"osrs-wiki:{page['pageid']}:{revision['revid']}",
         "title": page["title"],
@@ -55,12 +65,6 @@ def fetch_wiki_revision(title: str, timeout_seconds: int = 30) -> dict[str, Any]
         "content_sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
         "content": content,
     }
-
-
-def _revision_url(page: dict, revision: dict) -> str:
-    """Permanent link to one OSRS Wiki revision."""
-    title = urllib.parse.quote(page["title"].replace(" ", "_"))
-    return f"https://oldschool.runescape.wiki/w/{title}?oldid={revision['revid']}"
 
 
 def fetch_wiki_search_revisions(
@@ -103,16 +107,7 @@ def fetch_wiki_search_revisions(
             content = revision.get("slots", {}).get("main", {}).get("*")
             if not isinstance(content, str):
                 continue
-            yield {
-                "source_id": f"osrs-wiki:{page['pageid']}:{revision['revid']}",
-                "title": page["title"],
-                "url": _revision_url(page, revision),
-                "revision": str(revision["revid"]),
-                "retrieved_at": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
-                "source_timestamp": revision["timestamp"],
-                "content_sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
-                "content": content,
-            }
+            yield _source_record(page, revision, content)
             emitted += 1
             if maximum_records is not None and emitted >= maximum_records:
                 return

@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import json
 from dataclasses import replace
+from pathlib import Path
 
 from ..item_verification import build_wiki_trusted_item_documents
 from ..ruleset import Ruleset
@@ -12,6 +14,14 @@ from ..ruleset import Ruleset
 SubcommandGroup = argparse._SubParsersAction
 
 ACCOUNT_MODES = ("f2p_standard_training", "independent_hp")
+
+
+def read_json_document(path: Path, description: str) -> object:
+    """Parse a JSON file, raising a ``ValueError`` describing ``description`` if it cannot be read."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError) as error:
+        raise ValueError(f"Cannot read {description} {path}") from error
 
 
 def add_level_range(parser: argparse.ArgumentParser, name: str, *, minimum: int, maximum: int) -> None:

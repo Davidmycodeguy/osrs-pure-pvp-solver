@@ -28,8 +28,6 @@ class FighterState:
     max_hp: int
     attack_ready_tick: int = 0
     eat_ready_tick: int = 0
-    equipment_id: str = ""
-    inventory_id: str = ""
 
     def with_damage(self, damage: int) -> FighterState:
         return replace(self, hp=self.hp - damage)
@@ -43,8 +41,6 @@ class PendingDamage:
     target: str = field(compare=False)
     amount: int = field(compare=False)
     creation_tick: int = field(compare=False)
-    damage_type: str = field(compare=False, default="untyped")
-    metadata: tuple[tuple[str, str], ...] = field(compare=False, default=())
 
 
 @dataclass(frozen=True)

@@ -8,10 +8,11 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from fractions import Fraction
 from math import floor
+from numbers import Number
 
 from .errors import DataUnavailableError, VerifiedMechanicMissingError
 from .evaluation import DamageDistribution
-from .mechanics import MechanicRegistry
+from .mechanics import Mechanic, MechanicRegistry
 
 
 def _integer(value: int | Fraction, label: str) -> int:
@@ -167,12 +168,11 @@ def _player_defence_roll(mechanics: MechanicRegistry, target: TargetDefence) -> 
     )
 
 
-def build_melee_profile(
+def _melee_rolls(
     mechanics: MechanicRegistry,
     attacker: MeleeProfileInput,
     target: TargetDefence,
-) -> AttackProfile:
-    attacker.timing.validate()
+) -> tuple[int, int, Number, int, Mechanic, tuple[str, ...]]:
     effective_attack = mechanics.evaluate(
         "melee.effective_attack",
         {
@@ -233,30 +233,14 @@ def build_melee_profile(
             "damage.player_successful_zero_to_one",
         )
     )
-    return AttackProfile(
-        attacker.weapon_id,
-        attacker.attack_type,
-        attack_roll,
-        defence_roll,
-        Fraction(accuracy),
-        max_hit,
-        attacker.timing,
-        bool(zero_rule.value),
-        versions,
-        DynamicMeleeDamage(
-            attacker.strength_bonus,
-            attacker.strength_prayer_multiplier,
-            attacker.strength_style_bonus,
-        ),
-    )
+    return attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions
 
 
-def build_ranged_profile(
+def _ranged_rolls(
     mechanics: MechanicRegistry,
     attacker: RangedProfileInput,
     target: TargetDefence,
-) -> AttackProfile:
-    attacker.timing.validate()
+) -> tuple[int, int, Number, int, Mechanic, tuple[str, ...]]:
     effective_attack = mechanics.evaluate(
         "ranged.effective_attack",
         {
@@ -321,6 +305,41 @@ def build_ranged_profile(
             "damage.player_successful_zero_to_one",
         )
     )
+    return attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions
+
+
+def build_melee_profile(
+    mechanics: MechanicRegistry,
+    attacker: MeleeProfileInput,
+    target: TargetDefence,
+) -> AttackProfile:
+    attacker.timing.validate()
+    attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions = _melee_rolls(mechanics, attacker, target)
+    return AttackProfile(
+        attacker.weapon_id,
+        attacker.attack_type,
+        attack_roll,
+        defence_roll,
+        Fraction(accuracy),
+        max_hit,
+        attacker.timing,
+        bool(zero_rule.value),
+        versions,
+        DynamicMeleeDamage(
+            attacker.strength_bonus,
+            attacker.strength_prayer_multiplier,
+            attacker.strength_style_bonus,
+        ),
+    )
+
+
+def build_ranged_profile(
+    mechanics: MechanicRegistry,
+    attacker: RangedProfileInput,
+    target: TargetDefence,
+) -> AttackProfile:
+    attacker.timing.validate()
+    attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions = _ranged_rolls(mechanics, attacker, target)
     return AttackProfile(
         attacker.weapon_id,
         "ranged",
@@ -350,66 +369,7 @@ def build_melee_offensive_profile(
 ) -> OffensiveProfile:
     if cooldown_ticks < 1:
         raise DataUnavailableError("Melee cooldown must be positive")
-    effective_attack = mechanics.evaluate(
-        "melee.effective_attack",
-        {
-            "attack_level": attacker.attack_level,
-            "attack_boost": attacker.attack_boost,
-            "prayer_multiplier": attacker.attack_prayer_multiplier,
-            "style_bonus": attacker.attack_style_bonus,
-        },
-    )
-    attack_roll = _integer(
-        mechanics.evaluate(
-            "melee.attack_roll",
-            {
-                "effective_attack": effective_attack,
-                "attack_bonus": attacker.attack_bonus,
-            },
-        ),
-        "melee attack roll",
-    )
-    effective_strength = mechanics.evaluate(
-        "melee.effective_strength",
-        {
-            "strength_level": attacker.strength_level,
-            "strength_boost": attacker.strength_boost,
-            "prayer_multiplier": attacker.strength_prayer_multiplier,
-            "style_bonus": attacker.strength_style_bonus,
-        },
-    )
-    max_hit = _integer(
-        mechanics.evaluate(
-            "melee.max_hit",
-            {
-                "effective_strength": effective_strength,
-                "melee_strength_bonus": attacker.strength_bonus,
-            },
-        ),
-        "melee max hit",
-    )
-    defence_roll = _player_defence_roll(mechanics, target)
-    accuracy = mechanics.evaluate(
-        "melee.accuracy",
-        {
-            "attack_roll": attack_roll,
-            "defence_roll": defence_roll,
-        },
-    )
-    zero_rule = mechanics.require("damage.player_successful_zero_to_one")
-    versions = tuple(
-        mechanics.require(mechanic_id).formula_version
-        for mechanic_id in (
-            "melee.effective_attack",
-            "melee.attack_roll",
-            "melee.effective_strength",
-            "melee.max_hit",
-            "player.effective_defence",
-            "player.defence_roll",
-            "melee.accuracy",
-            "damage.player_successful_zero_to_one",
-        )
-    )
+    attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions = _melee_rolls(mechanics, attacker, target)
     return OffensiveProfile(
         weapon_id=attacker.weapon_id,
         damage_type=attacker.attack_type,
@@ -433,70 +393,7 @@ def build_ranged_offensive_profile(
 ) -> OffensiveProfile:
     if cooldown_ticks < 1:
         raise DataUnavailableError("Ranged cooldown must be positive")
-    effective_attack = mechanics.evaluate(
-        "ranged.effective_attack",
-        {
-            "ranged_level": attacker.ranged_level,
-            "ranged_boost": attacker.ranged_boost,
-            "prayer_multiplier": attacker.accuracy_prayer_multiplier,
-            "style_bonus": attacker.style_bonus,
-            "void_multiplier": attacker.accuracy_void_multiplier,
-        },
-    )
-    effective_strength = mechanics.evaluate(
-        "ranged.effective_strength",
-        {
-            "ranged_level": attacker.ranged_level,
-            "ranged_boost": attacker.ranged_boost,
-            "prayer_multiplier": attacker.strength_prayer_multiplier,
-            "style_bonus": attacker.style_bonus,
-            "void_multiplier": attacker.strength_void_multiplier,
-        },
-    )
-    attack_roll = _integer(
-        mechanics.evaluate(
-            "ranged.attack_roll",
-            {
-                "effective_ranged_attack": effective_attack,
-                "ranged_attack_bonus": attacker.ranged_attack_bonus,
-                "gear_multiplier": attacker.gear_multiplier,
-            },
-        ),
-        "ranged attack roll",
-    )
-    max_hit = _integer(
-        mechanics.evaluate(
-            "ranged.max_hit",
-            {
-                "effective_ranged_strength": effective_strength,
-                "ranged_strength_bonus": attacker.ranged_strength_bonus,
-                "gear_multiplier": attacker.gear_multiplier,
-            },
-        ),
-        "ranged max hit",
-    )
-    defence_roll = _player_defence_roll(mechanics, target)
-    accuracy = mechanics.evaluate(
-        "melee.accuracy",
-        {
-            "attack_roll": attack_roll,
-            "defence_roll": defence_roll,
-        },
-    )
-    zero_rule = mechanics.require("damage.player_successful_zero_to_one")
-    versions = tuple(
-        mechanics.require(mechanic_id).formula_version
-        for mechanic_id in (
-            "ranged.effective_attack",
-            "ranged.effective_strength",
-            "ranged.attack_roll",
-            "ranged.max_hit",
-            "player.effective_defence",
-            "player.defence_roll",
-            "melee.accuracy",
-            "damage.player_successful_zero_to_one",
-        )
-    )
+    attack_roll, defence_roll, accuracy, max_hit, zero_rule, versions = _ranged_rolls(mechanics, attacker, target)
     return OffensiveProfile(
         weapon_id=attacker.weapon_id,
         damage_type="ranged",

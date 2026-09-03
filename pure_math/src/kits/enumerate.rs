@@ -314,6 +314,36 @@ mod tests {
         max_ko_options: 0,
     };
 
+    /// Rune scimitar survivor row (plus any `extra` columns); bonus columns are the true item sums
+    /// so the reconstruction check passes.
+    fn scimitar_row(items: &[EquipmentItem], extra: &[(&str, &str)]) -> Vec<(String, String)> {
+        let ids: HashMap<i64, &EquipmentItem> = items.iter().map(|i| (i.item_id, i)).collect();
+        let armour_ids = [579i64, 1478, 577, 542, 1063];
+        let mut total = OffenceBonuses::of(ids[&1333]);
+        for id in armour_ids {
+            total = total.plus(OffenceBonuses::of(ids[&id]));
+        }
+        let text = |v: i64| v.to_string();
+        let mut owned: Vec<(String, String)> = vec![
+            ("head_id".into(), text(armour_ids[0])),
+            ("neck_id".into(), text(armour_ids[1])),
+            ("body_id".into(), text(armour_ids[2])),
+            ("legs_id".into(), text(armour_ids[3])),
+            ("hands_id".into(), text(armour_ids[4])),
+            ("weapon_id".into(), "1333".into()),
+            ("shield_id".into(), String::new()),
+            ("ammo_id".into(), String::new()),
+            ("attack_stab".into(), text(total.attack[0])),
+            ("attack_slash".into(), text(total.attack[1])),
+            ("attack_crush".into(), text(total.attack[2])),
+            ("attack_ranged".into(), text(total.attack[3])),
+            ("melee_strength".into(), text(total.melee_strength)),
+            ("ranged_strength".into(), text(total.ranged_strength)),
+        ];
+        owned.extend(extra.iter().map(|(k, v)| (k.to_string(), v.to_string())));
+        owned
+    }
+
     #[test]
     fn legal_ko_weapons_are_melee_only_and_exclude_the_primary() {
         let (_, items) = ruleset();
@@ -343,30 +373,7 @@ mod tests {
     fn enumerate_kits_keeps_baseline_and_only_out_hitting_ko_weapons() {
         let (mechanics, items) = ruleset();
         let kernel = CombatKernel::new(&mechanics).unwrap();
-        let ids: HashMap<i64, &EquipmentItem> = items.iter().map(|i| (i.item_id, i)).collect();
-        // Rune scimitar row; bonus columns are the true item sums so the reconstruction check passes.
-        let armour_ids = [579i64, 1478, 577, 542, 1063];
-        let mut total = OffenceBonuses::of(ids[&1333]);
-        for id in armour_ids {
-            total = total.plus(OffenceBonuses::of(ids[&id]));
-        }
-        let text = |v: i64| v.to_string();
-        let owned: Vec<(String, String)> = vec![
-            ("head_id".into(), text(armour_ids[0])),
-            ("neck_id".into(), text(armour_ids[1])),
-            ("body_id".into(), text(armour_ids[2])),
-            ("legs_id".into(), text(armour_ids[3])),
-            ("hands_id".into(), text(armour_ids[4])),
-            ("weapon_id".into(), "1333".into()),
-            ("shield_id".into(), String::new()),
-            ("ammo_id".into(), String::new()),
-            ("attack_stab".into(), text(total.attack[0])),
-            ("attack_slash".into(), text(total.attack[1])),
-            ("attack_crush".into(), text(total.attack[2])),
-            ("attack_ranged".into(), text(total.attack[3])),
-            ("melee_strength".into(), text(total.melee_strength)),
-            ("ranged_strength".into(), text(total.ranged_strength)),
-        ];
+        let owned = scimitar_row(&items, &[]);
         let source: Vec<(&str, &str)> = owned.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
         let (mut primary, columns) = candidate(&source);
         primary.max_hit = 8;
@@ -420,30 +427,7 @@ mod tests {
         let (mechanics, items) = ruleset();
         let kernel = CombatKernel::new(&mechanics).unwrap();
         let book = SpellBook::load(&mechanics).unwrap();
-        let ids: HashMap<i64, &EquipmentItem> = items.iter().map(|i| (i.item_id, i)).collect();
-        let armour_ids = [579i64, 1478, 577, 542, 1063];
-        let mut total = OffenceBonuses::of(ids[&1333]);
-        for id in armour_ids {
-            total = total.plus(OffenceBonuses::of(ids[&id]));
-        }
-        let text = |v: i64| v.to_string();
-        let owned: Vec<(String, String)> = vec![
-            ("head_id".into(), text(armour_ids[0])),
-            ("neck_id".into(), text(armour_ids[1])),
-            ("body_id".into(), text(armour_ids[2])),
-            ("legs_id".into(), text(armour_ids[3])),
-            ("hands_id".into(), text(armour_ids[4])),
-            ("weapon_id".into(), "1333".into()),
-            ("shield_id".into(), String::new()),
-            ("ammo_id".into(), String::new()),
-            ("attack_stab".into(), text(total.attack[0])),
-            ("attack_slash".into(), text(total.attack[1])),
-            ("attack_crush".into(), text(total.attack[2])),
-            ("attack_ranged".into(), text(total.attack[3])),
-            ("melee_strength".into(), text(total.melee_strength)),
-            ("ranged_strength".into(), text(total.ranged_strength)),
-            ("magic_damage".into(), "0".into()),
-        ];
+        let owned = scimitar_row(&items, &[("magic_damage", "0")]);
         let source: Vec<(&str, &str)> = owned.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
         let (mut primary, columns) = candidate(&source);
         primary.max_hit = 8;
@@ -479,29 +463,7 @@ mod tests {
     fn max_ko_options_keeps_the_hardest_hitting_switches() {
         let (mechanics, items) = ruleset();
         let kernel = CombatKernel::new(&mechanics).unwrap();
-        let ids: HashMap<i64, &EquipmentItem> = items.iter().map(|i| (i.item_id, i)).collect();
-        let armour_ids = [579i64, 1478, 577, 542, 1063];
-        let mut total = OffenceBonuses::of(ids[&1333]);
-        for id in armour_ids {
-            total = total.plus(OffenceBonuses::of(ids[&id]));
-        }
-        let text = |v: i64| v.to_string();
-        let owned: Vec<(String, String)> = vec![
-            ("head_id".into(), text(armour_ids[0])),
-            ("neck_id".into(), text(armour_ids[1])),
-            ("body_id".into(), text(armour_ids[2])),
-            ("legs_id".into(), text(armour_ids[3])),
-            ("hands_id".into(), text(armour_ids[4])),
-            ("weapon_id".into(), "1333".into()),
-            ("shield_id".into(), String::new()),
-            ("ammo_id".into(), String::new()),
-            ("attack_stab".into(), text(total.attack[0])),
-            ("attack_slash".into(), text(total.attack[1])),
-            ("attack_crush".into(), text(total.attack[2])),
-            ("attack_ranged".into(), text(total.attack[3])),
-            ("melee_strength".into(), text(total.melee_strength)),
-            ("ranged_strength".into(), text(total.ranged_strength)),
-        ];
+        let owned = scimitar_row(&items, &[]);
         let source: Vec<(&str, &str)> = owned.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
         let (mut primary, columns) = candidate(&source);
         primary.max_hit = 8;

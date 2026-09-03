@@ -14,7 +14,7 @@ from ..accounts import LevelRange
 from ..frontier import OffensiveTarget, solve_verified_offense
 from ..frontier_merge import merge_offense_frontiers
 from ..ruleset import load_ruleset
-from .common import ACCOUNT_MODES, SubcommandGroup, add_level_range
+from .common import ACCOUNT_MODES, SubcommandGroup, add_level_range, read_json_document
 
 
 def _offense_frontier(args: argparse.Namespace) -> int:
@@ -74,10 +74,7 @@ def register_offense_frontier(commands: SubcommandGroup) -> None:
 def _merge_frontiers(args: argparse.Namespace) -> int:
     documents = []
     for path in args.inputs:
-        try:
-            documents.append(json.loads(path.read_text(encoding="utf-8")))
-        except (FileNotFoundError, json.JSONDecodeError) as error:
-            raise ValueError(f"Cannot read frontier shard {path}") from error
+        documents.append(read_json_document(path, "frontier shard"))
     merged = merge_offense_frontiers(documents, top=args.top)
     args.output.write_text(json.dumps(merged, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(

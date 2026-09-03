@@ -15,7 +15,7 @@ from pure_solver.profiles import AttackProfile, VerifiedAttackTiming
 from pure_solver.ruleset import load_ruleset
 
 
-def _result(win: float, loss: float, draw: float = 0.0, samples: int = 10_000) -> MatchupResult:
+def _result(win: float, loss: float, samples: int = 10_000) -> MatchupResult:
     wins = round(win * samples)
     losses = round(loss * samples)
     draws = samples - wins - losses

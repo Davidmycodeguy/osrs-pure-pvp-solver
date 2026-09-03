@@ -469,7 +469,7 @@ def select_diverse_seeds(candidates: Iterable[ReductionCandidate], requested_siz
     if not pool:
         raise ValueError("Seed selection requires at least one candidate")
 
-    _, vectors = _normalized_vectors(pool)
+    metric_names, vectors = _normalized_vectors(pool)
     selected: list[ReductionCandidate] = []
     reasons: dict[str, list[str]] = {}
 
@@ -482,7 +482,6 @@ def select_diverse_seeds(candidates: Iterable[ReductionCandidate], requested_siz
         selected.append(candidate)
         reasons[candidate.candidate_id] = [reason]
 
-    metric_names = tuple(sorted({name for candidate in pool for name in candidate.metric_names}))
     for metric_name in metric_names:
         eligible = [candidate for candidate in pool if metric_name in candidate.metric_map]
         extreme = min(

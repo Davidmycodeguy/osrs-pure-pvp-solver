@@ -14,7 +14,7 @@ use anyhow::{anyhow, bail, Result};
 use rayon::prelude::*;
 use serde_json::{json, Value};
 
-use crate::canonical::{canonical_hash, compact_sorted_json, fraction_document};
+use crate::canonical::{canonical_hash, canonical_json, fraction_document};
 use crate::combat::{CombatKernel, DamageDistribution, ResolvedStyle, StyleInputs, DEFENCE_TYPES};
 use crate::io::{csv_writer, write_json};
 use crate::items::EquipmentItem;
@@ -416,12 +416,12 @@ fn styles_json(styles: &[ResolvedStyle]) -> String {
             })
         })
         .collect();
-    compact_sorted_json(&Value::Array(value))
+    canonical_json(&Value::Array(value))
 }
 
 pub fn fraction_map_json(values: &BTreeMap<String, Rational>) -> String {
     let map: serde_json::Map<String, Value> = values.iter().map(|(k, v)| (k.clone(), fraction_document(v))).collect();
-    compact_sorted_json(&Value::Object(map))
+    canonical_json(&Value::Object(map))
 }
 
 pub const MANIFEST_COLUMNS: [&str; 6] = [

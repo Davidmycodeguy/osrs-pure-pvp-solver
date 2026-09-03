@@ -69,9 +69,6 @@ pub type LoadoutTuple<'a> = (
 /// Weapon-keyed loadouts shared by every account with one unlock signature.
 #[derive(Clone, Debug)]
 pub struct SignatureGear<'a> {
-    pub weapons: Vec<&'a EquipmentItem>,
-    pub ammo_by_weapon: HashMap<i64, &'a EquipmentItem>,
-    pub shield_by_weapon: HashMap<i64, &'a EquipmentItem>,
     /// (armour, weapon, ammo, shield) tuples, weapon-major like the Python generator.
     pub rows: Vec<LoadoutTuple<'a>>,
 }
@@ -189,17 +186,11 @@ pub fn build_signature_gear_with<'a>(account: AccountState, items: &'a [Equipmen
     let armour_options: Vec<Vec<&EquipmentItem>> = MATRIX_ARMOUR_SLOTS.iter().map(|slot| slot_items(slot)).collect();
 
     let mut ammo_by_weapon = HashMap::new();
-    let mut shield_by_weapon = HashMap::new();
     let mut rows = Vec::new();
     for &weapon in &weapons {
         if !weapon.ammo_ids.is_empty() {
             if let Some(ammo) = best_compatible_ammo(weapon, &ammo_options) {
                 ammo_by_weapon.insert(weapon.item_id, ammo);
-            }
-        }
-        if weapon.slot == "weapon" {
-            if let Some(shield) = offensive_shield {
-                shield_by_weapon.insert(weapon.item_id, shield);
             }
         }
         let choices: Vec<Vec<&EquipmentItem>> = if kit_mode == "full" {
@@ -229,12 +220,7 @@ pub fn build_signature_gear_with<'a>(account: AccountState, items: &'a [Equipmen
             }
         }
     }
-    Ok(SignatureGear {
-        weapons,
-        ammo_by_weapon,
-        shield_by_weapon,
-        rows,
-    })
+    Ok(SignatureGear { rows })
 }
 
 /// Expand accounts into loadout rows (profile ids start at 1); returns rows and signature count.

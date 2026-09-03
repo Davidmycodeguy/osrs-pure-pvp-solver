@@ -234,7 +234,6 @@ def _normalise_universe(candidate_ids: Sequence[str]) -> tuple[tuple[str, ...], 
 
 
 def _normalise_active_ids(
-    candidate_ids: tuple[str, ...],
     positions: dict[str, int],
     provided: Sequence[str],
 ) -> tuple[str, ...]:
@@ -493,8 +492,8 @@ def solve_double_oracle(
     seed_active = tuple(initial_active or ())
     row_seed = initial_active_rows if initial_active_rows is not None else seed_active
     column_seed = initial_active_columns if initial_active_columns is not None else seed_active
-    active_rows = _normalise_active_ids(all_candidates, positions, row_seed)
-    active_columns = _normalise_active_ids(all_candidates, positions, column_seed)
+    active_rows = _normalise_active_ids(positions, row_seed)
+    active_columns = _normalise_active_ids(positions, column_seed)
     epsilon_fraction = _as_fraction(epsilon)
     screen_callback = screen or _default_screen
     book = _CachedPayoffBook(payoff, {})

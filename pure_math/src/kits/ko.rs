@@ -17,14 +17,12 @@ use num_traits::{One, ToPrimitive};
 use rayon::prelude::*;
 use serde_json::Value;
 
-use super::{Kit, KitKo, KitKoTables, FINISH_THRESHOLDS, MELEE_DAMAGE_TYPES, STACK_STYLE_FAMILY, STACK_WEAPON_TYPE};
+use super::{Kit, KitKo, KitKoTables, FINISH_THRESHOLDS, MELEE_DAMAGE_TYPES, PROGRESS_EVERY, STACK_STYLE_FAMILY, STACK_WEAPON_TYPE};
 use crate::combat::{CombatKernel, DamageDistribution, StyleTable};
 use crate::ranking::{RankingCandidate, RankingStyle, DAMAGE_TYPES, DEFENCE_STATES, HP_THRESHOLDS, WINDOWS};
 use crate::rational::Rational;
 
 pub type RepresentativeRolls = BTreeMap<String, BTreeMap<String, i64>>;
-
-const PROGRESS_EVERY: usize = 100_000;
 
 /// `representative_defence_rolls` from a Stage 3 screen report.
 pub fn load_representative_rolls(path: &Path) -> Result<RepresentativeRolls> {

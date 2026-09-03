@@ -25,6 +25,9 @@ pub const STACK_STYLE_FAMILY: &str = "rapid";
 pub const CATEGORIES: [&str; 6] = ["sustain", "race", "burst", "defence", "utility", "ko_switch"];
 pub const TIE_BREAK: [&str; 6] = ["race", "ko_switch", "burst", "sustain", "defence", "utility"];
 
+/// How often the parallel KO/race passes log progress to stderr.
+pub(super) const PROGRESS_EVERY: usize = 100_000;
+
 /// Name-indexed access to the manifest columns Stage 4 keeps as `source_values`.
 pub struct SourceColumns {
     index: HashMap<String, usize>,

@@ -13,7 +13,6 @@ def _weapon(
     strength: int,
     *,
     speed: int = 4,
-    weapon_type: str = "scimitar",
     mechanic_flags: tuple[str, ...] = (),
 ) -> EquipmentItem:
     return EquipmentItem(
@@ -25,7 +24,7 @@ def _weapon(
         slot="weapon",
         requirements={"attack": attack_requirement},
         bonuses={"attack_slash": slash, "melee_strength": strength},
-        weapon_type=weapon_type,
+        weapon_type="scimitar",
         attack_speed=speed,
         attack_range=1,
         attack_styles=("accurate", "aggressive", "controlled", "defensive"),

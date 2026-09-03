@@ -804,26 +804,23 @@ def solve_verified_offense(
     kit_cache: dict[tuple[int, ...], tuple[CombatKit, ...]] = {}
 
     archetypes = (
-        (
-            "melee_only",
+        (  # melee_only
             LevelRange(max(40, attack_range.minimum), attack_range.maximum),
             strength_range,
             LevelRange(1, 1),
         ),
-        (
-            "ranged_only",
+        (  # ranged_only
             LevelRange(1, 1),
             LevelRange(1, 1),
             LevelRange(max(30, ranged_range.minimum), ranged_range.maximum),
         ),
-        (
-            "hybrid",
+        (  # hybrid
             LevelRange(max(40, attack_range.minimum), attack_range.maximum),
             strength_range,
             LevelRange(max(30, ranged_range.minimum), ranged_range.maximum),
         ),
     )
-    for _, attack_bounds, strength_bounds, ranged_bounds in archetypes:
+    for attack_bounds, strength_bounds, ranged_bounds in archetypes:
         if (
             attack_bounds.minimum > attack_bounds.maximum
             or strength_bounds.minimum > strength_bounds.maximum

@@ -193,10 +193,6 @@ fn validate(config: &KitConfig) -> Result<Vec<i64>> {
     validate_eat_penalties(&config.eat_penalties)
 }
 
-struct Ranked {
-    rankings: Vec<RankedKit>,
-}
-
 // Private assembly step: every argument is a distinct per-kit or per-candidate column that
 // `rank_kits` has already computed, so a parameter struct would only rename the one call site.
 #[allow(clippy::too_many_arguments)]
@@ -210,11 +206,11 @@ fn build_rankings(
     candidate_flags: &[Vec<String>],
     panel_reasons: &BTreeMap<String, Vec<String>>,
     pressure_ranks: &[usize],
-) -> Ranked {
+) -> Vec<RankedKit> {
     let count = kits.len();
     let mut races = races.into_iter().map(Some).collect::<Vec<_>>();
     let mut scores = scores.into_iter().map(Some).collect::<Vec<_>>();
-    let rankings = order
+    order
         .iter()
         .enumerate()
         .map(|(position, &index)| {
@@ -240,8 +236,7 @@ fn build_rankings(
                 simulator_seed_reasons: seed_reasons,
             }
         })
-        .collect();
-    Ranked { rankings }
+        .collect()
 }
 
 /// Expand every survivor into kits and rank the kit population.
@@ -331,7 +326,7 @@ pub fn rank_kits(
         kits,
         ko_metrics,
         preview_tables,
-        rankings: ranked.rankings,
+        rankings: ranked,
         config: KitConfig {
             eat_penalties: penalties,
             ..config.clone()

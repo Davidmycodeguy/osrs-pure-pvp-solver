@@ -13,7 +13,6 @@ use crate::rational::Rational;
 
 #[derive(Clone, Debug)]
 pub struct Mechanic {
-    pub mechanic_id: String,
     pub status: String,
     pub value: Value,
     pub formula_version: String,
@@ -43,9 +42,8 @@ impl MechanicRegistry {
                 .map(|c| c.iter().filter_map(Value::as_str).map(str::to_owned).collect())
                 .unwrap_or_default();
             mechanics.insert(
-                mechanic_id.clone(),
+                mechanic_id,
                 Mechanic {
-                    mechanic_id,
                     status: item.get("status").and_then(Value::as_str).unwrap_or("unverified").to_owned(),
                     value: item.get("value").cloned().unwrap_or(Value::Null),
                     formula_version: item.get("formula_version").and_then(Value::as_str).unwrap_or("unversioned").to_owned(),

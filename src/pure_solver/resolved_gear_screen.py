@@ -103,6 +103,11 @@ class ResolvedSource:
     cadence_ko_probabilities: Mapping[str, Fraction]
 
 
+_BAND_SKILLS = ("attack", "strength", "ranged", "magic", "prayer")
+EXACT_ACCOUNT_SCOPE = "exact accounts: every row carries one fully specified 1-Defence profile with reachable Hitpoints"
+BAND_ACCOUNT_SCOPE = "gear-unlock band representatives, not exact combat-level-30 accounts"
+
+
 @dataclass(frozen=True)
 class ResolvedGearScreenReport:
     input_path: str
@@ -110,7 +115,7 @@ class ResolvedGearScreenReport:
     representative_defence_rolls: Mapping[str, Mapping[str, int]]
     sources: Mapping[str, ResolvedSource]
     audit_limit: int = 20
-    account_profile_scope: str = "gear-unlock band representatives, not exact combat-level-30 accounts"
+    account_profile_scope: str = BAND_ACCOUNT_SCOPE
 
     def to_document(self) -> Mapping[str, object]:
         counts = self.reduction.counts.to_document()
@@ -381,7 +386,6 @@ def _resolved_candidate(
     row: Mapping[str, str],
     *,
     items_by_id: Mapping[int, EquipmentItem],
-    representative_rolls: Mapping[str, Mapping[str, int]],
 ) -> tuple[ReductionCandidate, ResolvedSource]:
     static_candidate, source = _candidate_from_row(row, items_by_id=items_by_id)
     styles = _resolved_styles(ruleset, row)
@@ -458,7 +462,6 @@ def screen_resolved_gear_matrix_csv(
             ruleset,
             row,
             items_by_id=items_by_id,
-            representative_rolls=representative,
         )
         if candidate.candidate_id in sources:
             raise ValueError(f"Gear matrix contains duplicate structural candidate {candidate.candidate_id}")
@@ -481,11 +484,6 @@ def screen_resolved_gear_matrix_csv(
         audit_limit,
         account_profile_scope=_account_profile_scope(rows),
     )
-
-
-_BAND_SKILLS = ("attack", "strength", "ranged", "magic", "prayer")
-EXACT_ACCOUNT_SCOPE = "exact accounts: every row carries one fully specified 1-Defence profile with reachable Hitpoints"
-BAND_ACCOUNT_SCOPE = "gear-unlock band representatives, not exact combat-level-30 accounts"
 
 
 def _account_profile_scope(rows: Sequence[Mapping[str, str]]) -> str:

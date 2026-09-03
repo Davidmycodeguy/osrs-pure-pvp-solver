@@ -35,9 +35,6 @@ def _row(
     ko: Fraction = Fraction(1, 10),
     damage_type: str = "slash",
     style_id: str = "accurate_slash",
-    attack_roll: int = 1_000,
-    max_hit: int = 5,
-    potted_max_hit: int = 6,
     maximum_range: int = 1,
     defence: int = 10,
     magic_defence: int = 0,
@@ -47,9 +44,9 @@ def _row(
         {
             "style_id": style_id,
             "damage_type": damage_type,
-            "attack_roll": attack_roll,
-            "max_hit": max_hit,
-            "potted_max_hit": potted_max_hit,
+            "attack_roll": 1_000,
+            "max_hit": 5,
+            "potted_max_hit": 6,
             "cooldown_ticks": 4,
             "maximum_range": maximum_range,
         }

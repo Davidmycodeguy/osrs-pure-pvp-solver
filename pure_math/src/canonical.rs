@@ -120,11 +120,6 @@ pub fn canonical_hash(value: &Value) -> String {
     hex::encode(Sha256::digest(canonical_json(value).as_bytes()))
 }
 
-/// Python `json.dumps(obj, separators=(",", ":"), sort_keys=True)` for row JSON columns.
-pub fn compact_sorted_json(value: &Value) -> String {
-    canonical_json(value)
-}
-
 fn write_pretty(out: &mut String, value: &Value, depth: usize) {
     let indent = |out: &mut String, level: usize| {
         out.push('\n');

@@ -19,7 +19,7 @@ from ..potion_verification import build_verified_potion_documents
 from ..ruleset import load_ruleset
 from ..sources import fetch_wiki_revision, fetch_wiki_search_revisions, write_source_record
 from ..wiki_items import observe_equipment
-from .common import SubcommandGroup
+from .common import SubcommandGroup, read_json_document
 
 
 def _inspect(args: argparse.Namespace) -> int:
@@ -107,10 +107,7 @@ def register_add_items(commands: SubcommandGroup) -> None:
 
 def _rebuild_items(args: argparse.Namespace) -> int:
     ruleset = load_ruleset(args.ruleset)
-    try:
-        decisions = json.loads(args.decisions.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError) as error:
-        raise ValueError(f"Cannot read item verification decisions: {args.decisions}") from error
+    decisions = read_json_document(args.decisions, "item verification decisions:")
     if ruleset.source_archive is None:
         raise ValueError("Ruleset has no source archive")
     documents = build_verified_item_documents(
@@ -136,10 +133,7 @@ def register_rebuild_items(commands: SubcommandGroup) -> None:
 
 def _rebuild_consumables(args: argparse.Namespace) -> int:
     ruleset = load_ruleset(args.ruleset)
-    try:
-        decisions = json.loads(args.decisions.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError) as error:
-        raise ValueError(f"Cannot read consumable verification decisions: {args.decisions}") from error
+    decisions = read_json_document(args.decisions, "consumable verification decisions:")
     if ruleset.source_archive is None:
         raise ValueError("Ruleset has no source archive")
     documents = build_verified_consumable_documents(

@@ -57,8 +57,8 @@ class DuelSolveCommandTests(unittest.TestCase):
             self.assertNotIn("top_overall", payload)
 
     def test_solve_defaults_to_standard_f2p_training_mode(self) -> None:
-        parser_output = io.StringIO()
-        with redirect_stdout(parser_output):
+        output = io.StringIO()
+        with redirect_stdout(output):
             status = main(
                 [
                     "solve",
@@ -97,4 +97,4 @@ class DuelSolveCommandTests(unittest.TestCase):
         # yields no supported strategies, so the solve fails closed with an explicit verification block
         # instead of silently falling back to independent HP.
         self.assertEqual(status, 2)
-        self.assertEqual(json.loads(parser_output.getvalue())["verification"]["status"], "blocked")
+        self.assertEqual(json.loads(output.getvalue())["verification"]["status"], "blocked")

@@ -15,11 +15,10 @@ def _observation(
     attack_speed: int | None = None,
     attack_range: int | None = None,
     combat_style: str | None = None,
-    title: str | None = None,
 ) -> dict[str, object]:
     return {
         "source": {
-            "title": title or name,
+            "title": name,
             "revision": f"r-{item_id}",
             "source_id": f"osrs-wiki:test:{item_id}",
             "url": f"https://example.test/{item_id}",

@@ -19,7 +19,7 @@ from collections.abc import Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass
 from itertools import product
 
-from .account_frontier import equipment_unlock_signature
+from .account_frontier import account_levels, equipment_unlock_signature
 from .accounts import AccountState
 from .dominance import prune_dominated_items
 from .gear_matrix import (
@@ -40,7 +40,6 @@ _DEFENCE_BONUSES = ("defence_stab", "defence_slash", "defence_crush", "defence_r
 class SignatureGear:
     """Weapon-keyed item tuples shared by every account with one unlock signature."""
 
-    retained: tuple[EquipmentItem, ...]
     slot_options: Mapping[str, tuple[EquipmentItem, ...]]
     weapon_options: tuple[EquipmentItem, ...]
     ammo_by_weapon_id: Mapping[int, EquipmentItem]
@@ -139,7 +138,7 @@ def build_signature_gear(
         )
     )
     return SignatureGear(
-        retained, {slot: options[slot] for slot in MATRIX_ARMOUR_SLOTS}, weapons, ammo_by_weapon, shield_by_weapon, rows
+        {slot: options[slot] for slot in MATRIX_ARMOUR_SLOTS}, weapons, ammo_by_weapon, shield_by_weapon, rows
     )
 
 
@@ -189,20 +188,9 @@ def build_account_gear_matrix(
             gear_by_signature[signature] = build_signature_gear(account, item_tuple, kit_mode=kit_mode)
         profiles.append(_profile_for_account(profile_id, account, gear_by_signature[signature]))
     matrix = VerifiedGearMatrix(
-        maximum_level=max(max(_levels(account)) for account in accounts) if accounts else 0,
+        maximum_level=max(max(account_levels(account)) for account in accounts) if accounts else 0,
         profile_count=len(profiles),
         combination_count=sum(len(profile.combinations) for profile in profiles),
         profiles=tuple(profiles),
     )
     return matrix, len(gear_by_signature)
-
-
-def _levels(account: AccountState) -> tuple[int, ...]:
-    return (
-        account.attack_level,
-        account.strength_level,
-        account.ranged_level,
-        account.magic_level,
-        account.prayer_level,
-        account.hitpoints_level,
-    )

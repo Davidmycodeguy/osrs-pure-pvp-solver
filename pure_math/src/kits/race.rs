@@ -3,7 +3,7 @@
 
 use rayon::prelude::*;
 
-use super::Kit;
+use super::{Kit, PROGRESS_EVERY};
 use crate::ranking::race::{best_dpt, opponents_for, race_margin_with_food, style_dpt, summarise_margins, RaceConfig};
 use crate::ranking::{RaceScenario, RankingCandidate};
 use crate::rational::Rational;
@@ -70,8 +70,6 @@ fn scenarios_for(candidates: &[RankingCandidate], magic_rolls: &[i64], kit: &Kit
         })
         .collect()
 }
-
-const PROGRESS_EVERY: usize = 100_000;
 
 /// `config.food_slots` is the opponent's (full inventory) food; each kit uses its own `food_slots`.
 pub fn kit_race_scenarios(candidates: &[RankingCandidate], magic_rolls: &[i64], kits: &[Kit], config: &RaceConfig<'_>) -> Vec<Vec<RaceScenario>> {

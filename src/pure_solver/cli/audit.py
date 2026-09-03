@@ -25,7 +25,7 @@ from ..gear_catalog_export import (
 from ..kits import generate_combat_kits
 from ..legality import EquipmentItem
 from ..ruleset import load_ruleset
-from .common import SubcommandGroup
+from .common import SubcommandGroup, read_json_document
 
 _SKILL_OPTIONS = ("attack", "strength", "ranged", "magic", "prayer", "hitpoints")
 
@@ -169,10 +169,7 @@ def register_export_gear_catalog(commands: SubcommandGroup) -> None:
 
 
 def _validate_timing_experiment(args: argparse.Namespace) -> int:
-    try:
-        document = json.loads(args.input.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError) as error:
-        raise ValueError(f"Cannot read timing experiment {args.input}") from error
+    document = read_json_document(args.input, "timing experiment")
     claim = derive_timing_suite_claim(document, minimum_samples_per_case=args.minimum_samples)
     print(
         json.dumps(
