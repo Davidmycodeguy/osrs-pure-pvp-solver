@@ -5,6 +5,7 @@
 #   powershell -File pure_math\scripts\run_stages.ps1 -CombatLevel 40 -Stages 2,3,4
 #   powershell -File pure_math\scripts\run_stages.ps1 [-CombatLevel 40] [-Stages '2,3,4,5'] [-MaxKoOptions 4] [-MaxBuilds 0] [-Magic 1]
 #                                                      [-CompletedQuests 'Dragon Slayer I'] [-KeepDefensive 'true'] [-Threads 0]
+#                                                      [-OutDir outputs\cb40-rust-1def]   (read and write another folder)
 # Outputs (<tag> = cb<level>): Stage 2 gear-matrix-<tag>-offence.csv; Stage 3 resolved-survivors-<tag>.csv and
 # resolved-screen-<tag>.json; Stage 4 resolved-ranked-<tag>.csv and resolved-ranking-<tag>.json;
 # Stage 5 kits-<tag>.csv and kits-<tag>.json.
@@ -16,14 +17,15 @@ param(
     [int]$Magic = 1,
     [string]$CompletedQuests = 'Dragon Slayer I',
     [string]$KeepDefensive = 'true',
-    [int]$Threads = 0
+    [int]$Threads = 0,
+    [string]$OutDir = ''
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 Set-Location $root
 $exe = Join-Path $root 'pure_math\target\release\pure_math.exe'
 $ruleset = 'rulesets\osrs-f2p-v1'
-$out = "outputs\cb$CombatLevel-rust"
+$out = if ($OutDir) { $OutDir } else { "outputs\cb$CombatLevel-rust" }
 $tag = "cb$CombatLevel"
 $sw = [System.Diagnostics.Stopwatch]::StartNew()
 function Stage($name, $arguments) {
