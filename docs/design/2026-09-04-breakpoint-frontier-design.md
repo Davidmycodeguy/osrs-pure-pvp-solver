@@ -240,7 +240,10 @@ Measured, not assumed, and written into status.md:
 
 Success: the validation report has `top1_covered: true` and an empty `uncovered` list
 for the top 22 at combat 40, and every generated account is legal. Anything else is a
-missing breakpoint, and the design is not considered working until it is found.
+finding to run down on both sides before either is trusted: a missing breakpoint in
+section 4.1, or a ranking formula in Stages 3 to 5 that rewards a level the pinned
+mechanics say cannot matter. The design is not considered working until the miss is
+explained and fixed where the fault is.
 
 ## 10. Follow-ups, not in this version
 
