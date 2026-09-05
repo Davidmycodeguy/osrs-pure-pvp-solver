@@ -1,7 +1,7 @@
 # Stage 1b: breakpoint account frontier (`breakpoint-frontier`) design
 
 Date: 2026-09-04
-Status: design; implementation tracked in [status.md](../status.md)
+Status: not pursued (2026-09-04); section 11 has the measurement that settled it and what the investigation found instead
 Lane: `pure_solver` (Python). Stages 2 to 5 of `pure_math` consume the output unchanged.
 
 ## 1. Goal
@@ -41,8 +41,8 @@ levels enter through a few pinned formulas (`rulesets/osrs-f2p-v1/mechanics.json
 Consequences, each visible in the combat-40 kit rankings:
 
 - Strength between two max-hit steps is wasted combat level. With the potted Rune
-  warhammer and Amulet of strength at Prayer 13 the steps sit at 40, 44, 49, 53, 58, 61,
-  66 and 70; the kill-pressure leader is Strength 53, and 54 ranks below it.
+  warhammer and Amulet of strength at Prayer 13 the steps sit at 42, 46, 50, 53, 58, 61,
+  65 and 70 (max hits 14 to 21); the kill-pressure leader is Strength 53, and 54 ranks below it.
 - Because accuracy is smooth, whatever combat level is left after Strength goes to
   Attack (or, on the ranged side, to Ranged up to its tie). Along Attack + Strength = 82 at
   Hitpoints 50 the kits read 28/54 at 22.9%, 29/53 at 23.2%, 33/49 at 19.9%.
@@ -257,3 +257,33 @@ explained and fixed where the fault is.
 3. **Magic thresholds.** Spell unlock levels as Magic breakpoints, for when mage pures
    enter the frontier.
 4. **Members catalog.** Nothing in the generator is F2P-specific; it needs verified items.
+
+## 11. Outcome
+
+The sizing check in section 9 was run before any code was written, against the catalog and the
+pinned formulas:
+
+| | value |
+| --- | --- |
+| Strength levels that are a max-hit step for some (weapon, amulet, prayer, style, potion) class | 99 of 99 |
+| Same, for the single class Rune warhammer + Amulet of strength, aggressive, potted, any prayer | 67 of 99 |
+| Ranged levels that are a max-hit step for some (ammunition, prayer) class | 94 of 99 |
+| Combat-40, 1-Defence Stage 1 frontier | 3,977 accounts, one Hitpoints level per (Attack, Strength, Ranged, Prayer) |
+
+Two things follow. The union of thresholds across weapon classes is every level, because each
+class's staircase sits a level or two from the next, so a generator that must serve every
+weapon in Stage 2 cannot be smaller than the level range. And Stage 1's Pareto frontier already
+keeps, for each Strength, Ranged and Prayer, only the highest Attack that fits and the highest
+reachable Hitpoints, which is the remainder rule of section 4.2. A breakpoint frontier feeding
+the same Stage 2 would reproduce roughly the same 4,000 accounts and pass section 6 trivially.
+The eight-step reduction is real only per weapon pair; exploiting it means running Stages 2 to 5
+per (primary, switch) pair with pair-specific accounts, a different pipeline, for about a
+ten-fold cut in a stage that takes minutes. Not worth it at this scale; recorded here so it is
+not re-derived.
+
+What the investigation found instead: Stage 5 kept a KO switch or amulet swap only when it
+raised the unpotted max hit, while the KO and kill-pressure tables score the potted hit. At 50
+Strength on a Rune warhammer the Amulet of strength swap ties the worn Amulet of power unpotted
+(14) but wins potted (16 against 15) and was dropped. Fixed in `kits/enumerate.rs` (both filters
+compare potted hits when a potion is carried) with a unit test at that exact case, and the
+combat-40 runs were regenerated; [status.md](../status.md) carries the before and after counts.

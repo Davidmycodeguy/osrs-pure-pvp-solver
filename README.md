@@ -50,7 +50,7 @@ You have 28 slots, and every slot that is not food is a heal you do not get. For
 - **A Strength potion** in one slot, so the melee hit uses the boosted max hit.
 - **Runes for the hardest spell** the account can cast, when its max hit beats the weapon, costing one slot per rune type.
 
-Food is whatever is left: 28 minus switch slots, potions and rune slots. Options are kept only when they raise the knockout max hit, and a build that gains nothing from switching stays as its baseline. (Stage 5.)
+Food is whatever is left: 28 minus switch slots, potions and rune slots. Options are kept only when they raise the knockout max hit (the potted hit when a Strength potion is carried), and a build that gains nothing from switching stays as its baseline. (Stage 5.)
 
 ### 6. Fight simulator
 
