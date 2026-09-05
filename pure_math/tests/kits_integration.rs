@@ -90,7 +90,8 @@ fn fixture_run_is_deterministic_and_baselines_match_stage4() {
         );
     }
 
-    // One carried Strength potion costs a slot everywhere and never lowers kill pressure.
+    // One carried Strength potion costs a slot everywhere, never lowers kill pressure, and can only add kits
+    // (an amulet swap that pays off potted alone).
     let potted = rank_kits(
         &manifest(),
         "fixture",
@@ -106,14 +107,21 @@ fn fixture_run_is_deterministic_and_baselines_match_stage4() {
         },
     )
     .unwrap();
-    assert_eq!(potted.kits.len(), report.kits.len());
-    for (a, b) in potted.kits.iter().zip(&report.kits) {
-        assert_eq!(a.kit_id, b.kit_id);
-        assert_eq!(a.food_slots, b.food_slots - 1);
+    // The two kit sets differ only in switches: with a potion a switch must out-hit the potted primary, and an
+    // amulet swap that pays off potted alone becomes a kit. Baselines and every shared kit line up by id.
+    let potted_by_id: HashMap<&str, (usize, &pure_math::kits::Kit)> =
+        potted.kits.iter().enumerate().map(|(i, k)| (k.kit_id.as_str(), (i, k))).collect();
+    let mut shared = 0;
+    for (index, kit) in report.kits.iter().enumerate() {
+        let Some(&(potted_index, carried)) = potted_by_id.get(kit.kit_id.as_str()) else {
+            assert!(!kit.is_baseline(), "baseline kits exist in both runs");
+            continue;
+        };
+        shared += 1;
+        assert_eq!(carried.food_slots, kit.food_slots - 1);
+        assert!(potted.ko_metrics[potted_index].pressure >= report.ko_metrics[index].pressure);
     }
-    for (a, b) in potted.ko_metrics.iter().zip(&report.ko_metrics) {
-        assert!(a.pressure >= b.pressure);
-    }
+    assert!(shared > 30, "every baseline and most switches are shared");
 
     // Magic adds a runes variant of a kit only when the spell out-hits the primary; runes cost food.
     let magic = rank_kits(

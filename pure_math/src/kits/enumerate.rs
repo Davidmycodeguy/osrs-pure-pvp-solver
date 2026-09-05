@@ -168,15 +168,19 @@ fn kits_for(
         spell: None,
         food_slots: free,
     }];
-    let max_hit_of = |styles: &[RankingStyle]| styles.iter().map(|s| s.max_hit).max().unwrap_or(0);
+    // With a Strength potion carried the KO tables score potted hits, so the filters compare potted hits too;
+    // otherwise a swap that only pays off potted (Amulet of strength at 52 Strength: 17 against 16) is dropped.
+    let potted = potions > 0;
+    let hit_of = |styles: &[RankingStyle]| styles.iter().map(|s| if potted { s.potted_max_hit } else { s.max_hit }).max().unwrap_or(0);
+    let primary_hit = if potted { candidate.potted_max_hit } else { candidate.max_hit };
     for option in &item.options {
         let (weapon, neck) = (option.weapon, option.neck);
         let styles = &resolved[&option.key];
-        if max_hit_of(styles) <= candidate.max_hit {
+        if hit_of(styles) <= primary_hit {
             continue;
         }
         // An amulet swap must add max hit over the same weapon without it, or it is just a wasted slot.
-        if neck.is_some() && max_hit_of(styles) <= max_hit_of(&resolved[&option.base_key]) {
+        if neck.is_some() && hit_of(styles) <= hit_of(&resolved[&option.base_key]) {
             continue;
         }
         let slots = switch_slots(item.gear.weapon, item.gear.shield, weapon, neck.is_some());
@@ -317,8 +321,13 @@ mod tests {
     /// Rune scimitar survivor row (plus any `extra` columns); bonus columns are the true item sums
     /// so the reconstruction check passes.
     fn scimitar_row(items: &[EquipmentItem], extra: &[(&str, &str)]) -> Vec<(String, String)> {
+        scimitar_row_with_neck(items, 1478, extra)
+    }
+
+    /// `scimitar_row` with a chosen amulet in the neck slot.
+    fn scimitar_row_with_neck(items: &[EquipmentItem], neck_id: i64, extra: &[(&str, &str)]) -> Vec<(String, String)> {
         let ids: HashMap<i64, &EquipmentItem> = items.iter().map(|i| (i.item_id, i)).collect();
-        let armour_ids = [579i64, 1478, 577, 542, 1063];
+        let armour_ids = [579i64, neck_id, 577, 542, 1063];
         let mut total = OffenceBonuses::of(ids[&1333]);
         for id in armour_ids {
             total = total.plus(OffenceBonuses::of(ids[&id]));
@@ -377,6 +386,7 @@ mod tests {
         let source: Vec<(&str, &str)> = owned.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
         let (mut primary, columns) = candidate(&source);
         primary.max_hit = 8;
+        primary.potted_max_hit = 8;
         let kits = enumerate_kits(std::slice::from_ref(&primary), &columns, &items, &kernel, None, FULL_INVENTORY).unwrap();
         assert!(kits[0].is_baseline() && kits[0].food_slots == 28);
         let potted = enumerate_kits(
@@ -392,7 +402,8 @@ mod tests {
         )
         .unwrap();
         assert_eq!(potted[0].food_slots, 27, "a potion costs one slot");
-        assert_eq!(potted[1].food_slots, kits[1].food_slots - 1);
+        let same = potted.iter().find(|k| k.kit_id == kits[1].kit_id).expect("the first switch kit exists potted too");
+        assert_eq!(same.food_slots, kits[1].food_slots - 1);
         assert!(kits.len() > 1, "a 40-attack scimitar account has at least the rune 2h as a KO option");
         for kit in &kits[1..] {
             let ko = kit.ko.as_ref().unwrap();
@@ -445,6 +456,37 @@ mod tests {
         primary.levels[3] = 9; // Earth Strike max 6 does not out-hit the primary: no runes variants
         let low = enumerate_kits(std::slice::from_ref(&primary), &columns, &items, &kernel, Some(&book), FULL_INVENTORY).unwrap();
         assert_eq!(low.len(), without.len());
+    }
+
+    #[test]
+    fn potion_aware_filters_keep_an_amulet_swap_that_only_pays_off_potted() {
+        let (mechanics, items) = ruleset();
+        let kernel = CombatKernel::new(&mechanics).unwrap();
+        let owned = scimitar_row_with_neck(&items, 1731, &[]); // Amulet of power worn
+        let source: Vec<(&str, &str)> = owned.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
+        let (mut primary, columns) = candidate(&source);
+        // Strength 50, Superhuman Strength: the Rune warhammer hits 14 unpotted with either amulet,
+        // but 16 potted with Amulet of strength against 15 with Amulet of power.
+        primary.levels[1] = 50;
+        primary.levels[4] = 13;
+        primary.max_hit = 8;
+        primary.potted_max_hit = 8;
+        let warhammers = |kits: &[Kit]| kits.iter().filter(|k| k.ko.as_ref().is_some_and(|ko| ko.weapon_id == 1347)).count();
+        let unpotted = enumerate_kits(std::slice::from_ref(&primary), &columns, &items, &kernel, None, FULL_INVENTORY).unwrap();
+        assert_eq!(warhammers(&unpotted), 1, "without a potion the swap adds nothing");
+        let potted = enumerate_kits(
+            std::slice::from_ref(&primary),
+            &columns,
+            &items,
+            &kernel,
+            None,
+            KitLimits {
+                strength_potions: 1,
+                ..FULL_INVENTORY
+            },
+        )
+        .unwrap();
+        assert_eq!(warhammers(&potted), 2, "with a potion the swap lifts 15 to 16 and is a kit");
     }
 
     #[test]
