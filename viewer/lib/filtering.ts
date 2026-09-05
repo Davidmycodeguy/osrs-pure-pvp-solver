@@ -5,6 +5,7 @@ import {
   columnByKey,
   columnValue,
 } from '@/components/kit-columns';
+import { type StatRanges, matchesStatRanges } from '@/lib/stat-filters';
 import {
   type Dataset,
   type FieldIndex,
@@ -62,7 +63,28 @@ type BuildFilters = {
   weaponType: string;
   seedOnly: boolean;
   query: string;
+  /** Min/max bounds per stat column key, in raw dataset units. */
+  stats: StatRanges;
 };
+
+/** Raw value of a stat column for a build row, or null if the column is not a build column. */
+function buildStatReader(row: RawRow, index: FieldIndex) {
+  return (key: string) => {
+    const column = columnByKey(key);
+    if (!column || column.source !== 'build') return null;
+    return numberAt(row, index, column.field);
+  };
+}
+
+/** Raw value of a stat column for a kit row, or null if it is not numeric. */
+function kitStatReader(kit: RawRow, build: RawRow, context: ColumnContext) {
+  return (key: string) => {
+    const column = columnByKey(key);
+    if (!column) return null;
+    const value = columnValue(column, kit, build, context);
+    return typeof value === 'number' ? value : null;
+  };
+}
 
 export type KitFilters = BuildFilters & { koWeapon: string };
 
@@ -184,6 +206,8 @@ function matchesBuild(
     !buildSearchText(row, data, index).includes(filters.query)
   )
     return false;
+  if (!matchesStatRanges(filters.stats, buildStatReader(row, index)))
+    return false;
   return true;
 }
 
@@ -263,6 +287,8 @@ function matchesKit(kit: RawRow, context: ColumnContext, filters: KitFilters) {
     const text = `${buildSearchText(build, data, buildIndex)} ${stringAt(kit, kits.strings, kitIndex, 'ko_weapon').toLowerCase()} kit#${numberAt(kit, kitIndex, 'rank')}`;
     if (!text.includes(filters.query)) return false;
   }
+  if (!matchesStatRanges(filters.stats, kitStatReader(kit, build, context)))
+    return false;
   return true;
 }
 

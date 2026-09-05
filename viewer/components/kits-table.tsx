@@ -2,6 +2,9 @@
 
 import { ChevronRight } from 'lucide-react';
 
+import { PinButton } from '@/components/pin-button';
+import { canPinMore } from '@/lib/compare';
+
 import { Badge } from '@/components/ui/badge';
 import {
   type ColumnContext,
@@ -22,8 +25,11 @@ type Props = ColumnContext & {
   selectedKit: number | null;
   sortKey: KitSortKey;
   sortDescending: boolean;
+  /** Kit row indices pinned into the comparison. */
+  pinned: readonly number[];
   onSelect: (kitIndex: number) => void;
   onSort: (key: KitSortKey) => void;
+  onTogglePin: (kitIndex: number) => void;
 };
 
 function Cell({
@@ -79,8 +85,10 @@ export function KitsTable({
   selectedKit,
   sortKey,
   sortDescending,
+  pinned,
   onSelect,
   onSort,
+  onTogglePin,
 }: Props) {
   const context: ColumnContext = { kits, kitIndex, data, buildIndex };
   return (
@@ -91,6 +99,7 @@ export function KitsTable({
       >
         <thead className="border-b border-border bg-muted/45 text-[10px] uppercase tracking-[0.09em] text-muted-foreground">
           <tr>
+            <th className="w-9 px-2" aria-label="Pin for comparison" />
             {columns.map((column) => (
               <th
                 key={column.key}
@@ -124,6 +133,14 @@ export function KitsTable({
                     onSelect(kitRow);
                 }}
               >
+                <td className="px-2">
+                  <PinButton
+                    pinned={pinned.includes(kitRow)}
+                    enabled={canPinMore(pinned)}
+                    label={`kit #${numberAt(kit, kitIndex, 'rank')}`}
+                    onToggle={() => onTogglePin(kitRow)}
+                  />
+                </td>
                 {columns.map((column) => (
                   <td
                     key={column.key}

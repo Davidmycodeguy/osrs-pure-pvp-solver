@@ -460,16 +460,18 @@ export function columnValue(
   return numberAt(build, context.buildIndex, column.field);
 }
 
-/** Display text for a cell (and the CSV export). */
-export function columnText(
+/** The scale a column's raw numbers are stored at. */
+export function columnScale(column: KitColumn, context: ColumnContext): number {
+  return column.source === 'kit' ? context.kits.scale : SCALE;
+}
+
+/** Display text for a raw value, given the scale it is stored at. */
+export function formatColumnValue(
   column: KitColumn,
-  kit: RawRow,
-  build: RawRow,
-  context: ColumnContext,
+  value: number | string,
+  scale: number,
 ): string {
-  const value = columnValue(column, kit, build, context);
   if (typeof value === 'string') return value;
-  const scale = column.source === 'kit' ? context.kits.scale : SCALE;
   switch (column.kind) {
     case 'pct':
       return ((value / scale) * 100).toFixed(
@@ -482,6 +484,17 @@ export function columnText(
     default:
       return value.toLocaleString();
   }
+}
+
+/** Display text for a cell (and the CSV export). */
+export function columnText(
+  column: KitColumn,
+  kit: RawRow,
+  build: RawRow,
+  context: ColumnContext,
+): string {
+  const value = columnValue(column, kit, build, context);
+  return formatColumnValue(column, value, columnScale(column, context));
 }
 
 function loadStored(): string[] | null {

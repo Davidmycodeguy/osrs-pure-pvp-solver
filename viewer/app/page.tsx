@@ -4,6 +4,7 @@ import { useCallback, useDeferredValue, useMemo, useState } from 'react';
 
 import { BuildDetailPanel } from '@/components/build-detail-panel';
 import { BuildsTable } from '@/components/builds-table';
+import { ComparePanel } from '@/components/compare-panel';
 import { FiltersBar } from '@/components/filters-bar';
 import { Glossary } from '@/components/glossary';
 import {
@@ -15,16 +16,27 @@ import {
 import { KitsTable, type KitSortKey } from '@/components/kits-table';
 import { LoadErrorNotice, LoadingSkeleton } from '@/components/loading-states';
 import { SiteHeader } from '@/components/site-header';
+import { StatFiltersPanel } from '@/components/stat-filters-panel';
 import { SummaryTiles } from '@/components/summary-tiles';
 import { TableFooter } from '@/components/table-footer';
 import { useDatasets } from '@/hooks/use-datasets';
 import {
   type Dataset,
   type KitDataset,
+  SCALE,
   kitsByBuild,
   makeIndex,
   numberAt,
 } from '@/lib/dataset';
+import { buildCompareView, kitCompareView, togglePinned } from '@/lib/compare';
+import {
+  type StatEdge,
+  type StatInputs,
+  activeStatCount,
+  clearStatInputs,
+  setStatInput,
+  toStatRanges,
+} from '@/lib/stat-filters';
 import {
   ALL_KO,
   ALL_WEAPONS,
@@ -61,6 +73,11 @@ export default function Home() {
   const [showGlossary, setShowGlossary] = useState(false);
   const [visibleColumns, setVisibleColumns] = useVisibleColumns();
   const [copied, setCopied] = useState('');
+  const [statInputs, setStatInputs] = useState<StatInputs>({});
+  const [showStatFilters, setShowStatFilters] = useState(false);
+  const [pinnedKits, setPinnedKits] = useState<number[]>([]);
+  const [pinnedBuilds, setPinnedBuilds] = useState<number[]>([]);
+  const [differencesOnly, setDifferencesOnly] = useState(false);
   const deferredQuery = useDeferredValue(query.trim().toLowerCase());
   const rankMode = rankModeOf(kitSortKey);
 
@@ -89,9 +106,24 @@ export default function Home() {
     [kits, kitIndex],
   );
 
+  // Kit percentages are stored at the kit dataset's own scale; before it lands only build stats
+  // can be filtered, and those always use SCALE.
+  const kitScale = kits?.scale ?? SCALE;
+  const statRanges = useMemo(
+    () => toStatRanges(statInputs, kitScale),
+    [statInputs, kitScale],
+  );
+  const activeStats = activeStatCount(statRanges);
   const filters = useMemo<KitFilters>(
-    () => ({ tier, weaponType, seedOnly, query: deferredQuery, koWeapon }),
-    [tier, weaponType, seedOnly, deferredQuery, koWeapon],
+    () => ({
+      tier,
+      weaponType,
+      seedOnly,
+      query: deferredQuery,
+      koWeapon,
+      stats: statRanges,
+    }),
+    [tier, weaponType, seedOnly, deferredQuery, koWeapon, statRanges],
   );
   const filteredRows = useMemo<ViewRow[]>(() => {
     if (!data || viewMode === 'kits') return [];
@@ -140,9 +172,28 @@ export default function Home() {
     numberAt(kits.rows[selectedKit], kitIndex, 'build') === selectedBuildIndex
       ? selectedKit
       : (buildOptions[0] ?? null);
-  const columns = visibleColumns
-    .map(columnByKey)
-    .filter((column): column is KitColumn => column !== undefined);
+  const columns = useMemo(
+    () =>
+      visibleColumns
+        .map(columnByKey)
+        .filter((column): column is KitColumn => column !== undefined),
+    [visibleColumns],
+  );
+
+  const pinned = viewMode === 'kits' ? pinnedKits : pinnedBuilds;
+  const compareView = useMemo(() => {
+    if (!data || pinned.length === 0) return null;
+    if (viewMode === 'kits')
+      return kits
+        ? kitCompareView(pinned, columns, {
+            kits,
+            kitIndex,
+            data,
+            buildIndex: index,
+          })
+        : null;
+    return buildCompareView(pinned, columns, data, index, rankToIndex);
+  }, [data, kits, kitIndex, index, rankToIndex, pinned, viewMode, columns]);
 
   /** Filter changes always jump back to the first page. */
   function filterSetter<T>(setter: (value: T) => void) {
@@ -171,6 +222,27 @@ export default function Home() {
         columnByKey(next)?.kind === 'text';
       setSortDescending(!ascending);
     }
+  }
+
+  function changeStat(key: string, edge: StatEdge, text: string) {
+    setStatInputs((current) => setStatInput(current, key, edge, text));
+    setPage(0);
+  }
+
+  function clearStats() {
+    setStatInputs(clearStatInputs());
+    setPage(0);
+  }
+
+  function togglePinnedRow(id: number) {
+    if (viewMode === 'kits')
+      setPinnedKits((current) => togglePinned(current, id));
+    else setPinnedBuilds((current) => togglePinned(current, id));
+  }
+
+  function clearPins() {
+    if (viewMode === 'kits') setPinnedKits([]);
+    else setPinnedBuilds([]);
   }
 
   function changeRankMode(mode: RankMode) {
@@ -224,6 +296,9 @@ export default function Home() {
     setPage(0);
     setSelectedKit(null);
     setSelectedRank(1);
+    // Pins are row ids within one level's dataset, so they mean nothing after a switch.
+    setPinnedKits([]);
+    setPinnedBuilds([]);
   }
 
   return (
@@ -264,11 +339,26 @@ export default function Home() {
               }}
               showGlossary={showGlossary}
               onToggleGlossary={() => setShowGlossary((value) => !value)}
+              showStatFilters={showStatFilters}
+              onToggleStatFilters={() => setShowStatFilters((value) => !value)}
+              activeStats={activeStats}
               rankMode={rankMode}
               onRankModeChange={changeRankMode}
               visibleColumns={visibleColumns}
               onVisibleColumnsChange={setVisibleColumns}
             />
+
+            {showStatFilters ? (
+              <div className="px-4 pb-4">
+                <StatFiltersPanel
+                  viewMode={viewMode}
+                  inputs={statInputs}
+                  activeCount={activeStats}
+                  onChange={changeStat}
+                  onClear={clearStats}
+                />
+              </div>
+            ) : null}
 
             {error ? (
               <LoadErrorNotice message={error} />
@@ -287,8 +377,10 @@ export default function Home() {
                     selectedKit={activeKit}
                     sortKey={kitSortKey}
                     sortDescending={sortDescending}
+                    pinned={pinnedKits}
                     onSelect={selectKit}
                     onSort={changeKitSort}
+                    onTogglePin={togglePinnedRow}
                   />
                 ) : (
                   <BuildsTable
@@ -300,8 +392,10 @@ export default function Home() {
                     rankToIndex={rankToIndex}
                     pageRows={pageRows}
                     selectedRank={selectedRank}
+                    pinned={pinnedBuilds}
                     onSelect={setSelectedRank}
                     onSort={changeSort}
+                    onTogglePin={togglePinnedRow}
                   />
                 )}
                 <TableFooter
@@ -332,6 +426,18 @@ export default function Home() {
             onLoadKits={loadKits}
           />
         </section>
+
+        {compareView && compareView.entries.length > 0 ? (
+          <ComparePanel
+            view={compareView}
+            differencesOnly={differencesOnly}
+            onToggleDifferencesOnly={() =>
+              setDifferencesOnly((value) => !value)
+            }
+            onUnpin={togglePinnedRow}
+            onClear={clearPins}
+          />
+        ) : null}
       </div>
     </main>
   );

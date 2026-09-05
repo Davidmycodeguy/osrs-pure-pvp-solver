@@ -31,11 +31,12 @@ The viewer reads the `.json` files; the `.gz` copies are what gets attached to a
 ```bash
 npx oxlint            # lint
 npx tsc --noEmit      # type check
+npm test              # unit tests for the pure helpers under lib/
 npm run build         # production build into dist/
 npm start             # serve the production build locally
 ```
 
-CI runs the first three.
+CI runs the first four.
 
 ## Layout
 

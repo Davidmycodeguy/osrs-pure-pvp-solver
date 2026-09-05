@@ -2,6 +2,8 @@
 
 import { ChevronRight } from 'lucide-react';
 
+import { PinButton } from '@/components/pin-button';
+
 import { Badge } from '@/components/ui/badge';
 import {
   type Dataset,
@@ -12,6 +14,7 @@ import {
   stringAt,
   tierClasses,
 } from '@/lib/dataset';
+import { canPinMore } from '@/lib/compare';
 import { type SortKey, type ViewRow, defenceTotal } from '@/lib/filtering';
 
 const levelPills = [
@@ -34,8 +37,11 @@ type Props = {
   /** Rows for the current page, already filtered, grouped and sorted. */
   pageRows: ViewRow[];
   selectedRank: number;
+  /** Build ranks pinned into the comparison. */
+  pinned: readonly number[];
   onSelect: (rank: number) => void;
   onSort: (key: SortKey) => void;
+  onTogglePin: (rank: number) => void;
 };
 
 function BestKitCell({
@@ -75,14 +81,17 @@ export function BuildsTable({
   rankToIndex,
   pageRows,
   selectedRank,
+  pinned,
   onSelect,
   onSort,
+  onTogglePin,
 }: Props) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[900px] text-left text-sm">
         <thead className="border-b border-border bg-muted/45 text-[10px] uppercase tracking-[0.09em] text-muted-foreground">
           <tr>
+            <th className="w-9 px-2" aria-label="Pin for comparison" />
             <th className="px-4 py-3">
               <button onClick={() => onSort('rank')}>Rank</button>
             </th>
@@ -120,6 +129,14 @@ export function BuildsTable({
                     onSelect(rowRank);
                 }}
               >
+                <td className="px-2">
+                  <PinButton
+                    pinned={pinned.includes(rowRank)}
+                    enabled={canPinMore(pinned)}
+                    label={`build #${rowRank}`}
+                    onToggle={() => onTogglePin(rowRank)}
+                  />
+                </td>
                 <td className="px-4 py-3.5">
                   <div className="flex items-center gap-2">
                     <span className="font-mono text-base font-semibold">

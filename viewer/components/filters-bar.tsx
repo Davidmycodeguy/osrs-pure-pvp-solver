@@ -7,6 +7,7 @@ import {
   Flame,
   Layers3,
   Search,
+  SlidersHorizontal,
   Swords,
   Target,
   Users,
@@ -50,6 +51,10 @@ type Props = {
   onToggleSeedOnly: () => void;
   showGlossary: boolean;
   onToggleGlossary: () => void;
+  showStatFilters: boolean;
+  onToggleStatFilters: () => void;
+  /** How many stats currently narrow the table, shown on the toggle. */
+  activeStats: number;
   rankMode: RankMode;
   onRankModeChange: (mode: RankMode) => void;
   visibleColumns: string[];
@@ -76,6 +81,9 @@ export function FiltersBar({
   onToggleSeedOnly,
   showGlossary,
   onToggleGlossary,
+  showStatFilters,
+  onToggleStatFilters,
+  activeStats,
   rankMode,
   onRankModeChange,
   visibleColumns,
@@ -163,6 +171,14 @@ export function FiltersBar({
             onClick={onToggleSeedOnly}
           >
             <Target /> Simulator 32
+          </Button>
+          <Button
+            size="sm"
+            variant={showStatFilters || activeStats > 0 ? 'default' : 'outline'}
+            onClick={onToggleStatFilters}
+          >
+            <SlidersHorizontal /> Stat filters
+            {activeStats > 0 ? ` (${activeStats})` : ''}
           </Button>
           <Button
             size="sm"
