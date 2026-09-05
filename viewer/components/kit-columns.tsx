@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { Columns3 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -508,22 +508,45 @@ function store(keys: string[]) {
   }
 }
 
+/**
+ * The stored selection as an external store, so the hook below can hand React a server snapshot
+ * that matches the SSR HTML and the browser's own value only after hydration. `snapshot` is cached
+ * because getSnapshot has to be referentially stable between renders.
+ */
+let snapshot: string[] | null = null;
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void): () => void {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
+function getSnapshot(): string[] {
+  snapshot ??= loadStored() ?? DEFAULT_COLUMNS;
+  return snapshot;
+}
+
+/** The SSR HTML only ever knows DEFAULT_COLUMNS, so the hydration render must agree. */
+function getServerSnapshot(): string[] {
+  return DEFAULT_COLUMNS;
+}
+
+function publish(keys: string[]) {
+  snapshot = keys;
+  store(keys);
+  for (const listener of listeners) listener();
+}
+
 /** Visible column keys, remembered per browser. */
 export function useVisibleColumns(): [string[], (next: string[]) => void] {
-  // The picker button renders this count during SSR from DEFAULT_COLUMNS, so a browser with a
-  // stored selection of a different length hydrates a different label; the mismatch is cosmetic
-  // and settles on the client's value after hydration.
-  const [keys, setKeys] = useState<string[]>(() =>
-    typeof window === 'undefined'
-      ? DEFAULT_COLUMNS
-      : (loadStored() ?? DEFAULT_COLUMNS),
-  );
+  const keys = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const update = (next: string[]) => {
     const ordered = KIT_COLUMNS.map((column) => column.key).filter((key) =>
       next.includes(key),
     );
-    setKeys(ordered);
-    store(ordered);
+    publish(ordered);
   };
   return [keys, update];
 }
