@@ -17,6 +17,8 @@ As of 2026-09-02 the five-stage Rust pipeline is complete and verified for comba
 | Amulet switch: Amulet of strength tried with every KO weapon, kept when it raises the KO max hit; CB30 kits 918,427 → 1,168,086, CB40 1,660,515 → 2,175,645 | 2026-09-02 | [`pure_math/src/kits/enumerate.rs`](../pure_math/src/kits/enumerate.rs) |
 | Magic (`--magic`, default 1): runes variant of every kit carrying the hardest out-hitting F2P spell; CB30 kits → 2,335,208, CB40 → 4,349,384; Stage 5 at CB40 about 9 min | 2026-09-02 | [`pure_math/src/kits/magic.rs`](../pure_math/src/kits/magic.rs) |
 | Viewer: column picker (remembered per browser), any column sortable, copy rows as CSV (visible columns, up to 50,000 rows), glossary entries and KO-panel tiles for potion, max combo, amulet and spell | 2026-09-02 | [viewer.md](viewer.md) |
+| Kit stage compares potted hits when a Strength potion is carried: a KO switch must out-hit the potted primary and an amulet swap must raise the potted hit (both compared unpotted before, so a swap that only pays off potted, such as Amulet of strength at 50 Strength on a Rune warhammer, was dropped). CB40 1-Defence kits 4,349,384 → 5,365,714; Defence-opened kits 1,152,628 → 1,181,467; leaders unchanged except at 30 and 40 Defence | 2026-09-04 | [`pure_math/src/kits/enumerate.rs`](../pure_math/src/kits/enumerate.rs) (`potion_aware_filters_keep_an_amulet_swap_that_only_pays_off_potted`); [results.md](results.md) |
+| Breakpoint account frontier: designed, measured against the catalog and formulas, not built. Every Strength level is a max-hit step for some weapon class and Stage 1 already keeps the best Attack per Strength, Ranged and Prayer, so it would reproduce the frontier; the per-weapon-pair form is the only one that shrinks anything | 2026-09-04 | [design/2026-09-04-breakpoint-frontier-design.md](design/2026-09-04-breakpoint-frontier-design.md) section 11 |
 | Defence opened: catalog 84 → 150 verified items (48 with Defence requirements: bronze to rune helms, bodies, legs and shields, hardleather, studded, green d'hide body, leather cowl and gloves, four staves), requirements-parser fix, bulk `add-items` tool; `account-frontier --defence-levels`, `--keep-defensive`, `--max-ko-options`, `--max-builds`, `shortlist-survivors`, `run_stages.ps1`, `screen_chunks.ps1`; CB40 run over Defence 1/5/10/15/20/30/40 (24,084 accounts, 1,362,704 survivors, 1,152,628 kits) | 2026-09-02 | [`pure_math/src/account_frontier.rs`](../pure_math/src/account_frontier.rs), [`src/pure_solver/add_items.py`](../src/pure_solver/add_items.py) |
 
 ## Verified test counts (as of 2026-09-02)
@@ -35,10 +37,10 @@ The whole-stage golden comparison (SHA-256 of the Rust CSV against the Python CS
 | Run | Accounts | Survivors | Kits | Notes |
 | --- | --- | --- | --- | --- |
 | CB30, 1 Defence | 2,925 | 75,665 | 2,335,208 (potion, amulet, magic) | Kill-pressure #1: 7/52/39, 44 HP, Maple shortbow → Rune warhammer + Amulet of strength, 20.8%. |
-| CB40, 1 Defence | 3,977 | 112,992 | 4,349,384 (potion, amulet, magic) | Kill-pressure #1: 21/55/51, 49 HP, same kit, 37.9%. |
-| CB40, Defence 1/5/10/15/20/30/40 | 24,084 | 1,362,704 (433,845 shortlisted for Stage 5) | 1,152,628 (`--max-builds=150000 --max-ko-options=2 --magic=0`) | Pressure #1 stays 1 Defence (23.2%); attrition #1 flips to 20 Defence. |
+| CB40, 1 Defence | 3,977 | 112,992 | 5,365,714 (potion, amulet, magic; 4,349,384 before the 2026-09-04 potted-filter fix) | Kill-pressure #1: 21/55/51, 49 HP, same kit, 37.9%. |
+| CB40, Defence 1/5/10/15/20/30/40 | 24,084 | 1,362,704 (433,845 shortlisted for Stage 5) | 1,181,467 (`--max-builds=150000 --max-ko-options=2 --magic=0`; 1,152,628 before the 2026-09-04 potted-filter fix) | Pressure #1 stays 1 Defence (23.2%); attrition #1 flips to 20 Defence. |
 
-The viewer's level-30 dataset predates the magic step (it holds the amulet-step export); level 40 is the maintained dataset. The uncapped level-40 kits file is about 0.5 GB and the export cap of 250,000 exists for that reason.
+The viewer's level-30 dataset predates the magic step (it holds the amulet-step export); level 40 is the maintained dataset and was re-exported on 2026-09-04 from the Defence-opened rerun. The uncapped 1-Defence level-40 kits file is about 10.7 GB and the export cap of 250,000 exists for that reason.
 
 ## Known gaps and modelling limits
 

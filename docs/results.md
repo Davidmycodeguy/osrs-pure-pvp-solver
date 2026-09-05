@@ -32,24 +32,28 @@ Each addition was re-run for both levels; the leader's pressure rose with the St
 | Food slots | 25 | 25 |
 | Pressure before potion → with potion → with amulet | 15.4% → 20.1% → 20.8% | 31.7% → 36.8% → 37.9% |
 | Its runes variant | Fire Bolt (max 12, 3 rune slots), pressure rank 3, 22 food | Water Blast (max 14), pressure rank 2, 22 food |
-| Attrition #1 in the same run | (unchanged shape: see the table above) | 22 Atk / 51 Str / 49 Rng, Maple shortbow → Rune warhammer + Amulet of strength; pressure rank 141 |
-| Kits in the population | 2,335,208 (918,427 before the additions) | 4,349,384 (1,660,515 before the additions) |
+| Attrition #1 in the same run | (unchanged shape: see the table above) | 22 Atk / 51 Str / 49 Rng, Maple shortbow → Rune warhammer + Amulet of strength; pressure rank 133 (141 before the 2026-09-04 rerun) |
+| Kits in the population | 2,335,208 (918,427 before the additions) | 5,365,714 after the 2026-09-04 potted-filter fix (4,349,384 on 2026-09-02; 1,660,515 before the additions) |
+
+The combat-40 column was rerun on 2026-09-04 after the kit stage started comparing potted hits (see [status.md](status.md)): the kill-pressure leader, its pressure, burst, food and runes variant are unchanged, and the attrition leader is the same account; only the population and the ranks around them moved. Combat 30 was not rerun.
 
 Magic does not move kill pressure at these levels because no castable spell beats a 14 heal in one hit (Fire Bolt 12 at 35 Magic, Water Blast 14; Fire Blast 16 needs 59 Magic); it raises finish odds and race DPT only, and each runes variant sits just behind its own kit with three fewer food.
 
 ## Combat 40 with Defence opened (2026-09-02)
 
-The catalog was extended to 150 items (metal armour bronze to rune, hardleather, studded, green dragonhide body, staves) and Defence became a real level in the enumerator with its Hitpoints XP and combat-level cost. Every Defence level 1..40 produced 133,467 accounts and 1.36 million survivors and ran out of memory at the kit stage, so the run uses the armour breakpoints 1, 5, 10, 15, 20, 30, 40 with `--max-builds=150000 --max-ko-options=2 --magic=0` (433,845 shortlisted survivors, 1,152,628 kits). Best kit per Defence level, all Maple shortbow → Rune warhammer with a Strength potion:
+The catalog was extended to 150 items (metal armour bronze to rune, hardleather, studded, green dragonhide body, staves) and Defence became a real level in the enumerator with its Hitpoints XP and combat-level cost. Every Defence level 1..40 produced 133,467 accounts and 1.36 million survivors and ran out of memory at the kit stage, so the run uses the armour breakpoints 1, 5, 10, 15, 20, 30, 40 with `--max-builds=150000 --max-ko-options=2 --magic=0` (433,845 shortlisted survivors, 1,181,467 kits). Best kit per Defence level, all Maple shortbow → Rune warhammer + Amulet of strength with a Strength potion:
 
 | Defence | Account (A/S/R, HP) | Body | Beats one fish | Max combo | Race margin | Pressure rank |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 29/53/55, 50 | Leather | 23.2% | 27 | 7.4 fish | 1 |
-| 5 | 28/53/49, 47 | Leather | 21.4% | 26 | 5.8 | 172 |
-| 10 | 23/53/50, 47 | Hardleather | 20.5% | 26 | 8.9 | 659 |
-| 15 | 20/53/49, 48 | Hardleather | 19.2% | 26 | 10.6 | 2,968 |
-| 20 | 20/52/48, 46 | Studded | 17.2% | 25 | 12.4 | 11,522 |
-| 30 | 14/52/44, 46 | Studded | 13.4% | 24 | 12.5 | 38,894 |
-| 40 | 7/52/39, 45 | Studded | 9.5% | 23 | 11.9 | 135,187 |
+| 5 | 28/53/49, 47 | Leather | 21.4% | 26 | 5.8 | 170 |
+| 10 | 23/53/50, 47 | Hardleather | 20.5% | 26 | 8.9 | 673 |
+| 15 | 20/53/49, 48 | Hardleather | 19.2% | 26 | 10.6 | 3,053 |
+| 20 | 20/52/48, 46 | Studded | 17.2% | 25 | 12.4 | 12,328 |
+| 30 | 15/50/42, 43 | Studded | 13.8% | 24 | 12.3 | 39,795 |
+| 40 | 13/46/36, 41 | Studded | 9.9% | 22 | 11.3 | 121,676 |
+
+Rerun on 2026-09-04 after the kit stage started comparing potted hits (see [status.md](status.md)): 1,181,467 kits instead of 1,152,628, the same leaders down to 20 Defence with the same pressure, and new leaders at 30 and 40 Defence, where an Amulet of strength swap that only pays off potted (Strength 50 and 46) had been dropped before.
 
 Kill pressure stays with 1 Defence and falls about 3 to 4 points per 10 Defence. The attrition ranking flips to 20 Defence (26 Atk / 43 Str / 46 Rng, 41 HP, studded body, 13-fish margin) and its entire top 10 is 20-Defence accounts. Pressure values are lower than in the 1-Defence-only run (23% versus 38% at the top) because the opponent panel now contains tanks, so every kit is measured against higher defence rolls. Rune armour never reaches the top of either ranking: every top kit is an archer, and metal armour costs ranged accuracy. Rune matters only for melee-primary tanks, none of which reached the top.
 
